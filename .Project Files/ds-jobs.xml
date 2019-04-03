@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- job list for COMP335@MQ, S1-19Feb, 2019 -->
+<!-- job list for COMP335@MQ, S1-01Apr, 2019 -->
 <jobs>
 	<type name="short" minRunTime="1" maxRunTime="300" populationRate="60" />
 	<type name="medium" minRunTime="301" maxRunTime="1800" populationRate="30" />
