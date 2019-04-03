@@ -1,6 +1,7 @@
 ## How to use:
 
 Prereq: Must have openjdk8 installed. To install java type the following in the terminal: 
+
 ` sudo apt install openjdk-8-jre-headless `
 
 To run the client and server do the following:
