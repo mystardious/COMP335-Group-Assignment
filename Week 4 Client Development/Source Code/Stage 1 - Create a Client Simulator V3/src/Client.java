@@ -257,6 +257,15 @@ public class Client {
         // DONE 1 Sort servers from smallest to largest
         // DONE 2 Traverse through all servers and select the first server that has equal or more cores than the job.
 
+        for(int i = 0; i < allServerInfo.size(); i++) {
+
+            // Compare number of cores required for the job against the server's number of cores.
+            if(Integer.parseInt(currentJob[4]) <= Integer.parseInt(allServerInfo.get(i).get(4))) {
+                return allServerInfo.get(i);
+            }
+
+        }
+
         // No server was found
         return null;
 
