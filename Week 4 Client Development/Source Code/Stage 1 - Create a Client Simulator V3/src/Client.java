@@ -203,7 +203,8 @@ public class Client {
      */
     public ArrayList<String> findFirstFit(String[] currentJob) {
 
-        System.out.println("Please define first-fit algorithm.");
+        // TODO 1 Sort servers from smallest to largest
+        // TODO 2 Traverse through all servers and select the first server that has sufficient resource to the run the job
 
         return null;
 
