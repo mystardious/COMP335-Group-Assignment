@@ -5,22 +5,59 @@ import java.util.Scanner;
 
 public class Client {
 
+    // User Arguments
+    static boolean manualInput = false; // Allow manual input of commands
+    static boolean help        = false; // Display program usage
+
+    // Automation variables
+    static int algorithm = 0; // 0 = AllToLargest, 1 = First-Fit, 2 = Best-Fit, 3 = Worst-Fit
+
+    // Server data
+    ArrayList<ArrayList<String>> allServerInfo = new ArrayList<>();
+    boolean obtainServerData = true; // Enable request for server details
+
+    public static void main(String args[]) {
+
+        // Process program arguments
+        for(int i = 0; i < args.length; i++) {
+
+            if(args[i].equals("-m")) { manualInput = true; } // Enable manual input from user
+
+            else if(args[i].equals("-h")) {  help = true; } // Display program usage
+
+            else if(args[i].equals("-a")) { // Specify algorithm to be used
+
+                if(args[i+1].equals("ff"))
+                    algorithm = 1;
+                else if(args[i+1].equals("bf"))
+                    algorithm = 2;
+                else if(args[i+1].equals("wf"))
+                    algorithm = 3;
+                else {
+                    System.out.println("Please enter a valid algorithm.");
+                    help = true;
+                }
+
+                i++;
+
+            }
+
+        }
+
+        if(help)
+            clientUsage();
+        else {
+            Client client = new Client("127.0.0.1", 8096);
+        }
+
+    }
+
     // initialize socket and input output streams
     private Socket socket               = null;
     private BufferedReader in           = null;
     private DataOutputStream out        = null;
 
-    // Data to keep track of
-    int clientState = 0;
-    private String[] clientCommands = {"HELO", "AUTH " + System.getProperty("user.name"), "REDY", "SCHD", "QUIT", "OK", "RESC All"};
-    ArrayList<ArrayList<String>> serverInfo = new ArrayList<>();
-
-    // Execute RESC All once - Will not be used in Stage 1
-    boolean obtainServerData = true;
-
-    // constructor to put ip address and port
-    public Client(String address, int port)
-    {
+    public Client(String address, int port) {
         // establish a connection
         try {
 
@@ -37,19 +74,34 @@ public class Client {
         } catch(UnknownHostException u) { System.out.println(u);
         } catch(IOException i) { System.out.println(i); }
 
-        String userInput = clientCommands[clientState]; // Send HELO
+        // Manual input of commands.
+        if(manualInput) {
 
-        while (userInput != "EXIT PROGRAM") {
+            // Scanner initialisation for user manual input
+            Scanner in = new Scanner(new InputStreamReader(System.in));
+            String currentCommand = "";
 
-            // Send the command
-            sendCommand(userInput);
+            while(!currentCommand.equals("QUIT")) {
 
-            // Wait for reply
-            String serverResponse = waitForResponse();
-            System.out.println("RCVD: "+serverResponse);
+                // Enter and send a command to the Server.
+                currentCommand = in.nextLine();
+                sendCommand(currentCommand);
 
-            // Process reply
-            userInput = processServerResponse(serverResponse);
+            }
+
+        }
+
+        // Automated input of commands.
+        else {
+
+            // Say Hello and sign in to Server.
+            ClientSetup();
+
+            // Schedule all jobs based on default algorithm unless specified otherwise.
+            ClientScheduler();
+
+            // Close connection to server once all jobs have been scheduled.
+            ClientQuit();
 
         }
 
@@ -63,8 +115,165 @@ public class Client {
 
     }
 
-    // Send a command to the server
-    public void sendCommand(String argument){
+    // DONE 1 Separate program into three parts: ClientSetup(), ClientBody() & ClientExit().
+    // DONE 2 Remove processServerResponse once finished.
+
+    public void ClientSetup() {
+
+        // Say Hello and sign in
+        sendCommand("HELO");
+        sendCommand("AUTH "+System.getProperty("user.name"));
+
+    }
+
+    public void ClientScheduler() {
+
+        String currentJob = sendCommand("REDY");
+
+        // Find largest server
+        RESCAll();
+        int indexOfLargestServer = 0;
+        for(int i = 0; i < allServerInfo.size(); i++) {
+            if( Integer.parseInt(allServerInfo.get(indexOfLargestServer).get(4)) < Integer.parseInt(allServerInfo.get(i).get(4)) )
+                indexOfLargestServer = i;
+        }
+
+        while(!currentJob.equals("NONE")) {
+
+            String[] currentJobDetails = currentJob.split(" ");
+            String serverType = "";
+            String serverID = "";
+
+            // Collect information on all servers
+            RESCAll();
+
+            // AllToLargest
+            if(algorithm == 0) {
+                serverType = allServerInfo.get(indexOfLargestServer).get(0);
+                serverID = "0";
+            }
+
+            // First-Fit
+            else if(algorithm == 1) {
+
+                ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
+                serverType = firstFitServer.get(0);
+                serverID = firstFitServer.get(1);
+
+            }
+
+            // Best-Fit
+            else if(algorithm == 2) {
+
+                ArrayList<String> bestFitServer = findBestFit(currentJobDetails);
+                serverType = bestFitServer.get(0);
+                serverID = bestFitServer.get(1);
+
+            }
+
+            // Worst-Fit
+            else if (algorithm == 3) {
+
+                ArrayList<String> worstFitServer = findWorstFit(currentJobDetails);
+                serverType = worstFitServer.get(0);
+                serverID = worstFitServer.get(1);
+
+            }
+
+            // Run the job
+            sendCommand("SCHD " +
+                            currentJobDetails[2] + " " +
+                                serverType + " " +
+                                    serverID);
+
+            // Goto next job
+            currentJob = sendCommand("REDY");
+
+        }
+
+    }
+
+    public void ClientQuit() { sendCommand("QUIT"); }
+
+    // Client Scheduler Algorithms
+
+    /**
+     * First-Fit Algorithm
+     * @return the first active server with sufficient initial resource capacity to run the job
+     */
+    public ArrayList<String> findFirstFit(String[] currentJob) {
+
+        System.out.println("Please define first-fit algorithm.");
+
+        return null;
+
+    }
+
+    /**
+     * Best-Fit Algorithm
+     * @return the best-fit active server based on initial resource capacity
+     */
+    public ArrayList<String> findBestFit(String[] currentJob) {
+
+        System.out.println("Please define best-fit algorithm.");
+
+        return null;
+
+    }
+
+    /**
+     * Worst-Fit Algorithm
+     * @return the worst-fit active server based on resource capacity
+     */
+    public ArrayList<String> findWorstFit(String[] currentJob) {
+
+        System.out.println("Please define worst-fit algorithm.");
+
+        return null;
+
+    }
+
+    /**
+     * Resource Information Request
+     *  RESC All - The informaton of all servers, in the system, regardless of their state.
+     */
+    public void RESCAll() {
+
+        allServerInfo = new ArrayList<>(); // Delete old information for new data
+        sendCommandNoLog("RESC All"); // Expected Response is "DATA"
+
+        String temp = sendCommandNoLog("OK");
+        while(!temp.equals(".")) {
+
+            // Store data for each server into array
+            ArrayList<String> server = new ArrayList<>();
+            String[] tempServer = temp.split(" ");
+            for(String serverDetail: tempServer) {
+                server.add(serverDetail);
+            }
+
+            // Add server to list
+            allServerInfo.add(server);
+
+            // Get next server
+            temp = sendCommandNoLog("OK");
+
+        }
+
+    }
+
+    /**
+     * Send a command to the server and display the result in the terminal.
+     *  e.g. sendCommand("HELO");
+     *
+     *  Client Terminal
+     *      SENT: HELO
+     *      RCVD: OK
+     *
+     * @param argument - the command to be send.
+     * @return String - the reply from the server.
+     */
+    public String sendCommand(String argument){
 
         try {
 
@@ -72,83 +281,44 @@ public class Client {
             System.out.println("SENT: " +argument);
             out.write((argument+"\n").getBytes());
 
-        } catch(IOException i) {  System.out.println(i); }
+            // Read and return response from the server.
+            String serverResponse = in.readLine();
+            System.out.println("RCVD: "+serverResponse);
+            return serverResponse;
 
-    };
+        } catch(IOException i) { System.out.println(i); }
 
-    public String processServerResponse(String argument) {
+        return "ERR: No Response from Server.";
 
-        // Split string into array of words
-        String[] arr = argument.split(" ");
+    }
 
-        if(arr[0].equals("OK")) {
-
-            if(clientState == 3) { // Response from SCHD
-                clientState = 2; // Reply REDY
-            } else { // Response from any other command
-                clientState++; // Reply next command
-            }
-
-        } else if(arr[0].equals("JOBN")) {
-
-            if(!obtainServerData) {
-                clientState = 6;
-                obtainServerData = true;
-            } else {
-                clientState++; // Reply SCHD JobID ServerSize ServerID
-                return clientCommands[clientState] + " " + arr[2] + " " + "large 0";
-            }
-
-        } else if(arr[0].equals("NONE")) {
-
-            clientState = 4; // Reply QUIT
-
-        } else if(arr[0].equals("QUIT")) {
-
-            return "EXIT PROGRAM";
-
-        } else {
-
-            if(arr[0].equals(".") || arr[0].equals("DATA")) { // Response from end of RESC All
-
-                clientState = 2; // Reply REDY
-
-            } else {
-
-                clientState = 5; // Reply OK
-
-                // Record Server Details
-                ArrayList<String> temp = new ArrayList<>();
-                for(int i = 0; i < arr.length; i++) {
-                    temp.add(arr[i]);
-                }
-                serverInfo.add(temp);
-
-            }
-
-        }
-
-        // Return string for next command
-        return clientCommands[clientState];
-
-    };
-
-    public String waitForResponse() {
+    /**
+     * Sometimes we want to send a commmand and not display it in the terminal because it is not important to the user.
+     * This function works exactly the same as the above but without any logging.
+     * @param argument - the command to be send.
+     * @return String - the reply from the server.
+     */
+    public String sendCommandNoLog(String argument) {
 
         try {
+
+            // Send the command to the server
+            out.write((argument+"\n").getBytes());
+
+            // Return response from the server.
             return in.readLine();
-        } catch (IOException e) {
-            System.out.println("ERR: Server response was interrupted.");
-        }
 
-        System.out.println("ERR: No Response from Server.");
-        return null;
+        } catch(IOException i) { System.out.println(i); }
 
-    };
+        return "ERR: No Response from Server.";
 
-    public static void main(String args[]) {
+    }
 
-        Client client = new Client("127.0.0.1", 8096);
+    public static void clientUsage() {
+
+        System.out.println("ds-sim COMP335@MQ, S1-27Apr, 2019");
+        System.out.println("Usage:");
+        System.out.println("    java Client [-h] [-m] [-a]");
 
     }
 

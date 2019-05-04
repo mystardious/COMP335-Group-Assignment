@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb6d1513-6af5-41b9-8c48-5ce37970de42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple2.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple2.xml.ref.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple2.xml.your.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple3.xml.ref.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple3.xml.your.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple4.xml.ref.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple4.xml.your.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple5.xml.ref.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple5.xml.your.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/stage1diff.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/stage1diff.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/system.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/system.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/tests1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/tests1.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-    </list>
+    <list default="true" id="fb6d1513-6af5-41b9-8c48-5ce37970de42" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,29 +14,53 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="838">
-              <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+            <state relative-caret-position="399">
+              <caret line="178" column="49" lean-forward="true" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="49" />
+              <folding>
+                <element signature="method#Client#0;class#Client#0" />
+                <element signature="e#933#1317#0" />
+                <element signature="e#1348#1382#0" />
+                <element signature="e#2259#2349#0" />
+                <element signature="method#ClientSetup#0;class#Client#0" />
+                <element signature="e#4070#4255#1" />
+                <element signature="e#4565#4607#1" />
+                <element signature="docComment;method#RESCAll#0;class#Client#0" />
+                <element signature="method#RESCAll#0;class#Client#0" />
+                <element signature="docComment;method#sendCommand#0;class#Client#0" />
+                <element signature="method#sendCommand#0;class#Client#0" />
+                <element signature="docComment;method#sendCommandNoLog#0;class#Client#0" />
+                <element signature="method#sendCommandNoLog#0;class#Client#0" />
+                <element signature="method#Usage#0;class#Client#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="D:" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/Client.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="706" />
-    <option name="y" value="127" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -58,6 +68,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -93,12 +104,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554279662735" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Stage 1 - Create a Client Simulator V3" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556984093610" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
@@ -151,9 +161,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="706" y="127" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5328227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -162,15 +173,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2340195" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32932165" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -183,10 +194,39 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Test.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+        <state relative-caret-position="399">
+          <caret line="178" column="49" lean-forward="true" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="49" />
+          <folding>
+            <element signature="method#Client#0;class#Client#0" />
+            <element signature="e#933#1317#0" />
+            <element signature="e#1348#1382#0" />
+            <element signature="e#2259#2349#0" />
+            <element signature="method#ClientSetup#0;class#Client#0" />
+            <element signature="e#4070#4255#1" />
+            <element signature="e#4565#4607#1" />
+            <element signature="docComment;method#RESCAll#0;class#Client#0" />
+            <element signature="method#RESCAll#0;class#Client#0" />
+            <element signature="docComment;method#sendCommand#0;class#Client#0" />
+            <element signature="method#sendCommand#0;class#Client#0" />
+            <element signature="docComment;method#sendCommandNoLog#0;class#Client#0" />
+            <element signature="method#sendCommandNoLog#0;class#Client#0" />
+            <element signature="method#Usage#0;class#Client#0" />
+          </folding>
         </state>
       </provider>
     </entry>
