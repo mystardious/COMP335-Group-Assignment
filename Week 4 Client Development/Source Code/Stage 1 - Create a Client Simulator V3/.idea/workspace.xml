@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="186" column="36" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
+            <state relative-caret-position="400">
+              <caret line="224" column="122" selection-start-line="224" selection-start-column="122" selection-end-line="224" selection-end-column="122" />
               <folding>
                 <element signature="method#main#0;class#Client#0" />
                 <element signature="method#Client#0;class#Client#0" />
@@ -27,8 +27,6 @@
                 <element signature="e#3163#3253#0" />
                 <element signature="e#3314#3402#0" />
                 <element signature="method#ClientSetup#0;class#Client#0" />
-                <element signature="e#4355#4479#1" />
-                <element signature="e#4542#4745#1" />
                 <element signature="e#4807#5006#1" />
                 <element signature="e#5070#5273#1" />
                 <element signature="method#findBestFit#0;class#Client#0" />
@@ -64,9 +62,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="277" />
-    <option name="y" value="171" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2439" />
+    <option name="y" value="-14" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -115,7 +113,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556984093610" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556990029225" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
@@ -169,10 +167,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13113007" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13113007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -186,7 +184,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33260393" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
@@ -209,8 +207,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="186" column="36" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
+        <state relative-caret-position="400">
+          <caret line="224" column="122" selection-start-line="224" selection-start-column="122" selection-end-line="224" selection-end-column="122" />
           <folding>
             <element signature="method#main#0;class#Client#0" />
             <element signature="method#Client#0;class#Client#0" />
@@ -218,8 +216,6 @@
             <element signature="e#3163#3253#0" />
             <element signature="e#3314#3402#0" />
             <element signature="method#ClientSetup#0;class#Client#0" />
-            <element signature="e#4355#4479#1" />
-            <element signature="e#4542#4745#1" />
             <element signature="e#4807#5006#1" />
             <element signature="e#5070#5273#1" />
             <element signature="method#findBestFit#0;class#Client#0" />

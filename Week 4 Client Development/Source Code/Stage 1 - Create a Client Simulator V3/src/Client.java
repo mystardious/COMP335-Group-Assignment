@@ -1,6 +1,8 @@
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Client {
@@ -129,6 +131,8 @@ public class Client {
     public void ClientScheduler() {
 
         String currentJob = sendCommand("REDY");
+        String[] currentJobDetails = currentJob.split(" ");
+        String[] status = {""};
 
         // Find largest server
         RESCAll();
@@ -138,9 +142,9 @@ public class Client {
                 indexOfLargestServer = i;
         }
 
-        while(!currentJob.equals("NONE")) {
+        while(!currentJob.equals("NONE") && !status[0].equals("ERR:")) {
 
-            String[] currentJobDetails = currentJob.split(" ");
+            currentJobDetails = currentJob.split(" ");
             String serverType = "";
             String serverID = "";
 
@@ -155,6 +159,20 @@ public class Client {
 
             // First-Fit
             else if(algorithm == 1) {
+
+                // Sort Servers by type from smallest to largest
+                Collections.sort(allServerInfo, new Comparator<ArrayList<String>>() {
+                    @Override
+                    public int compare(ArrayList<String> o1, ArrayList<String> o2) {
+                        if(Integer.parseInt(o1.get(4)) < Integer.parseInt(o2.get(4))) {
+                            return -1;
+                        } else if (Integer.parseInt(o1.get(4)) > Integer.parseInt(o2.get(4))){
+                            return 1;
+                        } else {
+                            return 0;
+                        }
+                    }
+                });
 
                 ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
                 serverType = firstFitServer.get(0);
@@ -181,10 +199,10 @@ public class Client {
             }
 
             // Run the job
-            sendCommand("SCHD " +
+            status = sendCommand("SCHD " +
                             currentJobDetails[2] + " " +
                                 serverType + " " +
-                                    serverID);
+                                    serverID).split(" ");
 
             // Goto next job
             currentJob = sendCommand("REDY");
@@ -203,7 +221,7 @@ public class Client {
      */
     public ArrayList<String> findFirstFit(String[] currentJob) {
 
-        // TODO 1 Sort servers from smallest to largest
+        // DONE 1 Sort servers from smallest to largest
         // TODO 2 Traverse through all servers and select the first server that has sufficient resource to the run the job
 
         return null;
