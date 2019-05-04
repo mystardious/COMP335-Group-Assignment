@@ -15,7 +15,7 @@ public class Client {
     private String[] clientCommands = {"HELO", "AUTH " + System.getProperty("user.name"), "REDY", "SCHD", "QUIT", "OK", "RESC All"};
     ArrayList<ArrayList<String>> serverInfo = new ArrayList<>();
 
-    // Execute RESC All once
+    // Execute RESC All once - Will not be used in Stage 1
     boolean obtainServerData = true;
 
     // constructor to put ip address and port

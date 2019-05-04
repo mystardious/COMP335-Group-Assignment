@@ -2,20 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb6d1513-6af5-41b9-8c48-5ce37970de42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Original Client/client" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Original Client/client" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/config_simple1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/config_simple1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/config_week5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/ds-jobs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/ds-jobs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/server" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/system.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/system.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stage 1 - Create a Client Simulator/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stage 1 - Create a Client Simulator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stage 1 - Create a Client Simulator/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stage 1 - Create a Client Simulator/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stage 1 - Create a Client Simulator/Stage 1 - Create a Client Simulator.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stage 1 - Create a Client Simulator/out/production/Stage 1 - Create a Client Simulator/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stage 1 - Create a Client Simulator/out/production/Stage 1 - Create a Client Simulator/META-INF/Stage 1 - Create a Client Simulator.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stage 1 - Create a Client Simulator/src/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple2.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple2.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple2.xml.your.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple3.xml.ref.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple3.xml.your.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple4.xml.ref.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple4.xml.your.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple5.xml.ref.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple5.xml.your.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/stage1diff.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/stage1diff.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/system.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/system.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/tests1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/tests1.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1807">
-              <caret line="113" column="46" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
+            <state relative-caret-position="838">
+              <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -47,11 +46,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="706" />
+    <option name="y" value="127" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -59,8 +58,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,11 +92,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554279662735" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Stage 1 - Create a Client Simulator V3" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
@@ -152,9 +151,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="706" y="127" width="974" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5328227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -186,8 +185,8 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1807">
-          <caret line="113" column="46" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
+        <state relative-caret-position="838">
+          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
         </state>
       </provider>
     </entry>

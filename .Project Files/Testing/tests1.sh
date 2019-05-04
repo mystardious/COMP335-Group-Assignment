@@ -1,5 +1,6 @@
 #!/bin/bash
 # to kill multiple runaway processes, use 'pkill runaway_process_name'
+# For the Java implementation, use the following format: ./tests1.sh your_client.class [-n]
 configDir="./configs"
 diffLog="stage1diff.log"
 if [ ! -d $configDir ]; then
@@ -18,7 +19,7 @@ fi
 
 if [ ! -f $1 ]; then
 	echo "No $1 found!"
-	echo "Usage: $0 your_client [newline]"
+	echo "Usage: $0 your_client [-n]"
 	exit
 fi
 
@@ -50,12 +51,12 @@ for conf in $configDir/*.xml; do
 		./ds-server -c $conf -v brief -n > $conf.your.log&
 	fi
 	sleep 1
-	if [ -f $1.class ]; then
-		java $1
+	if [ -f $1 ] && [[ $1 == *".class" ]]; then
+		java $(sed 's/\.class//' <<< $1)
 	else
 		./$1
 	fi
-	sleep 2
+	sleep 1
 	diff $conf.ref.log $conf.your.log > $configDir/temp.log
 	if [ -s $configDir/temp.log ]; then
 		echo NOT PASSED!
