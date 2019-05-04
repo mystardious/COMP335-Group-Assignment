@@ -16,6 +16,7 @@ public class Client {
 
     // Server data
     ArrayList<ArrayList<String>> allServerInfo = new ArrayList<>();
+    ArrayList<ArrayList<String>> sortOrder = new ArrayList<>();
     boolean obtainServerData = true; // Enable request for server details
 
     public static void main(String args[]) {
@@ -142,6 +143,9 @@ public class Client {
                 indexOfLargestServer = i;
         }
 
+        //
+        findAllServerInfoSortOrder();
+
         while(!currentJob.equals("NONE") && !status[0].equals("ERR:")) {
 
             currentJobDetails = currentJob.split(" ");
@@ -160,23 +164,43 @@ public class Client {
             // First-Fit
             else if(algorithm == 1) {
 
+
+
                 // Sort Servers by type from smallest to largest
-                Collections.sort(allServerInfo, new Comparator<ArrayList<String>>() {
-                    @Override
-                    public int compare(ArrayList<String> o1, ArrayList<String> o2) {
-                        if(Integer.parseInt(o1.get(4)) < Integer.parseInt(o2.get(4))) {
-                            return -1;
-                        } else if (Integer.parseInt(o1.get(4)) > Integer.parseInt(o2.get(4))){
-                            return 1;
-                        } else {
-                            return 0;
-                        }
-                    }
-                });
+//                Collections.sort(allServerInfo, new Comparator<ArrayList<String>>() {
+//                    @Override
+//                    public int compare(ArrayList<String> o1, ArrayList<String> o2) {
+//
+//                        // Do not sort if both servers are the same type
+//                        if(o1.get(0).equals(o2.get(0))) {
+//                            if(Integer.parseInt(o1.get(1)) < Integer.parseInt(o2.get(1))) {
+//                                return -1;
+//                            } else if(Integer.parseInt(o1.get(1)) < Integer.parseInt(o2.get(1))) {
+//                                return 1;
+//                            } else
+//                                return 0;
+//                        }
+//
+//
+//                       if(Integer.parseInt(o1.get(4)) < Integer.parseInt(o2.get(4))){ // Otherwise sort by core count
+//                            return -1;
+//                        } else if (Integer.parseInt(o1.get(4)) > Integer.parseInt(o2.get(4))){
+//                            return 1;
+//                        } else {
+//                            return 0;
+//                        }
+//
+//                    }
+//                });
+
+                sortAllServerInfo();
+
 
                 ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
                 serverType = firstFitServer.get(0);
                 serverID = firstFitServer.get(1);
+
+                System.out.println(firstFitServer);
 
             }
 
@@ -204,9 +228,18 @@ public class Client {
                                 serverType + " " +
                                     serverID).split(" ");
 
+            for(ArrayList<String> server: allServerInfo) {
+                if(server.get(0).equals(serverType) && server.get(1).equals(serverID))
+                    System.out.println(server);
+            }
+
             // Goto next job
             currentJob = sendCommand("REDY");
 
+        }
+
+        for(ArrayList<String> x: sortOrder) {
+            System.out.println(x);
         }
 
     }
@@ -222,8 +255,9 @@ public class Client {
     public ArrayList<String> findFirstFit(String[] currentJob) {
 
         // DONE 1 Sort servers from smallest to largest
-        // TODO 2 Traverse through all servers and select the first server that has sufficient resource to the run the job
+        // DONE 2 Traverse through all servers and select the first server that has equal or more cores than the job.
 
+        // No server was found
         return null;
 
     }
@@ -278,6 +312,69 @@ public class Client {
             temp = sendCommandNoLog("OK");
 
         }
+
+    }
+
+    public void sortAllServerInfo() {
+
+        ArrayList<ArrayList<String>> temp = new ArrayList<>();
+
+        for(int i = 0; i < sortOrder.size(); i++) {
+
+            for(int j = 0; j < allServerInfo.size(); j++) {
+
+                if(sortOrder.get(i).get(0).equals(allServerInfo.get(j).get(0)))
+                    temp.add(allServerInfo.get(j));
+
+            }
+
+        }
+
+        allServerInfo = temp;
+
+    }
+
+    public void findAllServerInfoSortOrder() {
+
+        for(int i = 0; i < allServerInfo.size(); i++) {
+
+            if(!isServerTypeInList(allServerInfo.get(i).get(0))) {
+                addServerType(allServerInfo.get(i).get(0), allServerInfo.get(i).get(4));
+            }
+
+        }
+
+    }
+
+    public int addServerType(String serverType, String coreCount) {
+
+        ArrayList<String> temp = new ArrayList<>();
+        temp.add(serverType);
+        temp.add(coreCount);
+
+        for(int i = 0; i < sortOrder.size(); i++) {
+            if(Integer.parseInt(coreCount) < Integer.parseInt(sortOrder.get(i).get(1))) {
+                sortOrder.add(i, temp);
+                return 0;
+            }
+        }
+
+        sortOrder.add(temp);
+        return 0;
+
+    }
+
+    // Helper method for sortAllServerInfoAlphabetically()
+    public boolean isServerTypeInList(String otherServerType) {
+
+        for(ArrayList<String> server: sortOrder) {
+
+            if(server.get(0).equals(otherServerType))
+                return true;
+
+        }
+
+        return false;
 
     }
 
