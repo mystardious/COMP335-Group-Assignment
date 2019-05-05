@@ -215,8 +215,8 @@ public class Client {
      */
     public ArrayList<String> findBestFit(String[] currentJob) {
 
-        // TODO 1 Create helper method for finding if a server has sufficient resource to process a job
-        // TODO 2 Create helper method for finding fitness value
+        // DONE 1 Create helper method for finding if a server has sufficient resource to process a job
+        // DONE 2 Create helper method for finding fitness value
         // TODO 3 Write note for definition of best-fit
         // TODO 4 Based on note complete the findBestFit() method.
 
@@ -251,6 +251,19 @@ public class Client {
             return true;
 
         return false;
+
+    }
+
+    /**
+     * Calculate fitness value of a job to a server
+     * @return the difference between the number of cores the job requires and that in the server
+     */
+    public int calculateFitnessValue(ArrayList<String> server, String[] currentJob) {
+
+        int noRequiredCores = Integer.parseInt(currentJob[4]);
+        int serverCores = Integer.parseInt(server.get(4));
+
+        return serverCores - noRequiredCores;
 
     }
 
