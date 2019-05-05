@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb6d1513-6af5-41b9-8c48-5ce37970de42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -12,12 +14,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="296" column="34" selection-start-line="296" selection-start-column="34" selection-end-line="296" selection-end-column="34" />
+            <state relative-caret-position="355">
+              <caret line="358" column="70" selection-start-line="358" selection-start-column="70" selection-end-line="358" selection-end-column="70" />
               <folding>
                 <element signature="method#main#0;class#Client#0" />
                 <element signature="method#Client#0;class#Client#0" />
@@ -27,7 +29,7 @@
                 <element signature="docComment;method#findFirstFit#0;class#Client#0" />
                 <element signature="method#findFirstFit#0;class#Client#0" />
                 <element signature="docComment;method#findWorstFit#0;class#Client#0" />
-                <element signature="method#findWorstFit#0;class#Client#0" />
+                <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
                 <element signature="method#findBestFitServer#0;class#Client#0" />
                 <element signature="docComment;method#findBestFitActiveServer#0;class#Client#0" />
                 <element signature="method#findBestFitActiveServer#0;class#Client#0" />
@@ -94,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,30 +106,13 @@
             <path>
               <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stage 1 - Create a Client Simulator V3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stage 1 - Create a Client Simulator V3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stage 1 - Create a Client Simulator V3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Stage 1 - Create a Client Simulator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stage 1 - Create a Client Simulator V3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -189,7 +173,7 @@
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13219616" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -253,8 +237,8 @@
     <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class" />
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="296" column="34" selection-start-line="296" selection-start-column="34" selection-end-line="296" selection-end-column="34" />
+        <state relative-caret-position="355">
+          <caret line="358" column="70" selection-start-line="358" selection-start-column="70" selection-end-line="358" selection-end-column="70" />
           <folding>
             <element signature="method#main#0;class#Client#0" />
             <element signature="method#Client#0;class#Client#0" />
@@ -264,7 +248,7 @@
             <element signature="docComment;method#findFirstFit#0;class#Client#0" />
             <element signature="method#findFirstFit#0;class#Client#0" />
             <element signature="docComment;method#findWorstFit#0;class#Client#0" />
-            <element signature="method#findWorstFit#0;class#Client#0" />
+            <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
             <element signature="method#findBestFitServer#0;class#Client#0" />
             <element signature="docComment;method#findBestFitActiveServer#0;class#Client#0" />
             <element signature="method#findBestFitActiveServer#0;class#Client#0" />
