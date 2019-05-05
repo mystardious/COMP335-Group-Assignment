@@ -12,24 +12,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="121">
               <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
               <folding>
-                <element signature="method#main#0;class#Client#0" />
-                <element signature="method#Client#0;class#Client#0" />
-                <element signature="method#ClientSetup#0;class#Client#0" />
-                <element signature="docComment;method#ClientScheduler#0;class#Client#0" />
                 <element signature="docComment;method#findFirstFit#0;class#Client#0" />
                 <element signature="docComment;method#findBestFit#0;class#Client#0" />
                 <element signature="method#findBestFit#0;class#Client#0" />
                 <element signature="docComment;method#findWorstFit#0;class#Client#0" />
-                <element signature="method#findWorstFit#0;class#Client#0" />
                 <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
                 <element signature="method#findBestFitServer#0;class#Client#0" />
+                <element signature="docComment;method#findBestFitActiveServer#0;class#Client#0" />
+                <element signature="method#findBestFitActiveServer#0;class#Client#0" />
                 <element signature="docComment;method#isServerAvailable#0;class#Client#0" />
                 <element signature="method#isServerAvailable#0;class#Client#0" />
                 <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
@@ -120,9 +117,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
+      <pane id="Scope" />
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557074649163" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -179,7 +174,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.13219616" />
       <window_info id="Image Layers" order="1" />
@@ -187,6 +181,12 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Structure" order="5" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.13219616" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -195,7 +195,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
@@ -242,9 +242,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Test.class" />
     <entry file="file://$PROJECT_DIR$/src/Test.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class" />
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -257,10 +255,14 @@
             <element signature="docComment;method#findFirstFit#0;class#Client#0" />
             <element signature="docComment;method#findBestFit#0;class#Client#0" />
             <element signature="method#findBestFit#0;class#Client#0" />
+            <element signature="method#ClientScheduler#0;class#Client#0" />
+            <element signature="docComment;method#findFirstFit#0;class#Client#0" />
+            <element signature="method#findFirstFit#0;class#Client#0" />
             <element signature="docComment;method#findWorstFit#0;class#Client#0" />
-            <element signature="method#findWorstFit#0;class#Client#0" />
             <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
             <element signature="method#findBestFitServer#0;class#Client#0" />
+            <element signature="docComment;method#findBestFitActiveServer#0;class#Client#0" />
+            <element signature="method#findBestFitActiveServer#0;class#Client#0" />
             <element signature="docComment;method#isServerAvailable#0;class#Client#0" />
             <element signature="method#isServerAvailable#0;class#Client#0" />
             <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
