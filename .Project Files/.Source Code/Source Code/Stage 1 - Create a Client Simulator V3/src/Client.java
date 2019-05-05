@@ -249,21 +249,32 @@ public class Client {
      */
     public ArrayList<String> findFirstFit(String[] currentJob) {
 
-
-        int noCoresRequired = Integer.parseInt(currentJob[4]);
+        /**
+         *  Compare job's required number of cores against server's number of cores
+         */
 
         for(ArrayList<String> server: allServerInfo) {
 
-            int serverCores = Integer.parseInt(server.get(4));
-
-            if(noCoresRequired <= serverCores) {
-//                System.out.println("Server: "+server);
+            if(hasSufficientResources(server, currentJob)) {
                 return server;
             }
 
         }
 
-        // No server was found
+        /**
+         * If there is no server with sufficient resource capacity, compare using initial resource capacity
+         */
+
+        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+
+            if(hasSufficientResources(initialAllServerInfo.get(i), currentJob)) {
+                if(isServerAvailable(allServerInfo.get(i))) {
+                    return allServerInfo.get(i);
+                }
+            }
+
+        }
+
         return null;
 
     }
