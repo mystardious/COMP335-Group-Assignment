@@ -14,6 +14,7 @@ public class Client {
 
     // Server data
     ArrayList<ArrayList<String>> allServerInfo = new ArrayList<>();
+    ArrayList<ArrayList<String>> initialAllServerInfo = new ArrayList<>();
     ArrayList<ArrayList<String>> sortOrder = new ArrayList<>();
     boolean obtainServerData = true; // Enable request for server details
 
@@ -156,7 +157,11 @@ public class Client {
         String[] currentJobDetails = currentJob.split(" ");
         String[] status = {""};
 
-        // Find largest server
+        // Save an initial copy of all server info
+        RESCAll();
+        initialAllServerInfo = allServerInfo;
+
+        // Save another copy so that data in both ArrayLists are not linked
         RESCAll();
         int indexOfLargestServer = 0;
         for(int i = 0; i < allServerInfo.size(); i++) {
@@ -176,13 +181,13 @@ public class Client {
             RESCAll();
 
             // AllToLargest
-            if(algorithm == 0) {
+            if (algorithm == 0) {
                 serverType = allServerInfo.get(indexOfLargestServer).get(0);
                 serverID = "0";
             }
 
             // First-Fit
-            else if(algorithm == 1) {
+            else if (algorithm == 1) {
 
                 sortAllServerInfo();
 
@@ -193,7 +198,7 @@ public class Client {
             }
 
             // Best-Fit
-            else if(algorithm == 2) {
+            else if (algorithm == 2) {
 
                 ArrayList<String> bestFitServer = findBestFit(currentJobDetails);
                 serverType = bestFitServer.get(0);
@@ -218,6 +223,7 @@ public class Client {
 
             // Goto next job
             currentJob = sendCommand("REDY");
+
 
         }
 
@@ -260,13 +266,45 @@ public class Client {
 
     /**
      * Best-Fit Algorithm
-     * @return the best-fit active server based on initial resource capacity
+     * @return the best-fit server or if none have sufficient resources, return the best-fit active server based on initial resources
+     *
+     * A server is the best fit when the difference between the server's number of cores and the jobs required cores is
+     * the smallest.
+     *
+     *  e.g.    Anything not important has been replaced with the letter x
+     *
+     *  Some Servers
+     *          server_type server_ID server_state available_time #CPU_cores memory disk_space
+     *          xlarge,     x,        x,           x,             16,        x,     x
+     *          large,      x,        x,           x,             8,         x,     x
+     *
+     *  The current job
+     *                submit_time job_ID estimated_runtime #CPU_cores memory disk_space
+     *          JOBN, x,          x,     x,                7,         x,     x
+     *
+     *  The fitness value of the two severs xlarge and large are:
+     *          xlarge: 9
+     *          large:  1
+     *
+     *  The server with the best fit is the one with the lowest fitness value which is the large server. So the job should
+     *  be scheduled to large. However if there are no servers that have sufficient resources to run the job then it is
+     *  assigned to the server with the best fit based on the first RESCAll() call. Which will use the first server of every
+     *  type depending on the job's required cores.
+     *
      */
     public ArrayList<String> findBestFit(String[] currentJob) {
 
-        System.out.println("Please define best-fit algorithm.");
+        // DONE 1 Create helper method for finding if a server has sufficient resource to process a job
+        // DONE 2 Create helper method for finding fitness value
+        // DONE 3 Write note for definition of best-fit
+        // DONE 4 Based on note complete the findBestFit() method.
 
-        return null;
+        ArrayList<String> bestFitServer = findBestFitServer(allServerInfo, currentJob);
+
+        if(bestFitServer != null)
+            return bestFitServer;
+        else
+            return findBestFitServer(initialAllServerInfo, currentJob);
 
     }
 
@@ -281,6 +319,71 @@ public class Client {
         return null;
 
     }
+
+    // Algorithm Helper Methods
+
+    /**
+     * Find the server with the closest number of cores to the job with sufficient resources (must have more cores than job)
+     * @return Best Fit Server based on list of server data
+     */
+    public ArrayList<String> findBestFitServer(ArrayList<ArrayList<String>> serverList, String[] currentJob) {
+
+        int bestFit = Integer.MAX_VALUE, minAvail = Integer.MAX_VALUE;
+        ArrayList<String> bestFitServer = null;
+
+        for(ArrayList<String> server: serverList) {
+
+            if(hasSufficientResources(server, currentJob)) {
+
+                int fitnessValue = calculateFitnessValue(server, currentJob);
+                int serverAvailTime = Integer.parseInt(server.get(3));
+
+                if( (fitnessValue < bestFit) || (fitnessValue == bestFit && serverAvailTime < minAvail) ) {
+
+                    bestFit = fitnessValue;
+                    minAvail = serverAvailTime;
+                    bestFitServer = server;
+
+                }
+
+            }
+
+        }
+
+        return bestFitServer;
+
+    }
+
+    /**
+     * Does this server have sufficient resources?
+     * @return true if the server has equal or more cores than the job requires
+     */
+    public boolean hasSufficientResources(ArrayList<String> server, String[] currentJob) {
+
+        int noRequiredCores = Integer.parseInt(currentJob[4]);
+        int serverCores = Integer.parseInt(server.get(4));
+
+        if(noRequiredCores <= serverCores)
+            return true;
+
+        return false;
+
+    }
+
+    /**
+     * Calculate fitness value of a job to a server
+     * @return the difference between the number of cores the job requires and that in the server
+     */
+    public int calculateFitnessValue(ArrayList<String> server, String[] currentJob) {
+
+        int noRequiredCores = Integer.parseInt(currentJob[4]);
+        int serverCores = Integer.parseInt(server.get(4));
+
+        return serverCores - noRequiredCores;
+
+    }
+
+    // Client Command Methods
 
     /**
      * Resource Information Request
@@ -464,6 +567,8 @@ public class Client {
         return "ERR: No Response from Server.";
 
     }
+
+    // Client Usage
 
     public static void clientUsage() {
 

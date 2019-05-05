@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb6d1513-6af5-41b9-8c48-5ce37970de42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple2.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/configs/config_simple2.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-client" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-client" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-jobs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-jobs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-server" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/system.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/system.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,20 +20,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="250" column="117" selection-start-line="250" selection-start-column="117" selection-end-line="250" selection-end-column="117" />
+            <state relative-caret-position="346">
+              <caret line="190" column="36" selection-start-line="190" selection-start-column="36" selection-end-line="190" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1939#2323#0" />
-                <element signature="e#3286#3376#0" />
+                <element signature="method#Client#0;class#Client#0" />
+                <element signature="e#1816#2200#0" />
+                <element signature="e#3163#3253#0" />
                 <element signature="method#ClientSetup#0;class#Client#0" />
-                <element signature="e#4629#4753#1" />
-                <element signature="e#5119#5318#1" />
-                <element signature="e#5382#5585#1" />
-                <element signature="docComment;method#findBestFit#0;class#Client#0" />
-                <element signature="method#findBestFit#0;class#Client#0" />
                 <element signature="docComment;method#findWorstFit#0;class#Client#0" />
                 <element signature="method#findWorstFit#0;class#Client#0" />
+                <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
+                <element signature="method#findBestFitServer#0;class#Client#0" />
+                <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
+                <element signature="method#hasSufficientResources#0;class#Client#0" />
+                <element signature="docComment;method#calculateFitnessValue#0;class#Client#0" />
+                <element signature="method#calculateFitnessValue#0;class#Client#0" />
                 <element signature="docComment;method#RESCAll#0;class#Client#0" />
                 <element signature="method#RESCAll#0;class#Client#0" />
                 <element signature="docComment;method#RESCAvail#0;class#Client#0" />
@@ -80,8 +79,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2102" />
-    <option name="y" value="-13" />
+    <option name="x" value="2086" />
+    <option name="y" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -91,6 +90,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -134,7 +134,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557049689764" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557063168130" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
@@ -189,8 +189,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13326226" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13113007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -203,11 +204,11 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49733475" weight="0.38353196" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4968017" visible="true" weight="0.2524377" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50319827" side_tool="true" weight="0.29469123" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49946696" weight="0.32827735" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -249,95 +250,23 @@
     <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="453" selection-start-line="453" selection-end-line="453" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="2993" selection-start-line="2993" selection-end-line="2993" />
-          <folding>
-            <element signature="e#117955#117956#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="820" selection-start-line="820" selection-end-line="820" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/net/URLClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="381" selection-start-line="381" selection-end-line="381" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="435" selection-start-line="435" selection-end-line="435" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="1461" selection-start-line="1461" selection-end-line="1461" />
-          <folding>
-            <element signature="e#31007#31008#0" expanded="true" />
-            <element signature="e#31039#31040#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="1511" selection-start-line="1511" selection-end-line="1511" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-          <folding>
-            <element signature="e#7312#7313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/TimSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="898" selection-start-line="898" selection-end-line="898" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="250" column="117" selection-start-line="250" selection-start-column="117" selection-end-line="250" selection-end-column="117" />
+        <state relative-caret-position="346">
+          <caret line="190" column="36" selection-start-line="190" selection-start-column="36" selection-end-line="190" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1939#2323#0" />
-            <element signature="e#3286#3376#0" />
+            <element signature="method#Client#0;class#Client#0" />
+            <element signature="e#1816#2200#0" />
+            <element signature="e#3163#3253#0" />
             <element signature="method#ClientSetup#0;class#Client#0" />
-            <element signature="e#4629#4753#1" />
-            <element signature="e#5119#5318#1" />
-            <element signature="e#5382#5585#1" />
-            <element signature="docComment;method#findBestFit#0;class#Client#0" />
-            <element signature="method#findBestFit#0;class#Client#0" />
             <element signature="docComment;method#findWorstFit#0;class#Client#0" />
             <element signature="method#findWorstFit#0;class#Client#0" />
+            <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
+            <element signature="method#findBestFitServer#0;class#Client#0" />
+            <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
+            <element signature="method#hasSufficientResources#0;class#Client#0" />
+            <element signature="docComment;method#calculateFitnessValue#0;class#Client#0" />
+            <element signature="method#calculateFitnessValue#0;class#Client#0" />
             <element signature="docComment;method#RESCAll#0;class#Client#0" />
             <element signature="method#RESCAll#0;class#Client#0" />
             <element signature="docComment;method#RESCAvail#0;class#Client#0" />
