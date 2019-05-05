@@ -359,6 +359,29 @@ public class Client {
     }
 
     /**
+     * Is the selected server available?
+     * @return true if the server status is either 2 or 3 (Idle or Active)
+     *
+     * Server data structure
+     *
+     *      server_type server_ID server_state available_time #CPU_cores memory disk_space
+     *      0           1         2            3              4          5      6
+     *
+     * The server's current state is obtained in the third field.
+     *
+     */
+    public boolean isServerAvailable(ArrayList<String> server) {
+
+        int serverState = Integer.parseInt(server.get(2));
+
+        if(serverState == 2 || serverState == 3)
+            return true;
+
+        return false;
+
+    }
+
+    /**
      * Does this server have sufficient resources?
      * @return true if the server has equal or more cores than the job requires
      */
