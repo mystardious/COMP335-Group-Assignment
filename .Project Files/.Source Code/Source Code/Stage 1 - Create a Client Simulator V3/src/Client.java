@@ -189,7 +189,8 @@ public class Client {
             else if (algorithm == 1) {
 
                 // Sort All Servers from smallest to largest
-                sortAllServerInfo();
+                allServerInfo = sortAllServerInfo(allServerInfo);
+                initialAllServerInfo = sortAllServerInfo(initialAllServerInfo);
 
                 ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
                 serverType = firstFitServer.get(0);
@@ -525,22 +526,22 @@ public class Client {
     /**
      * Can be called at any time generally after a RESCAll() or RESCAvail() call to sort the new data in the list
      */
-    public void sortAllServerInfo() {
+    public ArrayList<ArrayList<String>> sortAllServerInfo(ArrayList<ArrayList<String>> serverList) {
 
         ArrayList<ArrayList<String>> temp = new ArrayList<>();
 
         for(int i = 0; i < sortOrder.size(); i++) {
 
-            for(int j = 0; j < allServerInfo.size(); j++) {
+            for(int j = 0; j < serverList.size(); j++) {
 
-                if(sortOrder.get(i).get(0).equals(allServerInfo.get(j).get(0)))
-                    temp.add(allServerInfo.get(j));
+                if(sortOrder.get(i).get(0).equals(serverList.get(j).get(0)))
+                    temp.add(serverList.get(j));
 
             }
 
         }
 
-        allServerInfo = temp;
+        return temp;
 
     }
 
