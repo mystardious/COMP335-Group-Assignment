@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb6d1513-6af5-41b9-8c48-5ce37970de42" name="Default Changelist" comment="" />
+    <list default="true" id="fb6d1513-6af5-41b9-8c48-5ce37970de42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-client" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-client" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-jobs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-jobs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-server" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/ds-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.Project Files/Testing/system.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.Project Files/Testing/system.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,23 +20,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="178" column="49" lean-forward="true" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="49" />
+            <state relative-caret-position="346">
+              <caret line="190" column="36" selection-start-line="190" selection-start-column="36" selection-end-line="190" selection-end-column="36" />
               <folding>
                 <element signature="method#Client#0;class#Client#0" />
-                <element signature="e#933#1317#0" />
-                <element signature="e#1348#1382#0" />
-                <element signature="e#2259#2349#0" />
+                <element signature="e#1816#2200#0" />
+                <element signature="e#3163#3253#0" />
                 <element signature="method#ClientSetup#0;class#Client#0" />
-                <element signature="e#4070#4255#1" />
-                <element signature="e#4565#4607#1" />
+                <element signature="docComment;method#findWorstFit#0;class#Client#0" />
+                <element signature="method#findWorstFit#0;class#Client#0" />
+                <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
+                <element signature="method#findBestFitServer#0;class#Client#0" />
+                <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
+                <element signature="method#hasSufficientResources#0;class#Client#0" />
+                <element signature="docComment;method#calculateFitnessValue#0;class#Client#0" />
+                <element signature="method#calculateFitnessValue#0;class#Client#0" />
                 <element signature="docComment;method#RESCAll#0;class#Client#0" />
                 <element signature="method#RESCAll#0;class#Client#0" />
+                <element signature="docComment;method#RESCAvail#0;class#Client#0" />
+                <element signature="method#RESCAvail#0;class#Client#0" />
+                <element signature="method#sortAllServerInfo#0;class#Client#0" />
+                <element signature="method#findAllServerInfoSortOrder#0;class#Client#0" />
+                <element signature="method#addServerType#0;class#Client#0" />
+                <element signature="method#isServerTypeInList#0;class#Client#0" />
                 <element signature="docComment;method#sendCommand#0;class#Client#0" />
                 <element signature="method#sendCommand#0;class#Client#0" />
                 <element signature="docComment;method#sendCommandNoLog#0;class#Client#0" />
                 <element signature="method#sendCommandNoLog#0;class#Client#0" />
-                <element signature="method#Usage#0;class#Client#0" />
+                <element signature="method#clientUsage#0;class#Client#0" />
               </folding>
             </state>
           </provider>
@@ -45,8 +62,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>elephant</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="D:" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -56,11 +78,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2086" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -68,7 +90,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,15 +123,18 @@
               <item name="Stage 1 - Create a Client Simulator V3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556984093610" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557063168130" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
@@ -161,10 +188,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13113007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -173,12 +200,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2340195" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.22860238" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49733475" weight="0.38353196" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
@@ -192,40 +219,67 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="19" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>IllegalArgumentException</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>o1 == null</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Test.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Test.class" />
+    <entry file="file://$PROJECT_DIR$/src/Test.java" />
     <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="178" column="49" lean-forward="true" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="49" />
+        <state relative-caret-position="346">
+          <caret line="190" column="36" selection-start-line="190" selection-start-column="36" selection-end-line="190" selection-end-column="36" />
           <folding>
             <element signature="method#Client#0;class#Client#0" />
-            <element signature="e#933#1317#0" />
-            <element signature="e#1348#1382#0" />
-            <element signature="e#2259#2349#0" />
+            <element signature="e#1816#2200#0" />
+            <element signature="e#3163#3253#0" />
             <element signature="method#ClientSetup#0;class#Client#0" />
-            <element signature="e#4070#4255#1" />
-            <element signature="e#4565#4607#1" />
+            <element signature="docComment;method#findWorstFit#0;class#Client#0" />
+            <element signature="method#findWorstFit#0;class#Client#0" />
+            <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
+            <element signature="method#findBestFitServer#0;class#Client#0" />
+            <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
+            <element signature="method#hasSufficientResources#0;class#Client#0" />
+            <element signature="docComment;method#calculateFitnessValue#0;class#Client#0" />
+            <element signature="method#calculateFitnessValue#0;class#Client#0" />
             <element signature="docComment;method#RESCAll#0;class#Client#0" />
             <element signature="method#RESCAll#0;class#Client#0" />
+            <element signature="docComment;method#RESCAvail#0;class#Client#0" />
+            <element signature="method#RESCAvail#0;class#Client#0" />
+            <element signature="method#sortAllServerInfo#0;class#Client#0" />
+            <element signature="method#findAllServerInfoSortOrder#0;class#Client#0" />
+            <element signature="method#addServerType#0;class#Client#0" />
+            <element signature="method#isServerTypeInList#0;class#Client#0" />
             <element signature="docComment;method#sendCommand#0;class#Client#0" />
             <element signature="method#sendCommand#0;class#Client#0" />
             <element signature="docComment;method#sendCommandNoLog#0;class#Client#0" />
             <element signature="method#sendCommandNoLog#0;class#Client#0" />
-            <element signature="method#Usage#0;class#Client#0" />
+            <element signature="method#clientUsage#0;class#Client#0" />
           </folding>
         </state>
       </provider>
