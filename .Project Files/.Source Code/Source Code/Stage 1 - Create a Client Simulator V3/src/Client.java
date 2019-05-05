@@ -330,12 +330,6 @@ public class Client {
      */
     public ArrayList<String> findWorstFit(String[] currentJob) {
 
-        // DONE 1 Understand helper method for finding a server that has sufficient resource to process a job
-        // DONE 2 Understand helper method for finding fitness value
-        // DONE 3 Create method findWorstFitServer()
-        // DONE 4 Write note for definition of worst-fit
-        // DONE 5 Based on note complete the findWorstFit() method
-
         int worstFit = Integer.MIN_VALUE;
         ArrayList<String> worstFitServer = null;
 
