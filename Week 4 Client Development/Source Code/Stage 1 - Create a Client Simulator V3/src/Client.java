@@ -224,10 +224,39 @@ public class Client {
         // TODO 3 Write note for definition of best-fit
         // TODO 4 Based on note complete the findBestFit() method.
 
-        int bestFit = Integer.MAX_VALUE, minAvail = Integer.MAX_VALUE;
-        ArrayList<String> bestFitServer = new ArrayList<>();
+        ArrayList<String> bestFitServer = findBestFitServer(allServerInfo, currentJob);
 
-        for(ArrayList<String> server: allServerInfo) {
+        if(bestFitServer != null)
+            return bestFitServer;
+        else
+            return findBestFitServer(initialAllServerInfo, currentJob);
+
+    }
+
+    /**
+     * Worst-Fit Algorithm
+     * @return the worst-fit active server based on resource capacity
+     */
+    public ArrayList<String> findWorstFit(String[] currentJob) {
+
+        System.out.println("Please define worst-fit algorithm.");
+
+        return null;
+
+    }
+
+    // Algorithm Helper Methods
+
+    /**
+     * Find the server with the closest number of cores to the job with sufficient resources (must have more cores than job)
+     * @return Best Fit Server based on list of server data
+     */
+    public ArrayList<String> findBestFitServer(ArrayList<ArrayList<String>> serverList, String[] currentJob) {
+
+        int bestFit = Integer.MAX_VALUE, minAvail = Integer.MAX_VALUE;
+        ArrayList<String> bestFitServer = null;
+
+        for(ArrayList<String> server: serverList) {
 
             if(hasSufficientResources(server, currentJob)) {
 
@@ -246,33 +275,9 @@ public class Client {
 
         }
 
-        System.out.println(currentJob[2]+" "+currentJob[4]+"  "+bestFit);
-
-        if(bestFitServer.size() != 0) {
-
-            return bestFitServer;
-
-        } else {
-
-            return findFirstFit(currentJob);
-
-        }
+        return bestFitServer;
 
     }
-
-    /**
-     * Worst-Fit Algorithm
-     * @return the worst-fit active server based on resource capacity
-     */
-    public ArrayList<String> findWorstFit(String[] currentJob) {
-
-        System.out.println("Please define worst-fit algorithm.");
-
-        return null;
-
-    }
-
-    // Algorithm Helper Methods
 
     /**
      * Does this server have sufficient resources?
@@ -302,6 +307,8 @@ public class Client {
         return serverCores - noRequiredCores;
 
     }
+
+    // Client Command Methods
 
     /**
      * Resource Information Request
@@ -383,6 +390,8 @@ public class Client {
         return "ERR: No Response from Server.";
 
     }
+
+    // Client Usage
 
     public static void clientUsage() {
 
