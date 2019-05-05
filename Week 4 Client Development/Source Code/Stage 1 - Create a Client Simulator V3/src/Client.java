@@ -144,7 +144,7 @@ public class Client {
      *      First-Fit Algorithm
      *
      *          1. The Server list must be sorted from smallest to largest (from smallest to largest coreCount)
-     *                  findAllServerInfoSortOrder() - Finds the order to sort the servers. (Run once at the begininng of ClientScheduler)
+     *                  findAllServerInfoSortOrder() - Finds the order to sort the servers. (Run once at the beginning of ClientScheduler)
      *                  sortAllServerInfo() - Sorts the allServerInfo list based on the ArrayList<ArrayList<String>> sortOrder;
      *          2. The first available server that has 'sufficient resources' is scheduled a job.
      *                  findFirstFit(String[] currentJob) - the first active server with sufficient initial resource capacity to run the job
@@ -189,6 +189,7 @@ public class Client {
             // First-Fit
             else if (algorithm == 1) {
 
+                // Sort All Servers from smallest to largest
                 sortAllServerInfo();
 
                 ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
@@ -314,7 +315,10 @@ public class Client {
      */
     public ArrayList<String> findWorstFit(String[] currentJob) {
 
-        System.out.println("Please define worst-fit algorithm.");
+        // TODO 1 Understand helper method for finding a server that has sufficient resource to process a job
+        // TODO 2 Understand helper method for finding fitness value
+        // TODO 3 Write note for definition of worst-fit
+        // TODO 4 Based on note complete the findWorstFit() method
 
         return null;
 
