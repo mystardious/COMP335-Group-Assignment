@@ -336,8 +336,6 @@ public class Client {
         int altFit = Integer.MIN_VALUE;
         ArrayList<String> altFitServer = null;
 
-        int minAvail = Integer.MAX_VALUE;
-
         for(ArrayList<String> server: allServerInfo) {
 
             if(hasSufficientResources(server, currentJob)) {
