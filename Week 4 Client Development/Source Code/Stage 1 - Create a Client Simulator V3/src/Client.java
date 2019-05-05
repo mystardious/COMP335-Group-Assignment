@@ -193,6 +193,16 @@ public class Client {
             // Goto next job
             currentJob = sendCommand("REDY");
 
+
+
+        }
+
+        for(ArrayList<String> server: allServerInfo) {
+            System.out.println(server);
+        }
+
+        for(ArrayList<String> server: initialAllServerInfo) {
+            System.out.println(server);
         }
 
     }
@@ -216,13 +226,21 @@ public class Client {
     /**
      * Best-Fit Algorithm
      * @return the best-fit active server based on initial resource capacity
+     *          xlarge: 9
+     *          large:  1
+     *
+     *  The server with the best fit is the one with the lowest fitness value which is the large server. So the job should
+     *  be scheduled to large. However if there are no servers that have sufficient resources to run the job then it is
+     *  assigned to the server with the best fit based on the first RESCAll() call. Which will use the first server of every
+     *  type depending on the job's required cores.
+     *
      */
     public ArrayList<String> findBestFit(String[] currentJob) {
 
         // DONE 1 Create helper method for finding if a server has sufficient resource to process a job
         // DONE 2 Create helper method for finding fitness value
-        // TODO 3 Write note for definition of best-fit
-        // TODO 4 Based on note complete the findBestFit() method.
+        // DONE 3 Write note for definition of best-fit
+        // DONE 4 Based on note complete the findBestFit() method.
 
         ArrayList<String> bestFitServer = findBestFitServer(allServerInfo, currentJob);
 
