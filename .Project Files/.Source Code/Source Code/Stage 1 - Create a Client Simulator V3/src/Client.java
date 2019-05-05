@@ -309,7 +309,7 @@ public class Client {
         if(bestFitServer != null)
             return bestFitServer;
         else
-            return findBestFitServer(initialAllServerInfo, currentJob);
+            return findBestFitActiveServer(currentJob);
 
     }
 
@@ -398,6 +398,41 @@ public class Client {
                     bestFit = fitnessValue;
                     minAvail = serverAvailTime;
                     bestFitServer = server;
+
+                }
+
+            }
+
+        }
+
+        return bestFitServer;
+
+    }
+
+    /**
+     * Find the server with the closest number of cores to the job based on initial resource capacity (must be active)
+     * @return Best Fit Server based on list of inital server data
+     */
+    public ArrayList<String> findBestFitActiveServer(String[] currentJob) {
+
+        int bestFit = Integer.MAX_VALUE, minAvail = Integer.MAX_VALUE;
+        ArrayList<String> bestFitServer = null;
+
+        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+
+            ArrayList<String> initialServer = initialAllServerInfo.get(i);
+            ArrayList<String> currentServer = allServerInfo.get(i);
+
+            if(hasSufficientResources(initialServer, currentJob)) {
+
+                int fitnessValue = calculateFitnessValue(initialServer, currentJob);
+                int serverAvailTime = Integer.parseInt(initialServer.get(3));
+
+                if( ((fitnessValue < bestFit) || (fitnessValue == bestFit && serverAvailTime < minAvail)) && isServerAvailable(currentServer)) {
+
+                    bestFit = fitnessValue;
+                    minAvail = serverAvailTime;
+                    bestFitServer = initialServer;
 
                 }
 
