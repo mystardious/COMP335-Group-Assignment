@@ -210,6 +210,8 @@ public class Client {
             // Worst-Fit
             else if (algorithm == 3) {
 
+
+
                 ArrayList<String> worstFitServer = findWorstFit(currentJobDetails);
                 serverType = worstFitServer.get(0);
                 serverID = worstFitServer.get(1);
@@ -225,6 +227,9 @@ public class Client {
             // Goto next job
             currentJob = sendCommand("REDY");
 
+//            for(ArrayList<String> server: allServerInfo) {
+//                System.out.println(server);
+//            }
 
         }
 
@@ -311,7 +316,6 @@ public class Client {
 
     /**
      * Worst-Fit Algorithm
-     * @return the worst-fit active server based on resource capacity
      * @return the worst-fit active server or if there is none, return the server with the second worst-fit
      *
      * A server is consider to be the worst-fit if the fitness value is the biggest possible, this means the bigger the
@@ -332,7 +336,42 @@ public class Client {
         // TODO 3 Write note for definition of worst-fit
         // TODO 4 Based on note complete the findWorstFit() method
 
-        return null;
+        int worstFit = Integer.MIN_VALUE;
+        ArrayList<String> worstFitServer = null;
+
+        int altFit = Integer.MIN_VALUE;
+        ArrayList<String> altFitServer = null;
+
+        int minAvail = Integer.MAX_VALUE;
+
+        for(ArrayList<String> server: allServerInfo) {
+
+            if(hasSufficientResources(server, currentJob)) {
+
+                int fitnessValue = calculateFitnessValue(server, currentJob);
+                int serverAvailTime = Integer.parseInt(server.get(3));
+
+                if( (fitnessValue > worstFit) && isServerAvailable(server) ) {
+
+                    worstFit = fitnessValue;
+                    worstFitServer = server;
+
+                } else if (fitnessValue > altFit && serverAvailTime < minAvail) {
+
+                    altFit = fitnessValue;
+                    minAvail = serverAvailTime;
+                    altFitServer = server;
+
+                }
+
+            }
+
+        }
+
+        if(worstFitServer != null)
+            return worstFitServer;
+        else
+            return altFitServer;
 
     }
 
