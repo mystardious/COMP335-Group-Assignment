@@ -350,10 +350,9 @@ public class Client {
                     worstFit = fitnessValue;
                     worstFitServer = server;
 
-                } else if (fitnessValue > altFit && serverAvailTime < minAvail) {
+                } else if (fitnessValue > altFit && !isServerAvailable(server)) {
 
                     altFit = fitnessValue;
-                    minAvail = serverAvailTime;
                     altFitServer = server;
 
                 }
@@ -364,8 +363,11 @@ public class Client {
 
         if(worstFitServer != null)
             return worstFitServer;
-        else
+        else if(altFitServer != null)
             return altFitServer;
+        else {
+            return findWorstFitActiveServer(currentJob);
+        }
 
     }
 
@@ -400,6 +402,37 @@ public class Client {
         }
 
         return bestFitServer;
+
+    }
+
+    public ArrayList<String> findWorstFitActiveServer(String[] currentJob) {
+
+        int worstFit = Integer.MIN_VALUE;
+        ArrayList<String> worstFitActiveServer = null;
+
+        int minAvail = Integer.MAX_VALUE;
+
+        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+
+            ArrayList<String> initialServer = initialAllServerInfo.get(i);
+            ArrayList<String> currentServer = allServerInfo.get(i);
+
+            if(hasSufficientResources(initialServer, currentJob)) {
+
+                int fitnessValue = calculateFitnessValue(initialServer, currentJob);
+
+                if( (fitnessValue > worstFit) && isServerAvailable(currentServer) ) {
+
+                    worstFit = fitnessValue;
+                    worstFitActiveServer = initialServer;
+
+                }
+
+            }
+
+        }
+
+        return worstFitActiveServer;
 
     }
 
