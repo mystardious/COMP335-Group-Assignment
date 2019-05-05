@@ -16,7 +16,6 @@ public class Client {
     ArrayList<ArrayList<String>> allServerInfo = new ArrayList<>();
     ArrayList<ArrayList<String>> initialAllServerInfo = new ArrayList<>();
     ArrayList<ArrayList<String>> sortOrder = new ArrayList<>();
-    boolean obtainServerData = true; // Enable request for server details
 
     public static void main(String args[]) {
 
@@ -144,7 +143,7 @@ public class Client {
      *      First-Fit Algorithm
      *
      *          1. The Server list must be sorted from smallest to largest (from smallest to largest coreCount)
-     *                  findAllServerInfoSortOrder() - Finds the order to sort the servers. (Run once at the begininng of ClientScheduler)
+     *                  findAllServerInfoSortOrder() - Finds the order to sort the servers. (Run once at the beginning of ClientScheduler)
      *                  sortAllServerInfo() - Sorts the allServerInfo list based on the ArrayList<ArrayList<String>> sortOrder;
      *          2. The first available server that has 'sufficient resources' is scheduled a job.
      *                  findFirstFit(String[] currentJob) - the first active server with sufficient initial resource capacity to run the job
@@ -189,6 +188,7 @@ public class Client {
             // First-Fit
             else if (algorithm == 1) {
 
+                // Sort All Servers from smallest to largest
                 sortAllServerInfo();
 
                 ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
@@ -209,6 +209,8 @@ public class Client {
             // Worst-Fit
             else if (algorithm == 3) {
 
+
+
                 ArrayList<String> worstFitServer = findWorstFit(currentJobDetails);
                 serverType = worstFitServer.get(0);
                 serverID = worstFitServer.get(1);
@@ -224,6 +226,9 @@ public class Client {
             // Goto next job
             currentJob = sendCommand("REDY");
 
+//            for(ArrayList<String> server: allServerInfo) {
+//                System.out.println(server);
+//            }
 
         }
 
@@ -310,13 +315,63 @@ public class Client {
 
     /**
      * Worst-Fit Algorithm
-     * @return the worst-fit active server based on resource capacity
+     * @return the worst-fit active server or if there is none, return the server with the second worst-fit
+     *
+     * A server is consider to be the worst-fit if the fitness value is the biggest possible, this means the bigger the
+     * core count the better the server is for being the worse-fit. So the largest servers will be used instead of a
+     * smaller server which would cost less.
+     *
+     * For each active / idle server, it's fitness value is calculated and the server with the biggest value is scheduled
+     * the job.
+     *
+     * If the server is inactive, the altFit is calculated which is basically inactive servers with large coreCounts,
+     * if there is a server that has a slower boot time it is preferred over the one with a longer boot time.
+     *
      */
     public ArrayList<String> findWorstFit(String[] currentJob) {
 
-        System.out.println("Please define worst-fit algorithm.");
+        // DONE 1 Understand helper method for finding a server that has sufficient resource to process a job
+        // DONE 2 Understand helper method for finding fitness value
+        // DONE 3 Create method findWorstFitServer()
+        // DONE 4 Write note for definition of worst-fit
+        // DONE 5 Based on note complete the findWorstFit() method
 
-        return null;
+        int worstFit = Integer.MIN_VALUE;
+        ArrayList<String> worstFitServer = null;
+
+        int altFit = Integer.MIN_VALUE;
+        ArrayList<String> altFitServer = null;
+
+        int minAvail = Integer.MAX_VALUE;
+
+        for(ArrayList<String> server: allServerInfo) {
+
+            if(hasSufficientResources(server, currentJob)) {
+
+                int fitnessValue = calculateFitnessValue(server, currentJob);
+                int serverAvailTime = Integer.parseInt(server.get(3));
+
+                if( (fitnessValue > worstFit) && isServerAvailable(server) ) {
+
+                    worstFit = fitnessValue;
+                    worstFitServer = server;
+
+                } else if (fitnessValue > altFit && serverAvailTime < minAvail) {
+
+                    altFit = fitnessValue;
+                    minAvail = serverAvailTime;
+                    altFitServer = server;
+
+                }
+
+            }
+
+        }
+
+        if(worstFitServer != null)
+            return worstFitServer;
+        else
+            return altFitServer;
 
     }
 
@@ -351,6 +406,29 @@ public class Client {
         }
 
         return bestFitServer;
+
+    }
+
+    /**
+     * Is the selected server available?
+     * @return true if the server status is either 2 or 3 (Idle or Active)
+     *
+     * Server data structure
+     *
+     *      server_type server_ID server_state available_time #CPU_cores memory disk_space
+     *      0           1         2            3              4          5      6
+     *
+     * The server's current state is obtained in the third field.
+     *
+     */
+    public boolean isServerAvailable(ArrayList<String> server) {
+
+        int serverState = Integer.parseInt(server.get(2));
+
+        if(serverState == 2 || serverState == 3)
+            return true;
+
+        return false;
 
     }
 
