@@ -312,6 +312,18 @@ public class Client {
     /**
      * Worst-Fit Algorithm
      * @return the worst-fit active server based on resource capacity
+     * @return the worst-fit active server or if there is none, return the server with the second worst-fit
+     *
+     * A server is consider to be the worst-fit if the fitness value is the biggest possible, this means the bigger the
+     * core count the better the server is for being the worse-fit. So the largest servers will be used instead of a
+     * smaller server which would cost less.
+     *
+     * For each active / idle server, it's fitness value is calculated and the server with the biggest value is scheduled
+     * the job.
+     *
+     * If the server is inactive, the altFit is calculated which is basically inactive servers with large coreCounts,
+     * if there is a server that has a slower boot time it is preferred over the one with a longer boot time.
+     *
      */
     public ArrayList<String> findWorstFit(String[] currentJob) {
 
