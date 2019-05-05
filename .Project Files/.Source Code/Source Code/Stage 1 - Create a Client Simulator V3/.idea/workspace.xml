@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb6d1513-6af5-41b9-8c48-5ce37970de42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,16 +16,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="358" column="70" selection-start-line="358" selection-start-column="70" selection-end-line="358" selection-end-column="70" />
+            <state relative-caret-position="121">
+              <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
               <folding>
-                <element signature="method#main#0;class#Client#0" />
-                <element signature="method#Client#0;class#Client#0" />
-                <element signature="method#ClientSetup#0;class#Client#0" />
-                <element signature="docComment;method#ClientScheduler#0;class#Client#0" />
-                <element signature="method#ClientScheduler#0;class#Client#0" />
                 <element signature="docComment;method#findFirstFit#0;class#Client#0" />
-                <element signature="method#findFirstFit#0;class#Client#0" />
+                <element signature="docComment;method#findBestFit#0;class#Client#0" />
+                <element signature="method#findBestFit#0;class#Client#0" />
                 <element signature="docComment;method#findWorstFit#0;class#Client#0" />
                 <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
                 <element signature="method#findBestFitServer#0;class#Client#0" />
@@ -44,7 +38,6 @@
                 <element signature="docComment;method#RESCAvail#0;class#Client#0" />
                 <element signature="method#RESCAvail#0;class#Client#0" />
                 <element signature="docComment;method#sortAllServerInfo#0;class#Client#0" />
-                <element signature="method#sortAllServerInfo#0;class#Client#0" />
                 <element signature="docComment;method#findAllServerInfoSortOrder#0;class#Client#0" />
                 <element signature="method#findAllServerInfoSortOrder#0;class#Client#0" />
                 <element signature="method#addServerType#0;class#Client#0" />
@@ -96,12 +89,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
               <item name="Stage 1 - Create a Client Simulator V3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stage 1 - Create a Client Simulator V3" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stage 1 - Create a Client Simulator V3" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Stage 1 - Create a Client Simulator V3" type="b2602c69:ProjectViewProjectNode" />
@@ -113,9 +118,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557074649163" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -173,6 +175,12 @@
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.13219616" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Structure" order="5" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.13219616" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
@@ -237,13 +245,16 @@
     <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class" />
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="358" column="70" selection-start-line="358" selection-start-column="70" selection-end-line="358" selection-end-column="70" />
+        <state relative-caret-position="121">
+          <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
           <folding>
             <element signature="method#main#0;class#Client#0" />
             <element signature="method#Client#0;class#Client#0" />
             <element signature="method#ClientSetup#0;class#Client#0" />
             <element signature="docComment;method#ClientScheduler#0;class#Client#0" />
+            <element signature="docComment;method#findFirstFit#0;class#Client#0" />
+            <element signature="docComment;method#findBestFit#0;class#Client#0" />
+            <element signature="method#findBestFit#0;class#Client#0" />
             <element signature="method#ClientScheduler#0;class#Client#0" />
             <element signature="docComment;method#findFirstFit#0;class#Client#0" />
             <element signature="method#findFirstFit#0;class#Client#0" />
@@ -263,7 +274,6 @@
             <element signature="docComment;method#RESCAvail#0;class#Client#0" />
             <element signature="method#RESCAvail#0;class#Client#0" />
             <element signature="docComment;method#sortAllServerInfo#0;class#Client#0" />
-            <element signature="method#sortAllServerInfo#0;class#Client#0" />
             <element signature="docComment;method#findAllServerInfoSortOrder#0;class#Client#0" />
             <element signature="method#findAllServerInfoSortOrder#0;class#Client#0" />
             <element signature="method#addServerType#0;class#Client#0" />

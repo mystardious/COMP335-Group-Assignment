@@ -189,7 +189,8 @@ public class Client {
             else if (algorithm == 1) {
 
                 // Sort All Servers from smallest to largest
-                sortAllServerInfo();
+                allServerInfo = sortAllServerInfo(allServerInfo);
+                initialAllServerInfo = sortAllServerInfo(initialAllServerInfo);
 
                 ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
                 serverType = firstFitServer.get(0);
@@ -248,23 +249,32 @@ public class Client {
      */
     public ArrayList<String> findFirstFit(String[] currentJob) {
 
-        // DONE 1 Sort servers from smallest to largest
-        // DONE 2 Traverse through all servers and select the first server that has equal or more cores than the job.
-
-        int noCoresRequired = Integer.parseInt(currentJob[4]);
+        /**
+         *  Compare job's required number of cores against server's number of cores
+         */
 
         for(ArrayList<String> server: allServerInfo) {
 
-            int serverCores = Integer.parseInt(server.get(4));
-
-            if(noCoresRequired <= serverCores) {
-//                System.out.println("Server: "+server);
+            if(hasSufficientResources(server, currentJob)) {
                 return server;
             }
 
         }
 
-        // No server was found
+        /**
+         * If there is no server with sufficient resource capacity, compare using initial resource capacity
+         */
+
+        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+
+            if(hasSufficientResources(initialAllServerInfo.get(i), currentJob)) {
+                if(isServerAvailable(allServerInfo.get(i))) {
+                    return allServerInfo.get(i);
+                }
+            }
+
+        }
+
         return null;
 
     }
@@ -580,22 +590,22 @@ public class Client {
     /**
      * Can be called at any time generally after a RESCAll() or RESCAvail() call to sort the new data in the list
      */
-    public void sortAllServerInfo() {
+    public ArrayList<ArrayList<String>> sortAllServerInfo(ArrayList<ArrayList<String>> serverList) {
 
         ArrayList<ArrayList<String>> temp = new ArrayList<>();
 
         for(int i = 0; i < sortOrder.size(); i++) {
 
-            for(int j = 0; j < allServerInfo.size(); j++) {
+            for(int j = 0; j < serverList.size(); j++) {
 
-                if(sortOrder.get(i).get(0).equals(allServerInfo.get(j).get(0)))
-                    temp.add(allServerInfo.get(j));
+                if(sortOrder.get(i).get(0).equals(serverList.get(j).get(0)))
+                    temp.add(serverList.get(j));
 
             }
 
         }
 
-        allServerInfo = temp;
+        return temp;
 
     }
 
