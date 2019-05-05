@@ -14,7 +14,7 @@ public class Client {
 
     // Server data
     ArrayList<ArrayList<String>> allServerInfo = new ArrayList<>();
-    boolean obtainServerData = true; // Enable request for server details
+    ArrayList<ArrayList<String>> initialAllServerInfo = new ArrayList<>();
 
     public static void main(String args[]) {
 
@@ -130,7 +130,11 @@ public class Client {
 
         String currentJob = sendCommand("REDY");
 
-        // Find largest server
+        // Save an initial copy of all server info
+        RESCAll();
+        initialAllServerInfo = allServerInfo;
+
+        // Save another copy so that data in both ArrayLists are not linked
         RESCAll();
         int indexOfLargestServer = 0;
         for(int i = 0; i < allServerInfo.size(); i++) {
