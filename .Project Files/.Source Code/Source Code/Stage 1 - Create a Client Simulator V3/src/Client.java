@@ -293,23 +293,18 @@ public class Client {
      *
      *  The server with the best fit is the one with the lowest fitness value which is the large server. So the job should
      *  be scheduled to large. However if there are no servers that have sufficient resources to run the job then it is
-     *  assigned to the server with the best fit based on the first RESCAll() call. Which will use the first server of every
-     *  type depending on the job's required cores.
+     *  assigned to the server with the best fit based on the first RESCAll() call. Which will use the first active server
+     *  with sufficient resources.
      *
      */
     public ArrayList<String> findBestFit(String[] currentJob) {
-
-        // DONE 1 Create helper method for finding if a server has sufficient resource to process a job
-        // DONE 2 Create helper method for finding fitness value
-        // DONE 3 Write note for definition of best-fit
-        // DONE 4 Based on note complete the findBestFit() method.
 
         ArrayList<String> bestFitServer = findBestFitServer(allServerInfo, currentJob);
 
         if(bestFitServer != null)
             return bestFitServer;
         else
-            return findBestFitServer(initialAllServerInfo, currentJob);
+            return findBestFitActiveServer(currentJob);
 
     }
 
@@ -398,6 +393,41 @@ public class Client {
                     bestFit = fitnessValue;
                     minAvail = serverAvailTime;
                     bestFitServer = server;
+
+                }
+
+            }
+
+        }
+
+        return bestFitServer;
+
+    }
+
+    /**
+     * Find the server with the closest number of cores to the job based on initial resource capacity (must be active)
+     * @return Best Fit Server based on list of inital server data
+     */
+    public ArrayList<String> findBestFitActiveServer(String[] currentJob) {
+
+        int bestFit = Integer.MAX_VALUE, minAvail = Integer.MAX_VALUE;
+        ArrayList<String> bestFitServer = null;
+
+        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+
+            ArrayList<String> initialServer = initialAllServerInfo.get(i);
+            ArrayList<String> currentServer = allServerInfo.get(i);
+
+            if(hasSufficientResources(initialServer, currentJob)) {
+
+                int fitnessValue = calculateFitnessValue(initialServer, currentJob);
+                int serverAvailTime = Integer.parseInt(initialServer.get(3));
+
+                if( ((fitnessValue < bestFit) || (fitnessValue == bestFit && serverAvailTime < minAvail)) && isServerAvailable(currentServer)) {
+
+                    bestFit = fitnessValue;
+                    minAvail = serverAvailTime;
+                    bestFitServer = initialServer;
 
                 }
 
