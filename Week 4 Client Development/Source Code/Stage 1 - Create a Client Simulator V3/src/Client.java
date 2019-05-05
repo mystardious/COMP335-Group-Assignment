@@ -225,7 +225,23 @@ public class Client {
 
     /**
      * Best-Fit Algorithm
-     * @return the best-fit active server based on initial resource capacity
+     * @return the best-fit server or if none have sufficient resources, return the best-fit active server based on initial resources
+     *
+     * A server is the best fit when the difference between the server's number of cores and the jobs required cores is
+     * the smallest.
+     *
+     *  e.g.    Anything not important has been replaced with the letter x
+     *
+     *  Some Servers
+     *          server_type server_ID server_state available_time #CPU_cores memory disk_space
+     *          xlarge,     x,        x,           x,             16,        x,     x
+     *          large,      x,        x,           x,             8,         x,     x
+     *
+     *  The current job
+     *                submit_time job_ID estimated_runtime #CPU_cores memory disk_space
+     *          JOBN, x,          x,     x,                7,         x,     x
+     *
+     *  The fitness value of the two severs xlarge and large are:
      *          xlarge: 9
      *          large:  1
      *
