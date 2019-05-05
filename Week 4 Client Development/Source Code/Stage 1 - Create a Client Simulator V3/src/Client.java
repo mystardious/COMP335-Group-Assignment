@@ -152,13 +152,13 @@ public class Client {
             RESCAll();
 
             // AllToLargest
-            if(algorithm == 0) {
+            if (algorithm == 0) {
                 serverType = allServerInfo.get(indexOfLargestServer).get(0);
                 serverID = "0";
             }
 
             // First-Fit
-            else if(algorithm == 1) {
+            else if (algorithm == 1) {
 
                 ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
                 serverType = firstFitServer.get(0);
@@ -167,7 +167,7 @@ public class Client {
             }
 
             // Best-Fit
-            else if(algorithm == 2) {
+            else if (algorithm == 2) {
 
                 ArrayList<String> bestFitServer = findBestFit(currentJobDetails);
                 serverType = bestFitServer.get(0);
@@ -194,15 +194,6 @@ public class Client {
             currentJob = sendCommand("REDY");
 
 
-
-        }
-
-        for(ArrayList<String> server: allServerInfo) {
-            System.out.println(server);
-        }
-
-        for(ArrayList<String> server: initialAllServerInfo) {
-            System.out.println(server);
         }
 
     }
