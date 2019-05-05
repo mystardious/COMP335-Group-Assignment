@@ -249,8 +249,6 @@ public class Client {
      */
     public ArrayList<String> findFirstFit(String[] currentJob) {
 
-        // DONE 1 Sort servers from smallest to largest
-        // DONE 2 Traverse through all servers and select the first server that has equal or more cores than the job.
 
         int noCoresRequired = Integer.parseInt(currentJob[4]);
 
