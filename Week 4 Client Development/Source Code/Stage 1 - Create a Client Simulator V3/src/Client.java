@@ -215,7 +215,10 @@ public class Client {
      */
     public ArrayList<String> findBestFit(String[] currentJob) {
 
-        System.out.println("Please define best-fit algorithm.");
+        // TODO 1 Create helper method for finding if a server has sufficient resource to process a job
+        // TODO 2 Create helper method for finding fitness value
+        // TODO 3 Write note for definition of best-fit
+        // TODO 4 Based on note complete the findBestFit() method.
 
         return null;
 
