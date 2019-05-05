@@ -224,7 +224,39 @@ public class Client {
         // TODO 3 Write note for definition of best-fit
         // TODO 4 Based on note complete the findBestFit() method.
 
-        return null;
+        int bestFit = Integer.MAX_VALUE, minAvail = Integer.MAX_VALUE;
+        ArrayList<String> bestFitServer = new ArrayList<>();
+
+        for(ArrayList<String> server: allServerInfo) {
+
+            if(hasSufficientResources(server, currentJob)) {
+
+                int fitnessValue = calculateFitnessValue(server, currentJob);
+                int serverAvailTime = Integer.parseInt(server.get(3));
+
+                if( (fitnessValue < bestFit) || (fitnessValue == bestFit && serverAvailTime < minAvail) ) {
+
+                    bestFit = fitnessValue;
+                    minAvail = serverAvailTime;
+                    bestFitServer = server;
+
+                }
+
+            }
+
+        }
+
+        System.out.println(currentJob[2]+" "+currentJob[4]+"  "+bestFit);
+
+        if(bestFitServer.size() != 0) {
+
+            return bestFitServer;
+
+        } else {
+
+            return findFirstFit(currentJob);
+
+        }
 
     }
 
