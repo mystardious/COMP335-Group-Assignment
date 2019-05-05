@@ -16,7 +16,6 @@ public class Client {
     ArrayList<ArrayList<String>> allServerInfo = new ArrayList<>();
     ArrayList<ArrayList<String>> initialAllServerInfo = new ArrayList<>();
     ArrayList<ArrayList<String>> sortOrder = new ArrayList<>();
-    boolean obtainServerData = true; // Enable request for server details
 
     public static void main(String args[]) {
 
