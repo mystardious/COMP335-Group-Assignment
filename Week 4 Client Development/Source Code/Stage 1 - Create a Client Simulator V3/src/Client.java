@@ -236,6 +236,24 @@ public class Client {
 
     }
 
+    // Algorithm Helper Methods
+
+    /**
+     * Does this server have sufficient resources?
+     * @return true if the server has equal or more cores than the job requires
+     */
+    public boolean hasSufficientResources(ArrayList<String> server, String[] currentJob) {
+
+        int noRequiredCores = Integer.parseInt(currentJob[4]);
+        int serverCores = Integer.parseInt(server.get(4));
+
+        if(noRequiredCores <= serverCores)
+            return true;
+
+        return false;
+
+    }
+
     /**
      * Resource Information Request
      *  RESC All - The informaton of all servers, in the system, regardless of their state.
