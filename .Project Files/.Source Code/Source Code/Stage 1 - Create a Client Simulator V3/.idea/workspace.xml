@@ -28,11 +28,11 @@
                 <element signature="method#ClientScheduler#0;class#Client#0" />
                 <element signature="docComment;method#findFirstFit#0;class#Client#0" />
                 <element signature="method#findFirstFit#0;class#Client#0" />
-                <element signature="docComment;method#findBestFit#0;class#Client#0" />
-                <element signature="method#findBestFit#0;class#Client#0" />
                 <element signature="docComment;method#findWorstFit#0;class#Client#0" />
                 <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
                 <element signature="method#findBestFitServer#0;class#Client#0" />
+                <element signature="docComment;method#findBestFitActiveServer#0;class#Client#0" />
+                <element signature="method#findBestFitActiveServer#0;class#Client#0" />
                 <element signature="docComment;method#isServerAvailable#0;class#Client#0" />
                 <element signature="method#isServerAvailable#0;class#Client#0" />
                 <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
@@ -172,7 +172,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -188,7 +187,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
@@ -235,9 +234,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Test.class" />
     <entry file="file://$PROJECT_DIR$/src/Test.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class" />
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -250,11 +247,11 @@
             <element signature="method#ClientScheduler#0;class#Client#0" />
             <element signature="docComment;method#findFirstFit#0;class#Client#0" />
             <element signature="method#findFirstFit#0;class#Client#0" />
-            <element signature="docComment;method#findBestFit#0;class#Client#0" />
-            <element signature="method#findBestFit#0;class#Client#0" />
             <element signature="docComment;method#findWorstFit#0;class#Client#0" />
             <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
             <element signature="method#findBestFitServer#0;class#Client#0" />
+            <element signature="docComment;method#findBestFitActiveServer#0;class#Client#0" />
+            <element signature="method#findBestFitActiveServer#0;class#Client#0" />
             <element signature="docComment;method#isServerAvailable#0;class#Client#0" />
             <element signature="method#isServerAvailable#0;class#Client#0" />
             <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
