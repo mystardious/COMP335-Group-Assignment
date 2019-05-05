@@ -1,8 +1,6 @@
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Client {
@@ -104,7 +102,7 @@ public class Client {
             ClientScheduler();
 
             // Close connection to server once all jobs have been scheduled.
-            ClientQuit();
+            sendCommand("QUIT");
 
         }
 
@@ -118,9 +116,6 @@ public class Client {
 
     }
 
-    // DONE 1 Separate program into three parts: ClientSetup(), ClientBody() & ClientExit().
-    // DONE 2 Remove processServerResponse once finished.
-
     public void ClientSetup() {
 
         // Say Hello and sign in
@@ -129,6 +124,32 @@ public class Client {
 
     }
 
+    /**
+     * Client Scheduler
+     * If no algorithm was specified using "-a" then the default is used (allToLargest).
+     *
+     * Some details regarding the format for jobs and servers
+     *
+     *      JOBN submit_time (int) job_ID (int) estimated_runtime (int) #CPU_cores (int) memory (int) disk(int)
+     *      0    1                 2            3                       4                5            6
+     *
+     *      server_type (char *) server_ID (int) server_state (int) available_time (int) #CPU_cores (int) memory (int) disk_space (int)
+     *      0                    1               2                  3                    4                5            6
+     *
+     *      In order for a server to have sufficient resources to run a job, the job's required number of cores must be less
+     *      than or equal to the servers number of cores. If a job is scheduled to a server with less than the number of
+     *      required cores the server replys "ERR: Server incapable of running such a job".
+     *
+     *      First-Fit Algorithm
+     *
+     *          1. The Server list must be sorted from smallest to largest (from smallest to largest coreCount)
+     *                  findAllServerInfoSortOrder() - Finds the order to sort the servers. (Run once at the begininng of ClientScheduler)
+     *                  sortAllServerInfo() - Sorts the allServerInfo list based on the ArrayList<ArrayList<String>> sortOrder;
+     *          2. The first available server that has 'sufficient resources' is scheduled a job.
+     *                  findFirstFit(String[] currentJob) - the first active server with sufficient initial resource capacity to run the job
+     *
+     *
+     */
     public void ClientScheduler() {
 
         String currentJob = sendCommand("REDY");
@@ -143,7 +164,6 @@ public class Client {
                 indexOfLargestServer = i;
         }
 
-        //
         findAllServerInfoSortOrder();
 
         while(!currentJob.equals("NONE") && !status[0].equals("ERR:")) {
@@ -164,43 +184,11 @@ public class Client {
             // First-Fit
             else if(algorithm == 1) {
 
-
-
-                // Sort Servers by type from smallest to largest
-//                Collections.sort(allServerInfo, new Comparator<ArrayList<String>>() {
-//                    @Override
-//                    public int compare(ArrayList<String> o1, ArrayList<String> o2) {
-//
-//                        // Do not sort if both servers are the same type
-//                        if(o1.get(0).equals(o2.get(0))) {
-//                            if(Integer.parseInt(o1.get(1)) < Integer.parseInt(o2.get(1))) {
-//                                return -1;
-//                            } else if(Integer.parseInt(o1.get(1)) < Integer.parseInt(o2.get(1))) {
-//                                return 1;
-//                            } else
-//                                return 0;
-//                        }
-//
-//
-//                       if(Integer.parseInt(o1.get(4)) < Integer.parseInt(o2.get(4))){ // Otherwise sort by core count
-//                            return -1;
-//                        } else if (Integer.parseInt(o1.get(4)) > Integer.parseInt(o2.get(4))){
-//                            return 1;
-//                        } else {
-//                            return 0;
-//                        }
-//
-//                    }
-//                });
-
                 sortAllServerInfo();
-
 
                 ArrayList<String> firstFitServer = findFirstFit(currentJobDetails);
                 serverType = firstFitServer.get(0);
                 serverID = firstFitServer.get(1);
-
-                System.out.println(firstFitServer);
 
             }
 
@@ -228,40 +216,39 @@ public class Client {
                                 serverType + " " +
                                     serverID).split(" ");
 
-            for(ArrayList<String> server: allServerInfo) {
-                if(server.get(0).equals(serverType) && server.get(1).equals(serverID))
-                    System.out.println(server);
-            }
-
             // Goto next job
             currentJob = sendCommand("REDY");
 
         }
 
-        for(ArrayList<String> x: sortOrder) {
-            System.out.println(x);
-        }
-
     }
-
-    public void ClientQuit() { sendCommand("QUIT"); }
 
     // Client Scheduler Algorithms
 
     /**
      * First-Fit Algorithm
      * @return the first active server with sufficient initial resource capacity to run the job
+     *
+     * String[] currentJob =
+     *
+     *     JOBN submit_time (int) job_ID (int) estimated_runtime (int) #CPU_cores (int) memory (int) disk(int)
+     *     0    1                 2            3                       4                5            6
+     *
      */
     public ArrayList<String> findFirstFit(String[] currentJob) {
 
         // DONE 1 Sort servers from smallest to largest
         // DONE 2 Traverse through all servers and select the first server that has equal or more cores than the job.
 
-        for(int i = 0; i < allServerInfo.size(); i++) {
+        int noCoresRequired = Integer.parseInt(currentJob[4]);
 
-            // Compare number of cores required for the job against the server's number of cores.
-            if(Integer.parseInt(currentJob[4]) <= Integer.parseInt(allServerInfo.get(i).get(4))) {
-                return allServerInfo.get(i);
+        for(ArrayList<String> server: allServerInfo) {
+
+            int serverCores = Integer.parseInt(server.get(4));
+
+            if(noCoresRequired <= serverCores) {
+//                System.out.println("Server: "+server);
+                return server;
             }
 
         }
@@ -324,6 +311,39 @@ public class Client {
 
     }
 
+    /**
+     * Resource Information Request
+     *      *  RESC Avail - The information of servers that are available (i.e. inactive, booting and idle) for the job
+     *          with sufficient resources.
+     */
+    public void RESCAvail(String coreCount, String memory, String diskSpace) {
+
+        allServerInfo = new ArrayList<>(); // Delete old information for new data
+        sendCommandNoLog("RESC Avail " + coreCount+ " " + memory + " " + diskSpace); // Expected Response is "DATA"
+
+        String temp = sendCommandNoLog("OK");
+        while(!temp.equals(".")) {
+
+            // Store data for each server into array
+            ArrayList<String> server = new ArrayList<>();
+            String[] tempServer = temp.split(" ");
+            for(String serverDetail: tempServer) {
+                server.add(serverDetail);
+            }
+
+            // Add server to list
+            allServerInfo.add(server);
+
+            // Get next server
+            temp = sendCommandNoLog("OK");
+
+        }
+
+    }
+
+    /**
+     * Can be called at any time generally after a RESCAll() or RESCAvail() call to sort the new data in the list
+     */
     public void sortAllServerInfo() {
 
         ArrayList<ArrayList<String>> temp = new ArrayList<>();
@@ -343,6 +363,11 @@ public class Client {
 
     }
 
+    /**
+     * Is Run once at the start of ClientScheduler() after the RESCAll command has been called.
+     * Since the the coreCount of a server can change if busy, we find the order to sort the server list once
+     * before any job is scheduled.
+     */
     public void findAllServerInfoSortOrder() {
 
         for(int i = 0; i < allServerInfo.size(); i++) {
@@ -355,6 +380,7 @@ public class Client {
 
     }
 
+    // Helper method for findAllServerInfoSortOrder()
     public int addServerType(String serverType, String coreCount) {
 
         ArrayList<String> temp = new ArrayList<>();
@@ -373,7 +399,7 @@ public class Client {
 
     }
 
-    // Helper method for sortAllServerInfoAlphabetically()
+    // Helper method for findAllServerInfoSortOrder()
     public boolean isServerTypeInList(String otherServerType) {
 
         for(ArrayList<String> server: sortOrder) {
