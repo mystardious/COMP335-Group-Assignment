@@ -8,6 +8,7 @@ public class Client {
     // User Arguments
     static boolean manualInput = false; // Allow manual input of commands
     static boolean help        = false; // Display program usage
+    static boolean verbose     = false;
 
     // Automation variables
     static int algorithm = 0; // 0 = AllToLargest, 1 = First-Fit, 2 = Best-Fit, 3 = Worst-Fit
@@ -43,7 +44,28 @@ public class Client {
 
             }
 
+            else if(args[i].equals("-v")) {
+                verbose = true;
+            }
+
         }
+
+        System.out.println("# ds-sim client S1-07May, 2019 (COMP335@MQ)");
+        System.out.println("# Created by Mohamed Maatouk, Burak Ozturker & Cassandra Aung");
+
+        if(!verbose) {
+            System.out.println("#");
+            System.out.println("#   /$$$$$$  /$$ /$$                       /$$            /$$$$$$  /$$");
+            System.out.println("#   /$$__  $$| $$|__/                      | $$           /$$__  $$|__/");
+            System.out.println("#  | $$  \\__/| $$ /$$  /$$$$$$  /$$$$$$$  /$$$$$$        | $$  \\__/ /$$ /$$$$$$/$$$$");
+            System.out.println("#  | $$      | $$| $$ /$$__  $$| $$__  $$|_  $$_/        |  $$$$$$ | $$| $$_  $$_  $$");
+            System.out.println("#  | $$      | $$| $$| $$$$$$$$| $$  \\ $$  | $$           \\____  $$| $$| $$ \\ $$ \\ $$");
+            System.out.println("#  | $$    $$| $$| $$| $$_____/| $$  | $$  | $$ /$$       /$$  \\ $$| $$| $$ | $$ | $$|");
+            System.out.println("#  |  $$$$$$/| $$| $$|  $$$$$$$| $$  | $$  |  $$$$/      |  $$$$$$/| $$| $$ | $$ | $$");
+            System.out.println("#   \\______/ |__/|__/ \\_______/|__/  |__/   \\___/         \\______/ |__/|__/ |__/ |__/");
+            System.out.println();
+        }
+
 
         if(help)
             clientUsage();
@@ -64,7 +86,6 @@ public class Client {
 
             // Connect to the server
             socket = new Socket(address, port);
-            System.out.println("Connected");
 
             // Commands received from server
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -607,12 +628,14 @@ public class Client {
         try {
 
             // Send the command to the server
-            System.out.println("SENT: " +argument);
+            if(verbose)
+                System.out.println("SENT: " +argument);
             out.write((argument+"\n").getBytes());
 
             // Read and return response from the server.
             String serverResponse = in.readLine();
-            System.out.println("RCVD: "+serverResponse);
+            if(verbose)
+                System.out.println("RCVD: "+serverResponse);
             return serverResponse;
 
         } catch(IOException i) { System.out.println(i); }
@@ -647,7 +670,7 @@ public class Client {
 
         System.out.println("ds-sim COMP335@MQ, S1-27Apr, 2019");
         System.out.println("Usage:");
-        System.out.println("    java Client [-h] [-m] [-a]");
+        System.out.println("    java Client [-h] [-v] [-m] [-a algo_name]");
 
     }
 
