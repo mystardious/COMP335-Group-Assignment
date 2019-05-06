@@ -229,18 +229,6 @@ public class Client {
 
         }
 
-        System.out.println("Initial Server Information");
-        System.out.println();
-        for(ArrayList<String> server: initialAllServerInfo) {
-            System.out.println(server);
-        }
-
-        System.out.println("Current Server Information");
-        System.out.println();
-        for(ArrayList<String> server: allServerInfo) {
-            System.out.println(server);
-        }
-
     }
 
     // Client Scheduler Algorithms
@@ -518,9 +506,13 @@ public class Client {
     public boolean hasSufficientResources(ArrayList<String> server, String[] currentJob) {
 
         int noRequiredCores = Integer.parseInt(currentJob[4]);
+        int noRequiredMemory = Integer.parseInt(currentJob[5]);
+        int noRequiredDiskSpace = Integer.parseInt(currentJob[6]);
         int serverCores = Integer.parseInt(server.get(4));
+        int serverMemory = Integer.parseInt(server.get(5));
+        int serverDiskSpace = Integer.parseInt(server.get(6));
 
-        if(noRequiredCores <= serverCores)
+        if(serverCores >= noRequiredCores && serverMemory >= noRequiredMemory && serverDiskSpace >= noRequiredDiskSpace)
             return true;
 
         return false;

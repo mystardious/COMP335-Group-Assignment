@@ -1,4 +1,4 @@
-# ds-sim server S1-27Apr, 2019 (COMP335@MQ)
+# ds-sim server S1-06May, 2019 (COMP335@MQ)
 # Server-side simulator started with './ds-server -c ./configs/config_simple6.xml -v brief -n'
 # Waiting for connection to port 8096 of IP address 127.0.0.1
 RCVD HELO

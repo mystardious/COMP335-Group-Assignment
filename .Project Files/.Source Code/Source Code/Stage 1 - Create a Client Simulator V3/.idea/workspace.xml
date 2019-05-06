@@ -5,6 +5,34 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Stage 1 - Create a Client Simulator/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple1.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple1.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple1.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple1.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple2.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple2.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple2.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple2.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple3.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple3.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple3.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple3.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple4.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple4.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple4.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple4.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple5.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple5.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple5.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple5.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple6.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple6.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple6.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple6.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple7.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple7.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple7.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple7.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple8.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple8.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple8.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple8.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple9.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple9.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/config_simple9.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/config_simple9.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/ds-config1.xml.ref.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/ds-config1.xml.ref.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/configs/ds-config1.xml.your.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/configs/ds-config1.xml.your.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/ds-client" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/ds-client" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/ds-jobs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/ds-jobs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/ds-server" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/ds-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/my8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/ref8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/system.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/system.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing/testbf.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing/testbf.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,12 +42,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="492" column="47" selection-start-line="492" selection-start-column="47" selection-end-line="492" selection-end-column="47" />
+            <state relative-caret-position="-1735">
+              <caret line="229" column="9" selection-start-line="229" selection-start-column="9" selection-end-line="229" selection-end-column="9" />
               <folding>
                 <element signature="method#main#0;class#Client#0" />
                 <element signature="e#981#1445#1" />
@@ -28,33 +56,8 @@
                 <element signature="e#3235#3325#0" />
                 <element signature="method#ClientSetup#0;class#Client#0" />
                 <element signature="docComment;method#ClientScheduler#0;class#Client#0" />
-                <element signature="docComment;method#findFirstFit#0;class#Client#0" />
-                <element signature="method#findFirstFit#0;class#Client#0" />
-                <element signature="docComment;method#findBestFit#0;class#Client#0" />
-                <element signature="docComment;method#findWorstFit#0;class#Client#0" />
-                <element signature="method#findWorstFit#0;class#Client#0" />
-                <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
-                <element signature="method#findWorstFitActiveServer#0;class#Client#0" />
-                <element signature="docComment;method#findBestFitActiveServer#0;class#Client#0" />
-                <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
-                <element signature="method#hasSufficientResources#0;class#Client#0" />
-                <element signature="docComment;method#calculateFitnessValue#0;class#Client#0" />
-                <element signature="method#calculateFitnessValue#0;class#Client#0" />
-                <element signature="docComment;method#RESCAll#0;class#Client#0" />
-                <element signature="method#RESCAll#0;class#Client#0" />
-                <element signature="docComment;method#RESCAvail#0;class#Client#0" />
-                <element signature="method#RESCAvail#0;class#Client#0" />
-                <element signature="docComment;method#sortAllServerInfo#0;class#Client#0" />
-                <element signature="method#sortAllServerInfo#0;class#Client#0" />
-                <element signature="docComment;method#findAllServerInfoSortOrder#0;class#Client#0" />
-                <element signature="method#findAllServerInfoSortOrder#0;class#Client#0" />
-                <element signature="method#addServerType#0;class#Client#0" />
-                <element signature="method#isServerTypeInList#0;class#Client#0" />
-                <element signature="docComment;method#sendCommand#0;class#Client#0" />
-                <element signature="method#sendCommand#0;class#Client#0" />
-                <element signature="docComment;method#sendCommandNoLog#0;class#Client#0" />
-                <element signature="method#sendCommandNoLog#0;class#Client#0" />
-                <element signature="method#clientUsage#0;class#Client#0" />
+                <element signature="docComment;method#isServerAvailable#0;class#Client#0" />
+                <element signature="method#isServerAvailable#0;class#Client#0" />
               </folding>
             </state>
           </provider>
@@ -72,11 +75,19 @@
       </list>
     </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2214" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="1039" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,12 +127,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557125949475" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557148796568" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -153,17 +162,13 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10501066" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10714286" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -171,21 +176,25 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33152762" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="492" column="47" selection-start-line="492" selection-start-column="47" selection-end-line="492" selection-end-column="47" />
+        <state relative-caret-position="-1735">
+          <caret line="229" column="9" selection-start-line="229" selection-start-column="9" selection-end-line="229" selection-end-column="9" />
           <folding>
             <element signature="method#main#0;class#Client#0" />
             <element signature="e#981#1445#1" />
@@ -194,33 +203,8 @@
             <element signature="e#3235#3325#0" />
             <element signature="method#ClientSetup#0;class#Client#0" />
             <element signature="docComment;method#ClientScheduler#0;class#Client#0" />
-            <element signature="docComment;method#findFirstFit#0;class#Client#0" />
-            <element signature="method#findFirstFit#0;class#Client#0" />
-            <element signature="docComment;method#findBestFit#0;class#Client#0" />
-            <element signature="docComment;method#findWorstFit#0;class#Client#0" />
-            <element signature="method#findWorstFit#0;class#Client#0" />
-            <element signature="docComment;method#findBestFitServer#0;class#Client#0" />
-            <element signature="method#findWorstFitActiveServer#0;class#Client#0" />
-            <element signature="docComment;method#findBestFitActiveServer#0;class#Client#0" />
-            <element signature="docComment;method#hasSufficientResources#0;class#Client#0" />
-            <element signature="method#hasSufficientResources#0;class#Client#0" />
-            <element signature="docComment;method#calculateFitnessValue#0;class#Client#0" />
-            <element signature="method#calculateFitnessValue#0;class#Client#0" />
-            <element signature="docComment;method#RESCAll#0;class#Client#0" />
-            <element signature="method#RESCAll#0;class#Client#0" />
-            <element signature="docComment;method#RESCAvail#0;class#Client#0" />
-            <element signature="method#RESCAvail#0;class#Client#0" />
-            <element signature="docComment;method#sortAllServerInfo#0;class#Client#0" />
-            <element signature="method#sortAllServerInfo#0;class#Client#0" />
-            <element signature="docComment;method#findAllServerInfoSortOrder#0;class#Client#0" />
-            <element signature="method#findAllServerInfoSortOrder#0;class#Client#0" />
-            <element signature="method#addServerType#0;class#Client#0" />
-            <element signature="method#isServerTypeInList#0;class#Client#0" />
-            <element signature="docComment;method#sendCommand#0;class#Client#0" />
-            <element signature="method#sendCommand#0;class#Client#0" />
-            <element signature="docComment;method#sendCommandNoLog#0;class#Client#0" />
-            <element signature="method#sendCommandNoLog#0;class#Client#0" />
-            <element signature="method#clientUsage#0;class#Client#0" />
+            <element signature="docComment;method#isServerAvailable#0;class#Client#0" />
+            <element signature="method#isServerAvailable#0;class#Client#0" />
           </folding>
         </state>
       </provider>

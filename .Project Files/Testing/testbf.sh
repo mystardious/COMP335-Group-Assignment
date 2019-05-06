@@ -36,7 +36,7 @@ for conf in $configDir/*.xml; do
 	if [ -z $2 ]; then
 		./ds-server -c $conf -v brief > $conf.ref.log&
 		sleep 1
-		./ds-client
+		./ds-client -a bf
 	else
 		./ds-server -c $conf -v brief -n > $conf.ref.log&
 		sleep 1
@@ -54,7 +54,7 @@ for conf in $configDir/*.xml; do
 	if [ -f $1 ] && [[ $1 == *".class" ]]; then
 		java $(sed 's/\.class//' <<< $1) -a bf
 	else
-		./$1
+		./$1 -a bf
 	fi
 	sleep 1
 	diff $conf.ref.log $conf.your.log > $configDir/temp.log

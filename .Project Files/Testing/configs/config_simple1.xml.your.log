@@ -1,4 +1,4 @@
-# ds-sim server S1-27Apr, 2019 (COMP335@MQ)
+# ds-sim server S1-06May, 2019 (COMP335@MQ)
 # Server-side simulator started with './ds-server -c ./configs/config_simple1.xml -v brief -n'
 # Waiting for connection to port 8096 of IP address 127.0.0.1
 RCVD HELO
@@ -150,25 +150,25 @@ t:       1548 job    20 on # 0 of server large COMPLETED
 t:       1557 job    19 on # 5 of server large RUNNING
 t:       1560 job    17 on # 4 of server large COMPLETED
 SENT JOBN 1678 21 1 1 900 600
-RCVD SCHD 21 large 4
-t:       1678 job    21 (running) on # 4 of server large (active) SCHEDULED
-t:       1678 job    21 on # 4 of server large RUNNING
+RCVD SCHD 21 large 0
+t:       1678 job    21 (running) on # 0 of server large (active) SCHEDULED
+t:       1678 job    21 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       1687 job    21 on # 4 of server large COMPLETED
+t:       1687 job    21 on # 0 of server large COMPLETED
 SENT JOBN 1815 22 104 1 200 1200
-RCVD SCHD 22 large 4
-t:       1815 job    22 (running) on # 4 of server large (active) SCHEDULED
-t:       1815 job    22 on # 4 of server large RUNNING
+RCVD SCHD 22 large 0
+t:       1815 job    22 (running) on # 0 of server large (active) SCHEDULED
+t:       1815 job    22 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 1909 23 1 2 1900 700
-RCVD SCHD 23 large 4
-t:       1909 job    23 (running) on # 4 of server large (active) SCHEDULED
-t:       1909 job    23 on # 4 of server large RUNNING
+RCVD SCHD 23 large 0
+t:       1909 job    23 (running) on # 0 of server large (active) SCHEDULED
+t:       1909 job    23 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       1910 job    23 on # 4 of server large COMPLETED
+t:       1910 job    23 on # 0 of server large COMPLETED
 t:       1968 job    12 on # 0 of server large COMPLETED
 SENT JOBN 1975 24 818 1 400 800
 RCVD SCHD 24 large 0
@@ -176,12 +176,12 @@ t:       1975 job    24 (running) on # 0 of server large (active) SCHEDULED
 t:       1975 job    24 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       2084 job    22 on # 4 of server large COMPLETED
+t:       2084 job    22 on # 0 of server large COMPLETED
 t:       2205 job     7 on # 0 of server large COMPLETED
 SENT JOBN 2394 25 113 1 800 1000
-RCVD SCHD 25 large 4
-t:       2394 job    25 (running) on # 4 of server large (active) SCHEDULED
-t:       2394 job    25 on # 4 of server large RUNNING
+RCVD SCHD 25 large 0
+t:       2394 job    25 (running) on # 0 of server large (active) SCHEDULED
+t:       2394 job    25 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 2423 26 109 2 1300 1900
@@ -190,43 +190,43 @@ t:       2423 job    26 (running) on # 0 of server large (active) SCHEDULED
 t:       2423 job    26 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       2466 job    25 on # 4 of server large COMPLETED
+t:       2466 job    25 on # 0 of server large COMPLETED
 t:       2516 job    26 on # 0 of server large COMPLETED
 t:       2626 job    24 on # 0 of server large COMPLETED
 SENT JOBN 2917 27 1 2 1400 1200
-RCVD SCHD 27 large 0
-t:       2917 job    27 (running) on # 0 of server large (active) SCHEDULED
-t:       2917 job    27 on # 0 of server large RUNNING
+RCVD SCHD 27 large 3
+t:       2917 job    27 (running) on # 3 of server large (active) SCHEDULED
+t:       2917 job    27 on # 3 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       2920 job    27 on # 0 of server large COMPLETED
+t:       2920 job    27 on # 3 of server large COMPLETED
 SENT JOBN 3290 28 6 2 1400 2600
-RCVD SCHD 28 large 0
-t:       3290 job    28 (running) on # 0 of server large (active) SCHEDULED
-t:       3290 job    28 on # 0 of server large RUNNING
+RCVD SCHD 28 large 3
+t:       3290 job    28 (running) on # 3 of server large (active) SCHEDULED
+t:       3290 job    28 on # 3 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       3297 job    28 on # 0 of server large COMPLETED
+t:       3297 job    28 on # 3 of server large COMPLETED
 SENT JOBN 3696 29 856 2 1700 400
-RCVD SCHD 29 large 0
-t:       3696 job    29 (running) on # 0 of server large (active) SCHEDULED
-t:       3696 job    29 on # 0 of server large RUNNING
+RCVD SCHD 29 large 3
+t:       3696 job    29 (running) on # 3 of server large (active) SCHEDULED
+t:       3696 job    29 on # 3 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 4232 30 68823 1 100 200
-RCVD SCHD 30 large 4
-t:       4232 job    30 (running) on # 4 of server large (active) SCHEDULED
-t:       4232 job    30 on # 4 of server large RUNNING
+RCVD SCHD 30 large 0
+t:       4232 job    30 (running) on # 0 of server large (active) SCHEDULED
+t:       4232 job    30 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 4543 31 1 1 600 1300
-RCVD SCHD 31 large 4
-t:       4543 job    31 (running) on # 4 of server large (active) SCHEDULED
-t:       4543 job    31 on # 4 of server large RUNNING
+RCVD SCHD 31 large 0
+t:       4543 job    31 (running) on # 0 of server large (active) SCHEDULED
+t:       4543 job    31 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       4548 job    31 on # 4 of server large COMPLETED
-t:       4672 job    29 on # 0 of server large COMPLETED
+t:       4548 job    31 on # 0 of server large COMPLETED
+t:       4672 job    29 on # 3 of server large COMPLETED
 SENT JOBN 5282 32 3 1 700 1300
 RCVD SCHD 32 large 0
 t:       5282 job    32 (running) on # 0 of server large (active) SCHEDULED
@@ -242,55 +242,55 @@ t:       5472 job    33 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 6126 34 84 1 100 1700
-RCVD SCHD 34 large 1
-t:       6126 job    34 (running) on # 1 of server large (active) SCHEDULED
-t:       6126 job    34 on # 1 of server large RUNNING
+RCVD SCHD 34 large 0
+t:       6126 job    34 (running) on # 0 of server large (active) SCHEDULED
+t:       6126 job    34 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 6136 35 15 1 1000 1700
-RCVD SCHD 35 large 1
-t:       6136 job    35 (running) on # 1 of server large (active) SCHEDULED
-t:       6136 job    35 on # 1 of server large RUNNING
+RCVD SCHD 35 large 0
+t:       6136 job    35 (running) on # 0 of server large (active) SCHEDULED
+t:       6136 job    35 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       6144 job    35 on # 1 of server large COMPLETED
+t:       6144 job    35 on # 0 of server large COMPLETED
 SENT JOBN 6196 36 223 1 500 800
-RCVD SCHD 36 large 1
-t:       6196 job    36 (running) on # 1 of server large (active) SCHEDULED
-t:       6196 job    36 on # 1 of server large RUNNING
+RCVD SCHD 36 large 0
+t:       6196 job    36 (running) on # 0 of server large (active) SCHEDULED
+t:       6196 job    36 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 6215 37 5 1 400 1800
-RCVD SCHD 37 large 4
-t:       6215 job    37 (running) on # 4 of server large (active) SCHEDULED
-t:       6215 job    37 on # 4 of server large RUNNING
+RCVD SCHD 37 large 0
+t:       6215 job    37 (running) on # 0 of server large (active) SCHEDULED
+t:       6215 job    37 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       6223 job    37 on # 4 of server large COMPLETED
-t:       6263 job    34 on # 1 of server large COMPLETED
-t:       6327 job    36 on # 1 of server large COMPLETED
+t:       6223 job    37 on # 0 of server large COMPLETED
+t:       6263 job    34 on # 0 of server large COMPLETED
+t:       6327 job    36 on # 0 of server large COMPLETED
 SENT JOBN 6682 38 393 2 900 4100
-RCVD SCHD 38 large 1
-t:       6682 job    38 (running) on # 1 of server large (active) SCHEDULED
-t:       6682 job    38 on # 1 of server large RUNNING
+RCVD SCHD 38 large 0
+t:       6682 job    38 (running) on # 0 of server large (active) SCHEDULED
+t:       6682 job    38 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 6906 39 3 1 500 1000
-RCVD SCHD 39 large 4
-t:       6906 job    39 (running) on # 4 of server large (active) SCHEDULED
-t:       6906 job    39 on # 4 of server large RUNNING
+RCVD SCHD 39 large 0
+t:       6906 job    39 (running) on # 0 of server large (active) SCHEDULED
+t:       6906 job    39 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
-t:       6932 job    38 on # 1 of server large COMPLETED
-t:       7094 job    39 on # 4 of server large COMPLETED
+t:       6932 job    38 on # 0 of server large COMPLETED
+t:       7094 job    39 on # 0 of server large COMPLETED
 SENT JOBN 7111 40 234 1 1000 1000
-RCVD SCHD 40 large 1
-t:       7111 job    40 (running) on # 1 of server large (active) SCHEDULED
-t:       7111 job    40 on # 1 of server large RUNNING
+RCVD SCHD 40 large 0
+t:       7111 job    40 (running) on # 0 of server large (active) SCHEDULED
+t:       7111 job    40 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 t:       7118 job    33 on # 0 of server large COMPLETED
-t:       7318 job    40 on # 1 of server large COMPLETED
+t:       7318 job    40 on # 0 of server large COMPLETED
 SENT JOBN 7319 41 33 1 100 300
 RCVD SCHD 41 large 0
 t:       7319 job    41 (running) on # 0 of server large (active) SCHEDULED
@@ -305,9 +305,9 @@ t:       7417 job    42 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 7531 43 27881 3 1500 3900
-RCVD SCHD 43 large 1
-t:       7531 job    43 (running) on # 1 of server large (active) SCHEDULED
-t:       7531 job    43 on # 1 of server large RUNNING
+RCVD SCHD 43 large 0
+t:       7531 job    43 (running) on # 0 of server large (active) SCHEDULED
+t:       7531 job    43 on # 0 of server large RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 7571 44 1 2 1200 3200
@@ -358,12 +358,12 @@ t:       7792 job    49 on # 0 of server large COMPLETED
 t:      37736 job    13 on # 3 of server large COMPLETED
 t:      76116 job    19 on # 5 of server large COMPLETED
 t:      81681 job     9 on # 2 of server large COMPLETED
-t:      97641 job    43 on # 1 of server large COMPLETED
-t:      97952 job    30 on # 4 of server large COMPLETED
+t:      97641 job    43 on # 0 of server large COMPLETED
+t:      97952 job    30 on # 0 of server large COMPLETED
 # ---------------------------------------------------------------------------
 # 0 tiny servers used with a utilisation of 0.00 at the cost of $0.00
 # 0 small servers used with a utilisation of 0.00 at the cost of $0.00
 # 0 medium servers used with a utilisation of 0.00 at the cost of $0.00
-# 6 large servers used with a utilisation of 92.03 at the cost of $85.09
+# 6 large servers used with a utilisation of 98.16 at the cost of $63.76
 # ================================ [ Total ] ================================
-# Total #servers used: 6, avg utilisation: 92.03 and total cost: $85.09
+# Total #servers used: 6, avg utilisation: 98.16 and total cost: $63.76
