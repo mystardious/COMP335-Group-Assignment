@@ -46,9 +46,9 @@ RCVD REDY
 t:       1407 job     5 on # 3 of server mq RUNNING
 t:       1687 job     4 on # 0 of server mq COMPLETED
 SENT JOBN 1830 6 903 1 900 200
-RCVD SCHD 6 mq 0
-t:       1830 job     6 (running) on # 0 of server mq (active) SCHEDULED
-t:       1830 job     6 on # 0 of server mq RUNNING
+RCVD SCHD 6 mq 3
+t:       1830 job     6 (running) on # 3 of server mq (active) SCHEDULED
+t:       1830 job     6 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 1914 7 195 1 1000 900
@@ -59,7 +59,7 @@ SENT OK
 RCVD REDY
 t:       1965 job     1 on # 0 of server mq COMPLETED
 t:       2146 job     7 on # 0 of server mq COMPLETED
-t:       2344 job     6 on # 0 of server mq COMPLETED
+t:       2344 job     6 on # 3 of server mq COMPLETED
 SENT JOBN 2602 8 7037 6 5000 10300
 RCVD SCHD 8 mq 4
 t:       2602 job     8 (waiting) on # 4 of server mq (booting) SCHEDULED
@@ -81,36 +81,36 @@ RCVD REDY
 t:       3352 job    10 on # 5 of server mq RUNNING
 t:       3477 job     2 on # 1 of server mq COMPLETED
 SENT JOBN 3502 11 1164 1 600 1300
-RCVD SCHD 11 mq 5
-t:       3502 job    11 (running) on # 5 of server mq (active) SCHEDULED
-t:       3502 job    11 on # 5 of server mq RUNNING
+RCVD SCHD 11 mq 3
+t:       3502 job    11 (running) on # 3 of server mq (active) SCHEDULED
+t:       3502 job    11 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:       3784 job     3 on # 2 of server mq COMPLETED
 t:       4277 job     5 on # 3 of server mq COMPLETED
 SENT JOBN 4368 12 101 4 1800 5700
-RCVD SCHD 12 mq 1
-t:       4368 job    12 (running) on # 1 of server mq (active) SCHEDULED
-t:       4368 job    12 on # 1 of server mq RUNNING
+RCVD SCHD 12 mq 5
+t:       4368 job    12 (running) on # 5 of server mq (active) SCHEDULED
+t:       4368 job    12 on # 5 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 4524 13 4561 1 100 1800
-RCVD SCHD 13 mq 1
-t:       4524 job    13 (running) on # 1 of server mq (active) SCHEDULED
-t:       4524 job    13 on # 1 of server mq RUNNING
+RCVD SCHD 13 mq 0
+t:       4524 job    13 (running) on # 0 of server mq (active) SCHEDULED
+t:       4524 job    13 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:       4594 job    11 on # 5 of server mq COMPLETED
+t:       4594 job    11 on # 3 of server mq COMPLETED
 SENT JOBN 4824 14 5082 2 1900 4100
-RCVD SCHD 14 mq 5
-t:       4824 job    14 (running) on # 5 of server mq (active) SCHEDULED
-t:       4824 job    14 on # 5 of server mq RUNNING
+RCVD SCHD 14 mq 4
+t:       4824 job    14 (running) on # 4 of server mq (active) SCHEDULED
+t:       4824 job    14 on # 4 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 5903 15 2252 8 6300 7900
-RCVD SCHD 15 mq 2
-t:       5903 job    15 (running) on # 2 of server mq (active) SCHEDULED
-t:       5903 job    15 on # 2 of server mq RUNNING
+RCVD SCHD 15 mq 1
+t:       5903 job    15 (running) on # 1 of server mq (active) SCHEDULED
+t:       5903 job    15 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:       6047 job    10 on # 5 of server mq COMPLETED
@@ -122,16 +122,16 @@ t:       6592 job    16 (running) on # 5 of server mq (active) SCHEDULED
 t:       6592 job    16 on # 5 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:       6631 job    12 on # 1 of server mq COMPLETED
-t:       7085 job    13 on # 1 of server mq COMPLETED
+t:       6631 job    12 on # 5 of server mq COMPLETED
+t:       7085 job    13 on # 0 of server mq COMPLETED
 SENT JOBN 7559 17 2639 8 6500 10000
 RCVD SCHD 17 mq 0
 t:       7559 job    17 (running) on # 0 of server mq (active) SCHEDULED
 t:       7559 job    17 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:       7844 job    14 on # 5 of server mq COMPLETED
-t:       8066 job    15 on # 2 of server mq COMPLETED
+t:       7844 job    14 on # 4 of server mq COMPLETED
+t:       8066 job    15 on # 1 of server mq COMPLETED
 SENT JOBN 8476 18 952 8 4900 11200
 RCVD SCHD 18 mq 1
 t:       8476 job    18 (running) on # 1 of server mq (active) SCHEDULED
@@ -343,9 +343,9 @@ SENT OK
 RCVD REDY
 t:      28537 job    46 on # 1 of server mq COMPLETED
 SENT JOBN 29140 48 150 1 700 1800
-RCVD SCHD 48 mq 1
-t:      29140 job    48 (running) on # 1 of server mq (active) SCHEDULED
-t:      29140 job    48 on # 1 of server mq RUNNING
+RCVD SCHD 48 mq 0
+t:      29140 job    48 (running) on # 0 of server mq (active) SCHEDULED
+t:      29140 job    48 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 29558 49 1993 5 4200 3200
@@ -360,7 +360,7 @@ t:      29590 job    50 (running) on # 3 of server mq (active) SCHEDULED
 t:      29590 job    50 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:      29991 job    48 on # 1 of server mq COMPLETED
+t:      29991 job    48 on # 0 of server mq COMPLETED
 t:      30169 job    45 on # 0 of server mq COMPLETED
 SENT JOBN 30571 51 636 4 1900 4500
 RCVD SCHD 51 mq 1
@@ -376,32 +376,32 @@ t:      31454 job    52 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 32413 53 3478 3 2000 600
-RCVD SCHD 53 mq 1
-t:      32413 job    53 (running) on # 1 of server mq (active) SCHEDULED
-t:      32413 job    53 on # 1 of server mq RUNNING
+RCVD SCHD 53 mq 2
+t:      32413 job    53 (running) on # 2 of server mq (active) SCHEDULED
+t:      32413 job    53 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:      32790 job    51 on # 1 of server mq COMPLETED
 t:      32820 job    49 on # 2 of server mq COMPLETED
 t:      32963 job    50 on # 3 of server mq COMPLETED
 SENT JOBN 33613 54 4862 6 3800 1200
-RCVD SCHD 54 mq 2
-t:      33613 job    54 (running) on # 2 of server mq (active) SCHEDULED
-t:      33613 job    54 on # 2 of server mq RUNNING
+RCVD SCHD 54 mq 1
+t:      33613 job    54 (running) on # 1 of server mq (active) SCHEDULED
+t:      33613 job    54 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:      33877 job    52 on # 0 of server mq COMPLETED
-t:      34192 job    53 on # 1 of server mq COMPLETED
+t:      34192 job    53 on # 2 of server mq COMPLETED
 SENT JOBN 34331 55 259 1 700 1200
-RCVD SCHD 55 mq 2
-t:      34331 job    55 (running) on # 2 of server mq (active) SCHEDULED
-t:      34331 job    55 on # 2 of server mq RUNNING
+RCVD SCHD 55 mq 1
+t:      34331 job    55 (running) on # 1 of server mq (active) SCHEDULED
+t:      34331 job    55 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 35368 56 749 1 1000 1300
-RCVD SCHD 56 mq 2
-t:      35368 job    56 (running) on # 2 of server mq (active) SCHEDULED
-t:      35368 job    56 on # 2 of server mq RUNNING
+RCVD SCHD 56 mq 1
+t:      35368 job    56 (running) on # 1 of server mq (active) SCHEDULED
+t:      35368 job    56 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 35704 57 336 1 600 900
@@ -410,7 +410,7 @@ t:      35704 job    57 (running) on # 0 of server mq (active) SCHEDULED
 t:      35704 job    57 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:      36348 job    55 on # 2 of server mq COMPLETED
+t:      36348 job    55 on # 1 of server mq COMPLETED
 SENT JOBN 36461 58 1272 5 1000 9800
 RCVD SCHD 58 mq 0
 t:      36461 job    58 (running) on # 0 of server mq (active) SCHEDULED
@@ -418,14 +418,14 @@ t:      36461 job    58 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 36679 59 221 1 100 1300
-RCVD SCHD 59 mq 0
-t:      36679 job    59 (running) on # 0 of server mq (active) SCHEDULED
-t:      36679 job    59 on # 0 of server mq RUNNING
+RCVD SCHD 59 mq 1
+t:      36679 job    59 (running) on # 1 of server mq (active) SCHEDULED
+t:      36679 job    59 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:      36888 job    57 on # 0 of server mq COMPLETED
-t:      37035 job    54 on # 2 of server mq COMPLETED
-t:      37163 job    56 on # 2 of server mq COMPLETED
+t:      37035 job    54 on # 1 of server mq COMPLETED
+t:      37163 job    56 on # 1 of server mq COMPLETED
 SENT JOBN 37503 60 2477 7 4300 5400
 RCVD SCHD 60 mq 1
 t:      37503 job    60 (running) on # 1 of server mq (active) SCHEDULED
@@ -439,7 +439,7 @@ t:      38558 job    61 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:      38607 job    58 on # 0 of server mq COMPLETED
-t:      39186 job    59 on # 0 of server mq COMPLETED
+t:      39186 job    59 on # 1 of server mq COMPLETED
 SENT JOBN 39240 62 1580 7 1900 5100
 RCVD SCHD 62 mq 0
 t:      39240 job    62 (running) on # 0 of server mq (active) SCHEDULED
@@ -558,9 +558,9 @@ t:      52259 job    78 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 53074 79 3517 1 400 600
-RCVD SCHD 79 mq 1
-t:      53074 job    79 (running) on # 1 of server mq (active) SCHEDULED
-t:      53074 job    79 on # 1 of server mq RUNNING
+RCVD SCHD 79 mq 0
+t:      53074 job    79 (running) on # 0 of server mq (active) SCHEDULED
+t:      53074 job    79 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:      53859 job    77 on # 0 of server mq COMPLETED
@@ -574,28 +574,28 @@ RCVD REDY
 t:      54585 job    76 on # 0 of server mq COMPLETED
 t:      55012 job    78 on # 1 of server mq COMPLETED
 SENT JOBN 55398 81 3996 8 8000 7000
-RCVD SCHD 81 mq 2
-t:      55398 job    81 (running) on # 2 of server mq (active) SCHEDULED
-t:      55398 job    81 on # 2 of server mq RUNNING
+RCVD SCHD 81 mq 1
+t:      55398 job    81 (running) on # 1 of server mq (active) SCHEDULED
+t:      55398 job    81 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 55669 82 1332 1 700 1000
-RCVD SCHD 82 mq 1
-t:      55669 job    82 (running) on # 1 of server mq (active) SCHEDULED
-t:      55669 job    82 on # 1 of server mq RUNNING
+RCVD SCHD 82 mq 0
+t:      55669 job    82 (running) on # 0 of server mq (active) SCHEDULED
+t:      55669 job    82 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:      56602 job    79 on # 1 of server mq COMPLETED
+t:      56602 job    79 on # 0 of server mq COMPLETED
 SENT JOBN 56655 83 216 2 1400 2000
-RCVD SCHD 83 mq 1
-t:      56655 job    83 (running) on # 1 of server mq (active) SCHEDULED
-t:      56655 job    83 on # 1 of server mq RUNNING
+RCVD SCHD 83 mq 0
+t:      56655 job    83 (running) on # 0 of server mq (active) SCHEDULED
+t:      56655 job    83 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:      56682 job    82 on # 1 of server mq COMPLETED
-t:      56906 job    83 on # 1 of server mq COMPLETED
+t:      56682 job    82 on # 0 of server mq COMPLETED
+t:      56906 job    83 on # 0 of server mq COMPLETED
 t:      56908 job    80 on # 0 of server mq COMPLETED
-t:      57538 job    81 on # 2 of server mq COMPLETED
+t:      57538 job    81 on # 1 of server mq COMPLETED
 SENT JOBN 57713 84 435 8 1500 11400
 RCVD SCHD 84 mq 0
 t:      57713 job    84 (running) on # 0 of server mq (active) SCHEDULED
@@ -770,21 +770,21 @@ t:      75302 job   108 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 75910 109 97 1 300 300
-RCVD SCHD 109 mq 0
-t:      75910 job   109 (running) on # 0 of server mq (active) SCHEDULED
-t:      75910 job   109 on # 0 of server mq RUNNING
+RCVD SCHD 109 mq 1
+t:      75910 job   109 (running) on # 1 of server mq (active) SCHEDULED
+t:      75910 job   109 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:      76055 job   109 on # 0 of server mq COMPLETED
+t:      76055 job   109 on # 1 of server mq COMPLETED
 SENT JOBN 77137 110 869 1 600 1100
-RCVD SCHD 110 mq 0
-t:      77137 job   110 (running) on # 0 of server mq (active) SCHEDULED
-t:      77137 job   110 on # 0 of server mq RUNNING
+RCVD SCHD 110 mq 1
+t:      77137 job   110 (running) on # 1 of server mq (active) SCHEDULED
+t:      77137 job   110 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:      77201 job   108 on # 0 of server mq COMPLETED
 t:      77387 job   107 on # 1 of server mq COMPLETED
-t:      77593 job   110 on # 0 of server mq COMPLETED
+t:      77593 job   110 on # 1 of server mq COMPLETED
 SENT JOBN 78508 111 2475 1 1000 1600
 RCVD SCHD 111 mq 0
 t:      78508 job   111 (running) on # 0 of server mq (active) SCHEDULED
@@ -838,19 +838,19 @@ t:      83525 job   118 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 83675 119 67 1 500 1900
-RCVD SCHD 119 mq 0
-t:      83675 job   119 (running) on # 0 of server mq (active) SCHEDULED
-t:      83675 job   119 on # 0 of server mq RUNNING
+RCVD SCHD 119 mq 1
+t:      83675 job   119 (running) on # 1 of server mq (active) SCHEDULED
+t:      83675 job   119 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:      83696 job   115 on # 0 of server mq COMPLETED
 SENT JOBN 83706 120 3116 1 100 1700
-RCVD SCHD 120 mq 0
-t:      83706 job   120 (running) on # 0 of server mq (active) SCHEDULED
-t:      83706 job   120 on # 0 of server mq RUNNING
+RCVD SCHD 120 mq 1
+t:      83706 job   120 (running) on # 1 of server mq (active) SCHEDULED
+t:      83706 job   120 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:      84137 job   119 on # 0 of server mq COMPLETED
+t:      84137 job   119 on # 1 of server mq COMPLETED
 t:      84280 job   114 on # 0 of server mq COMPLETED
 SENT JOBN 84414 121 254 8 7700 3800
 RCVD SCHD 121 mq 2
@@ -889,7 +889,7 @@ t:      85890 job   126 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:      85949 job   118 on # 1 of server mq COMPLETED
-t:      85960 job   120 on # 0 of server mq COMPLETED
+t:      85960 job   120 on # 1 of server mq COMPLETED
 t:      86567 job   117 on # 0 of server mq COMPLETED
 SENT JOBN 87125 127 1032 4 1200 7900
 RCVD SCHD 127 mq 0
@@ -1008,9 +1008,9 @@ t:      98832 job   142 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 98846 143 1409 2 400 200
-RCVD SCHD 143 mq 0
-t:      98846 job   143 (running) on # 0 of server mq (active) SCHEDULED
-t:      98846 job   143 on # 0 of server mq RUNNING
+RCVD SCHD 143 mq 1
+t:      98846 job   143 (running) on # 1 of server mq (active) SCHEDULED
+t:      98846 job   143 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 99151 144 2241 8 6800 2500
@@ -1019,7 +1019,7 @@ t:      99151 job   144 (running) on # 2 of server mq (active) SCHEDULED
 t:      99151 job   144 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:      99574 job   143 on # 0 of server mq COMPLETED
+t:      99574 job   143 on # 1 of server mq COMPLETED
 t:      99731 job   141 on # 0 of server mq COMPLETED
 SENT JOBN 99879 145 2922 1 700 1900
 RCVD SCHD 145 mq 1
@@ -1111,9 +1111,9 @@ SENT OK
 RCVD REDY
 t:     107907 job   154 on # 1 of server mq COMPLETED
 SENT JOBN 108201 158 3561 1 500 1800
-RCVD SCHD 158 mq 1
-t:     108201 job   158 (running) on # 1 of server mq (active) SCHEDULED
-t:     108201 job   158 on # 1 of server mq RUNNING
+RCVD SCHD 158 mq 0
+t:     108201 job   158 (running) on # 0 of server mq (active) SCHEDULED
+t:     108201 job   158 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 108329 159 299 8 3800 15500
@@ -1133,66 +1133,66 @@ RCVD REDY
 t:     109191 job   156 on # 0 of server mq COMPLETED
 t:     109767 job   155 on # 1 of server mq COMPLETED
 SENT JOBN 109958 161 1325 1 700 800
-RCVD SCHD 161 mq 1
-t:     109958 job   161 (running) on # 1 of server mq (active) SCHEDULED
-t:     109958 job   161 on # 1 of server mq RUNNING
+RCVD SCHD 161 mq 0
+t:     109958 job   161 (running) on # 0 of server mq (active) SCHEDULED
+t:     109958 job   161 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 110267 162 2054 1 400 1700
-RCVD SCHD 162 mq 1
-t:     110267 job   162 (running) on # 1 of server mq (active) SCHEDULED
-t:     110267 job   162 on # 1 of server mq RUNNING
+RCVD SCHD 162 mq 0
+t:     110267 job   162 (running) on # 0 of server mq (active) SCHEDULED
+t:     110267 job   162 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     111016 job   158 on # 1 of server mq COMPLETED
+t:     111016 job   158 on # 0 of server mq COMPLETED
 t:     111200 job   159 on # 3 of server mq COMPLETED
 SENT JOBN 111518 163 2258 2 2100 3300
-RCVD SCHD 163 mq 1
-t:     111518 job   163 (running) on # 1 of server mq (active) SCHEDULED
-t:     111518 job   163 on # 1 of server mq RUNNING
+RCVD SCHD 163 mq 0
+t:     111518 job   163 (running) on # 0 of server mq (active) SCHEDULED
+t:     111518 job   163 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 111787 164 775 8 7400 13400
-RCVD SCHD 164 mq 0
-t:     111787 job   164 (running) on # 0 of server mq (active) SCHEDULED
-t:     111787 job   164 on # 0 of server mq RUNNING
+RCVD SCHD 164 mq 1
+t:     111787 job   164 (running) on # 1 of server mq (active) SCHEDULED
+t:     111787 job   164 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     111812 job   162 on # 1 of server mq COMPLETED
+t:     111812 job   162 on # 0 of server mq COMPLETED
 t:     111914 job   160 on # 2 of server mq COMPLETED
-t:     112189 job   161 on # 1 of server mq COMPLETED
+t:     112189 job   161 on # 0 of server mq COMPLETED
 SENT JOBN 112346 165 210 1 600 600
-RCVD SCHD 165 mq 1
-t:     112346 job   165 (running) on # 1 of server mq (active) SCHEDULED
-t:     112346 job   165 on # 1 of server mq RUNNING
+RCVD SCHD 165 mq 0
+t:     112346 job   165 (running) on # 0 of server mq (active) SCHEDULED
+t:     112346 job   165 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     112916 job   165 on # 1 of server mq COMPLETED
+t:     112916 job   165 on # 0 of server mq COMPLETED
 SENT JOBN 113042 166 4054 1 1000 1500
-RCVD SCHD 166 mq 1
-t:     113042 job   166 (running) on # 1 of server mq (active) SCHEDULED
-t:     113042 job   166 on # 1 of server mq RUNNING
+RCVD SCHD 166 mq 0
+t:     113042 job   166 (running) on # 0 of server mq (active) SCHEDULED
+t:     113042 job   166 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 113255 167 1030 4 3000 7400
-RCVD SCHD 167 mq 1
-t:     113255 job   167 (running) on # 1 of server mq (active) SCHEDULED
-t:     113255 job   167 on # 1 of server mq RUNNING
+RCVD SCHD 167 mq 0
+t:     113255 job   167 (running) on # 0 of server mq (active) SCHEDULED
+t:     113255 job   167 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     113480 job   163 on # 1 of server mq COMPLETED
+t:     113480 job   163 on # 0 of server mq COMPLETED
 SENT JOBN 113964 168 394 1 800 1300
-RCVD SCHD 168 mq 1
-t:     113964 job   168 (running) on # 1 of server mq (active) SCHEDULED
-t:     113964 job   168 on # 1 of server mq RUNNING
+RCVD SCHD 168 mq 0
+t:     113964 job   168 (running) on # 0 of server mq (active) SCHEDULED
+t:     113964 job   168 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     114335 job   168 on # 1 of server mq COMPLETED
-t:     114404 job   164 on # 0 of server mq COMPLETED
+t:     114335 job   168 on # 0 of server mq COMPLETED
+t:     114404 job   164 on # 1 of server mq COMPLETED
 SENT JOBN 114464 169 2954 4 1000 4900
-RCVD SCHD 169 mq 0
-t:     114464 job   169 (running) on # 0 of server mq (active) SCHEDULED
-t:     114464 job   169 on # 0 of server mq RUNNING
+RCVD SCHD 169 mq 1
+t:     114464 job   169 (running) on # 1 of server mq (active) SCHEDULED
+t:     114464 job   169 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 114952 170 520 2 1700 300
@@ -1201,7 +1201,7 @@ t:     114952 job   170 (running) on # 0 of server mq (active) SCHEDULED
 t:     114952 job   170 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     115143 job   166 on # 1 of server mq COMPLETED
+t:     115143 job   166 on # 0 of server mq COMPLETED
 t:     115237 job   170 on # 0 of server mq COMPLETED
 SENT JOBN 115481 171 15 1 500 1500
 RCVD SCHD 171 mq 0
@@ -1209,14 +1209,14 @@ t:     115481 job   171 (running) on # 0 of server mq (active) SCHEDULED
 t:     115481 job   171 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     115621 job   167 on # 1 of server mq COMPLETED
+t:     115621 job   167 on # 0 of server mq COMPLETED
 SENT JOBN 115919 172 3966 1 100 2000
-RCVD SCHD 172 mq 0
-t:     115919 job   172 (running) on # 0 of server mq (active) SCHEDULED
-t:     115919 job   172 on # 0 of server mq RUNNING
+RCVD SCHD 172 mq 1
+t:     115919 job   172 (running) on # 1 of server mq (active) SCHEDULED
+t:     115919 job   172 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     116297 job   169 on # 0 of server mq COMPLETED
+t:     116297 job   169 on # 1 of server mq COMPLETED
 SENT JOBN 116364 173 1494 4 3100 7000
 RCVD SCHD 173 mq 0
 t:     116364 job   173 (running) on # 0 of server mq (active) SCHEDULED
@@ -1231,9 +1231,9 @@ t:     116617 job   174 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 116868 175 2042 1 200 500
-RCVD SCHD 175 mq 0
-t:     116868 job   175 (running) on # 0 of server mq (active) SCHEDULED
-t:     116868 job   175 on # 0 of server mq RUNNING
+RCVD SCHD 175 mq 1
+t:     116868 job   175 (running) on # 1 of server mq (active) SCHEDULED
+t:     116868 job   175 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 116923 176 29 1 100 1400
@@ -1255,19 +1255,19 @@ t:     118116 job   178 (running) on # 0 of server mq (active) SCHEDULED
 t:     118116 job   178 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     118159 job   172 on # 0 of server mq COMPLETED
+t:     118159 job   172 on # 1 of server mq COMPLETED
 t:     118352 job   174 on # 1 of server mq COMPLETED
 t:     118472 job   178 on # 0 of server mq COMPLETED
 t:     118828 job   176 on # 1 of server mq COMPLETED
 t:     118917 job   177 on # 0 of server mq COMPLETED
 SENT JOBN 119159 179 273 1 500 800
-RCVD SCHD 179 mq 0
-t:     119159 job   179 (running) on # 0 of server mq (active) SCHEDULED
-t:     119159 job   179 on # 0 of server mq RUNNING
+RCVD SCHD 179 mq 1
+t:     119159 job   179 (running) on # 1 of server mq (active) SCHEDULED
+t:     119159 job   179 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     119257 job   175 on # 0 of server mq COMPLETED
-t:     119453 job   179 on # 0 of server mq COMPLETED
+t:     119257 job   175 on # 1 of server mq COMPLETED
+t:     119453 job   179 on # 1 of server mq COMPLETED
 SENT JOBN 119961 180 2575 3 2900 2900
 RCVD SCHD 180 mq 0
 t:     119961 job   180 (running) on # 0 of server mq (active) SCHEDULED
@@ -1363,9 +1363,9 @@ SENT OK
 RCVD REDY
 t:     128541 job   192 on # 0 of server mq COMPLETED
 SENT JOBN 128880 194 1545 1 100 600
-RCVD SCHD 194 mq 0
-t:     128880 job   194 (running) on # 0 of server mq (active) SCHEDULED
-t:     128880 job   194 on # 0 of server mq RUNNING
+RCVD SCHD 194 mq 3
+t:     128880 job   194 (running) on # 3 of server mq (active) SCHEDULED
+t:     128880 job   194 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     129138 job   189 on # 0 of server mq COMPLETED
@@ -1376,12 +1376,12 @@ t:     129305 job   195 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 129567 196 276 1 200 1600
-RCVD SCHD 196 mq 0
-t:     129567 job   196 (running) on # 0 of server mq (active) SCHEDULED
-t:     129567 job   196 on # 0 of server mq RUNNING
+RCVD SCHD 196 mq 3
+t:     129567 job   196 (running) on # 3 of server mq (active) SCHEDULED
+t:     129567 job   196 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     129723 job   196 on # 0 of server mq COMPLETED
+t:     129723 job   196 on # 3 of server mq COMPLETED
 t:     129752 job   190 on # 1 of server mq COMPLETED
 t:     130854 job   191 on # 2 of server mq COMPLETED
 t:     131038 job   193 on # 3 of server mq COMPLETED
@@ -1392,7 +1392,7 @@ t:     131170 job   197 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     131714 job   195 on # 0 of server mq COMPLETED
-t:     132176 job   194 on # 0 of server mq COMPLETED
+t:     132176 job   194 on # 3 of server mq COMPLETED
 SENT JOBN 132617 198 781 6 1800 1900
 RCVD SCHD 198 mq 0
 t:     132617 job   198 (running) on # 0 of server mq (active) SCHEDULED
@@ -1407,15 +1407,15 @@ SENT OK
 RCVD REDY
 t:     134104 job   197 on # 0 of server mq COMPLETED
 SENT JOBN 134439 200 4294 1 300 100
-RCVD SCHD 200 mq 1
-t:     134439 job   200 (running) on # 1 of server mq (active) SCHEDULED
-t:     134439 job   200 on # 1 of server mq RUNNING
+RCVD SCHD 200 mq 0
+t:     134439 job   200 (running) on # 0 of server mq (active) SCHEDULED
+t:     134439 job   200 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 134713 201 4474 1 100 1700
-RCVD SCHD 201 mq 1
-t:     134713 job   201 (running) on # 1 of server mq (active) SCHEDULED
-t:     134713 job   201 on # 1 of server mq RUNNING
+RCVD SCHD 201 mq 0
+t:     134713 job   201 (running) on # 0 of server mq (active) SCHEDULED
+t:     134713 job   201 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     135391 job   198 on # 0 of server mq COMPLETED
@@ -1428,28 +1428,28 @@ RCVD REDY
 t:     136309 job   202 on # 1 of server mq COMPLETED
 t:     136393 job   199 on # 1 of server mq COMPLETED
 SENT JOBN 136508 203 1624 2 1500 2600
-RCVD SCHD 203 mq 1
-t:     136508 job   203 (running) on # 1 of server mq (active) SCHEDULED
-t:     136508 job   203 on # 1 of server mq RUNNING
+RCVD SCHD 203 mq 0
+t:     136508 job   203 (running) on # 0 of server mq (active) SCHEDULED
+t:     136508 job   203 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     136908 job   200 on # 1 of server mq COMPLETED
+t:     136908 job   200 on # 0 of server mq COMPLETED
 SENT JOBN 137197 204 1038 1 900 400
-RCVD SCHD 204 mq 1
-t:     137197 job   204 (running) on # 1 of server mq (active) SCHEDULED
-t:     137197 job   204 on # 1 of server mq RUNNING
+RCVD SCHD 204 mq 0
+t:     137197 job   204 (running) on # 0 of server mq (active) SCHEDULED
+t:     137197 job   204 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     137554 job   203 on # 1 of server mq COMPLETED
-t:     137599 job   201 on # 1 of server mq COMPLETED
+t:     137554 job   203 on # 0 of server mq COMPLETED
+t:     137599 job   201 on # 0 of server mq COMPLETED
 SENT JOBN 138448 205 811 1 100 2000
-RCVD SCHD 205 mq 1
-t:     138448 job   205 (running) on # 1 of server mq (active) SCHEDULED
-t:     138448 job   205 on # 1 of server mq RUNNING
+RCVD SCHD 205 mq 0
+t:     138448 job   205 (running) on # 0 of server mq (active) SCHEDULED
+t:     138448 job   205 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     138936 job   205 on # 1 of server mq COMPLETED
-t:     139164 job   204 on # 1 of server mq COMPLETED
+t:     138936 job   205 on # 0 of server mq COMPLETED
+t:     139164 job   204 on # 0 of server mq COMPLETED
 SENT JOBN 139346 206 3338 4 1200 3600
 RCVD SCHD 206 mq 0
 t:     139346 job   206 (running) on # 0 of server mq (active) SCHEDULED
@@ -1596,9 +1596,9 @@ t:     151345 job   226 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 151981 227 26 1 100 1600
-RCVD SCHD 227 mq 0
-t:     151981 job   227 (running) on # 0 of server mq (active) SCHEDULED
-t:     151981 job   227 on # 0 of server mq RUNNING
+RCVD SCHD 227 mq 1
+t:     151981 job   227 (running) on # 1 of server mq (active) SCHEDULED
+t:     151981 job   227 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     152375 job   225 on # 1 of server mq COMPLETED
@@ -1615,9 +1615,9 @@ t:     152912 job   229 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 153233 230 4132 1 400 300
-RCVD SCHD 230 mq 2
-t:     153233 job   230 (running) on # 2 of server mq (active) SCHEDULED
-t:     153233 job   230 on # 2 of server mq RUNNING
+RCVD SCHD 230 mq 1
+t:     153233 job   230 (running) on # 1 of server mq (active) SCHEDULED
+t:     153233 job   230 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 153399 231 773 8 8000 2400
@@ -1626,24 +1626,24 @@ t:     153399 job   231 (running) on # 3 of server mq (active) SCHEDULED
 t:     153399 job   231 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     153763 job   227 on # 0 of server mq COMPLETED
+t:     153763 job   227 on # 1 of server mq COMPLETED
 t:     153911 job   229 on # 2 of server mq COMPLETED
 t:     154321 job   226 on # 0 of server mq COMPLETED
 SENT JOBN 154723 232 2882 1 500 600
-RCVD SCHD 232 mq 2
-t:     154723 job   232 (running) on # 2 of server mq (active) SCHEDULED
-t:     154723 job   232 on # 2 of server mq RUNNING
+RCVD SCHD 232 mq 1
+t:     154723 job   232 (running) on # 1 of server mq (active) SCHEDULED
+t:     154723 job   232 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     154962 job   231 on # 3 of server mq COMPLETED
 t:     155318 job   228 on # 1 of server mq COMPLETED
 SENT JOBN 155487 233 638 1 1000 800
-RCVD SCHD 233 mq 2
-t:     155487 job   233 (running) on # 2 of server mq (active) SCHEDULED
-t:     155487 job   233 on # 2 of server mq RUNNING
+RCVD SCHD 233 mq 1
+t:     155487 job   233 (running) on # 1 of server mq (active) SCHEDULED
+t:     155487 job   233 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     155609 job   230 on # 2 of server mq COMPLETED
+t:     155609 job   230 on # 1 of server mq COMPLETED
 SENT JOBN 155986 234 1247 7 5700 3100
 RCVD SCHD 234 mq 0
 t:     155986 job   234 (running) on # 0 of server mq (active) SCHEDULED
@@ -1651,30 +1651,30 @@ t:     155986 job   234 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 155990 235 1068 1 500 1900
-RCVD SCHD 235 mq 2
-t:     155990 job   235 (running) on # 2 of server mq (active) SCHEDULED
-t:     155990 job   235 on # 2 of server mq RUNNING
+RCVD SCHD 235 mq 0
+t:     155990 job   235 (running) on # 0 of server mq (active) SCHEDULED
+t:     155990 job   235 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 156310 236 1598 5 3600 6400
-RCVD SCHD 236 mq 2
-t:     156310 job   236 (running) on # 2 of server mq (active) SCHEDULED
-t:     156310 job   236 on # 2 of server mq RUNNING
+RCVD SCHD 236 mq 1
+t:     156310 job   236 (running) on # 1 of server mq (active) SCHEDULED
+t:     156310 job   236 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     156495 job   233 on # 2 of server mq COMPLETED
-t:     156901 job   235 on # 2 of server mq COMPLETED
+t:     156495 job   233 on # 1 of server mq COMPLETED
+t:     156901 job   235 on # 0 of server mq COMPLETED
 SENT JOBN 156944 237 2070 3 1400 600
-RCVD SCHD 237 mq 1
-t:     156944 job   237 (running) on # 1 of server mq (active) SCHEDULED
-t:     156944 job   237 on # 1 of server mq RUNNING
+RCVD SCHD 237 mq 2
+t:     156944 job   237 (running) on # 2 of server mq (active) SCHEDULED
+t:     156944 job   237 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     157780 job   232 on # 2 of server mq COMPLETED
+t:     157780 job   232 on # 1 of server mq COMPLETED
 SENT JOBN 158016 238 274 5 4600 8800
-RCVD SCHD 238 mq 1
-t:     158016 job   238 (running) on # 1 of server mq (active) SCHEDULED
-t:     158016 job   238 on # 1 of server mq RUNNING
+RCVD SCHD 238 mq 2
+t:     158016 job   238 (running) on # 2 of server mq (active) SCHEDULED
+t:     158016 job   238 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     158114 job   234 on # 0 of server mq COMPLETED
@@ -1684,9 +1684,9 @@ t:     158675 job   239 (running) on # 0 of server mq (active) SCHEDULED
 t:     158675 job   239 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     159119 job   238 on # 1 of server mq COMPLETED
-t:     159284 job   237 on # 1 of server mq COMPLETED
-t:     159337 job   236 on # 2 of server mq COMPLETED
+t:     159119 job   238 on # 2 of server mq COMPLETED
+t:     159284 job   237 on # 2 of server mq COMPLETED
+t:     159337 job   236 on # 1 of server mq COMPLETED
 SENT JOBN 159594 240 499 1 100 100
 RCVD SCHD 240 mq 0
 t:     159594 job   240 (running) on # 0 of server mq (active) SCHEDULED
@@ -1797,9 +1797,9 @@ SENT OK
 RCVD REDY
 t:     169966 job   251 on # 0 of server mq COMPLETED
 SENT JOBN 170696 256 3150 2 800 3700
-RCVD SCHD 256 mq 0
-t:     170696 job   256 (running) on # 0 of server mq (active) SCHEDULED
-t:     170696 job   256 on # 0 of server mq RUNNING
+RCVD SCHD 256 mq 2
+t:     170696 job   256 (running) on # 2 of server mq (active) SCHEDULED
+t:     170696 job   256 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     171094 job   254 on # 2 of server mq COMPLETED
@@ -1812,36 +1812,36 @@ RCVD REDY
 t:     171740 job   253 on # 0 of server mq COMPLETED
 t:     172082 job   252 on # 1 of server mq COMPLETED
 SENT JOBN 172487 258 3364 8 5600 14100
-RCVD SCHD 258 mq 1
-t:     172487 job   258 (running) on # 1 of server mq (active) SCHEDULED
-t:     172487 job   258 on # 1 of server mq RUNNING
+RCVD SCHD 258 mq 0
+t:     172487 job   258 (running) on # 0 of server mq (active) SCHEDULED
+t:     172487 job   258 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     172719 job   256 on # 0 of server mq COMPLETED
+t:     172719 job   256 on # 2 of server mq COMPLETED
 t:     173040 job   255 on # 3 of server mq COMPLETED
 SENT JOBN 173964 259 3266 8 3400 16100
-RCVD SCHD 259 mq 0
-t:     173964 job   259 (running) on # 0 of server mq (active) SCHEDULED
-t:     173964 job   259 on # 0 of server mq RUNNING
+RCVD SCHD 259 mq 1
+t:     173964 job   259 (running) on # 1 of server mq (active) SCHEDULED
+t:     173964 job   259 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     174294 job   257 on # 2 of server mq COMPLETED
-t:     174582 job   258 on # 1 of server mq COMPLETED
+t:     174582 job   258 on # 0 of server mq COMPLETED
 SENT JOBN 175135 260 1313 1 500 1900
-RCVD SCHD 260 mq 1
-t:     175135 job   260 (running) on # 1 of server mq (active) SCHEDULED
-t:     175135 job   260 on # 1 of server mq RUNNING
+RCVD SCHD 260 mq 0
+t:     175135 job   260 (running) on # 0 of server mq (active) SCHEDULED
+t:     175135 job   260 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 175238 261 882 2 1900 2600
-RCVD SCHD 261 mq 1
-t:     175238 job   261 (running) on # 1 of server mq (active) SCHEDULED
-t:     175238 job   261 on # 1 of server mq RUNNING
+RCVD SCHD 261 mq 0
+t:     175238 job   261 (running) on # 0 of server mq (active) SCHEDULED
+t:     175238 job   261 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     175824 job   260 on # 1 of server mq COMPLETED
-t:     176030 job   259 on # 0 of server mq COMPLETED
-t:     176522 job   261 on # 1 of server mq COMPLETED
+t:     175824 job   260 on # 0 of server mq COMPLETED
+t:     176030 job   259 on # 1 of server mq COMPLETED
+t:     176522 job   261 on # 0 of server mq COMPLETED
 SENT JOBN 176698 262 3948 1 1000 900
 RCVD SCHD 262 mq 0
 t:     176698 job   262 (running) on # 0 of server mq (active) SCHEDULED
@@ -2015,9 +2015,9 @@ t:     193985 job   286 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 194329 287 1344 1 600 1600
-RCVD SCHD 287 mq 1
-t:     194329 job   287 (running) on # 1 of server mq (active) SCHEDULED
-t:     194329 job   287 on # 1 of server mq RUNNING
+RCVD SCHD 287 mq 0
+t:     194329 job   287 (running) on # 0 of server mq (active) SCHEDULED
+t:     194329 job   287 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 194390 288 1213 2 1200 700
@@ -2027,84 +2027,84 @@ t:     194390 job   288 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 195011 289 129 2 500 2100
-RCVD SCHD 289 mq 0
-t:     195011 job   289 (running) on # 0 of server mq (active) SCHEDULED
-t:     195011 job   289 on # 0 of server mq RUNNING
+RCVD SCHD 289 mq 1
+t:     195011 job   289 (running) on # 1 of server mq (active) SCHEDULED
+t:     195011 job   289 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     195154 job   288 on # 1 of server mq COMPLETED
-t:     195549 job   287 on # 1 of server mq COMPLETED
+t:     195549 job   287 on # 0 of server mq COMPLETED
 SENT JOBN 195609 290 2459 1 600 600
-RCVD SCHD 290 mq 1
-t:     195609 job   290 (running) on # 1 of server mq (active) SCHEDULED
-t:     195609 job   290 on # 1 of server mq RUNNING
+RCVD SCHD 290 mq 0
+t:     195609 job   290 (running) on # 0 of server mq (active) SCHEDULED
+t:     195609 job   290 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     195773 job   286 on # 1 of server mq COMPLETED
-t:     196055 job   289 on # 0 of server mq COMPLETED
+t:     196055 job   289 on # 1 of server mq COMPLETED
 t:     196374 job   285 on # 0 of server mq COMPLETED
 t:     196428 job   284 on # 0 of server mq COMPLETED
 SENT JOBN 196582 291 5924 1 1000 800
-RCVD SCHD 291 mq 1
-t:     196582 job   291 (running) on # 1 of server mq (active) SCHEDULED
-t:     196582 job   291 on # 1 of server mq RUNNING
+RCVD SCHD 291 mq 0
+t:     196582 job   291 (running) on # 0 of server mq (active) SCHEDULED
+t:     196582 job   291 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 196769 292 5902 1 900 1200
-RCVD SCHD 292 mq 1
-t:     196769 job   292 (running) on # 1 of server mq (active) SCHEDULED
-t:     196769 job   292 on # 1 of server mq RUNNING
+RCVD SCHD 292 mq 0
+t:     196769 job   292 (running) on # 0 of server mq (active) SCHEDULED
+t:     196769 job   292 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     196876 job   290 on # 1 of server mq COMPLETED
+t:     196876 job   290 on # 0 of server mq COMPLETED
 SENT JOBN 197717 293 1329 1 600 2000
-RCVD SCHD 293 mq 1
-t:     197717 job   293 (running) on # 1 of server mq (active) SCHEDULED
-t:     197717 job   293 on # 1 of server mq RUNNING
+RCVD SCHD 293 mq 0
+t:     197717 job   293 (running) on # 0 of server mq (active) SCHEDULED
+t:     197717 job   293 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     198545 job   293 on # 1 of server mq COMPLETED
+t:     198545 job   293 on # 0 of server mq COMPLETED
 SENT JOBN 198627 294 3448 1 400 100
-RCVD SCHD 294 mq 1
-t:     198627 job   294 (running) on # 1 of server mq (active) SCHEDULED
-t:     198627 job   294 on # 1 of server mq RUNNING
+RCVD SCHD 294 mq 0
+t:     198627 job   294 (running) on # 0 of server mq (active) SCHEDULED
+t:     198627 job   294 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 198923 295 5619 1 400 100
-RCVD SCHD 295 mq 1
-t:     198923 job   295 (running) on # 1 of server mq (active) SCHEDULED
-t:     198923 job   295 on # 1 of server mq RUNNING
+RCVD SCHD 295 mq 0
+t:     198923 job   295 (running) on # 0 of server mq (active) SCHEDULED
+t:     198923 job   295 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 199430 296 6 1 200 1600
-RCVD SCHD 296 mq 1
-t:     199430 job   296 (running) on # 1 of server mq (active) SCHEDULED
-t:     199430 job   296 on # 1 of server mq RUNNING
+RCVD SCHD 296 mq 0
+t:     199430 job   296 (running) on # 0 of server mq (active) SCHEDULED
+t:     199430 job   296 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     199560 job   296 on # 1 of server mq COMPLETED
-t:     199812 job   291 on # 1 of server mq COMPLETED
+t:     199560 job   296 on # 0 of server mq COMPLETED
+t:     199812 job   291 on # 0 of server mq COMPLETED
 SENT JOBN 199846 297 371 1 200 700
-RCVD SCHD 297 mq 1
-t:     199846 job   297 (running) on # 1 of server mq (active) SCHEDULED
-t:     199846 job   297 on # 1 of server mq RUNNING
+RCVD SCHD 297 mq 0
+t:     199846 job   297 (running) on # 0 of server mq (active) SCHEDULED
+t:     199846 job   297 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     199853 job   292 on # 1 of server mq COMPLETED
-t:     200177 job   297 on # 1 of server mq COMPLETED
+t:     199853 job   292 on # 0 of server mq COMPLETED
+t:     200177 job   297 on # 0 of server mq COMPLETED
 SENT JOBN 200371 298 1487 5 1700 9000
-RCVD SCHD 298 mq 1
-t:     200371 job   298 (running) on # 1 of server mq (active) SCHEDULED
-t:     200371 job   298 on # 1 of server mq RUNNING
+RCVD SCHD 298 mq 0
+t:     200371 job   298 (running) on # 0 of server mq (active) SCHEDULED
+t:     200371 job   298 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 200516 299 914 6 5400 9000
-RCVD SCHD 299 mq 0
-t:     200516 job   299 (running) on # 0 of server mq (active) SCHEDULED
-t:     200516 job   299 on # 0 of server mq RUNNING
+RCVD SCHD 299 mq 1
+t:     200516 job   299 (running) on # 1 of server mq (active) SCHEDULED
+t:     200516 job   299 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     200552 job   294 on # 1 of server mq COMPLETED
+t:     200552 job   294 on # 0 of server mq COMPLETED
 SENT JOBN 200733 300 1753 2 400 1900
 RCVD SCHD 300 mq 0
 t:     200733 job   300 (running) on # 0 of server mq (active) SCHEDULED
@@ -2132,73 +2132,73 @@ t:     202107 job   303 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 202229 304 29 1 600 1900
-RCVD SCHD 304 mq 1
-t:     202229 job   304 (running) on # 1 of server mq (active) SCHEDULED
-t:     202229 job   304 on # 1 of server mq RUNNING
+RCVD SCHD 304 mq 0
+t:     202229 job   304 (running) on # 0 of server mq (active) SCHEDULED
+t:     202229 job   304 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     202248 job   304 on # 1 of server mq COMPLETED
-t:     202480 job   295 on # 1 of server mq COMPLETED
+t:     202248 job   304 on # 0 of server mq COMPLETED
+t:     202480 job   295 on # 0 of server mq COMPLETED
 SENT JOBN 202796 305 119 1 400 1000
-RCVD SCHD 305 mq 1
-t:     202796 job   305 (running) on # 1 of server mq (active) SCHEDULED
-t:     202796 job   305 on # 1 of server mq RUNNING
+RCVD SCHD 305 mq 0
+t:     202796 job   305 (running) on # 0 of server mq (active) SCHEDULED
+t:     202796 job   305 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     202858 job   305 on # 1 of server mq COMPLETED
+t:     202858 job   305 on # 0 of server mq COMPLETED
 SENT JOBN 202936 306 3857 3 3200 2200
-RCVD SCHD 306 mq 1
-t:     202936 job   306 (running) on # 1 of server mq (active) SCHEDULED
-t:     202936 job   306 on # 1 of server mq RUNNING
+RCVD SCHD 306 mq 3
+t:     202936 job   306 (running) on # 3 of server mq (active) SCHEDULED
+t:     202936 job   306 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     203392 job   303 on # 0 of server mq COMPLETED
-t:     203848 job   299 on # 0 of server mq COMPLETED
+t:     203848 job   299 on # 1 of server mq COMPLETED
 SENT JOBN 203879 307 2204 8 3700 1700
-RCVD SCHD 307 mq 0
-t:     203879 job   307 (running) on # 0 of server mq (active) SCHEDULED
-t:     203879 job   307 on # 0 of server mq RUNNING
+RCVD SCHD 307 mq 1
+t:     203879 job   307 (running) on # 1 of server mq (active) SCHEDULED
+t:     203879 job   307 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     203964 job   298 on # 1 of server mq COMPLETED
+t:     203964 job   298 on # 0 of server mq COMPLETED
 SENT JOBN 204411 308 1459 2 1700 3100
-RCVD SCHD 308 mq 1
-t:     204411 job   308 (running) on # 1 of server mq (active) SCHEDULED
-t:     204411 job   308 on # 1 of server mq RUNNING
+RCVD SCHD 308 mq 3
+t:     204411 job   308 (running) on # 3 of server mq (active) SCHEDULED
+t:     204411 job   308 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     204495 job   302 on # 2 of server mq COMPLETED
 SENT JOBN 205066 309 543 1 400 600
-RCVD SCHD 309 mq 1
-t:     205066 job   309 (running) on # 1 of server mq (active) SCHEDULED
-t:     205066 job   309 on # 1 of server mq RUNNING
+RCVD SCHD 309 mq 3
+t:     205066 job   309 (running) on # 3 of server mq (active) SCHEDULED
+t:     205066 job   309 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     205418 job   308 on # 1 of server mq COMPLETED
+t:     205418 job   308 on # 3 of server mq COMPLETED
 SENT JOBN 205726 310 2210 4 1800 4300
-RCVD SCHD 310 mq 1
-t:     205726 job   310 (running) on # 1 of server mq (active) SCHEDULED
-t:     205726 job   310 on # 1 of server mq RUNNING
+RCVD SCHD 310 mq 3
+t:     205726 job   310 (running) on # 3 of server mq (active) SCHEDULED
+t:     205726 job   310 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     206081 job   306 on # 1 of server mq COMPLETED
+t:     206081 job   306 on # 3 of server mq COMPLETED
 SENT JOBN 206740 311 229 1 600 300
-RCVD SCHD 311 mq 1
-t:     206740 job   311 (running) on # 1 of server mq (active) SCHEDULED
-t:     206740 job   311 on # 1 of server mq RUNNING
+RCVD SCHD 311 mq 3
+t:     206740 job   311 (running) on # 3 of server mq (active) SCHEDULED
+t:     206740 job   311 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     206863 job   310 on # 1 of server mq COMPLETED
+t:     206863 job   310 on # 3 of server mq COMPLETED
 SENT JOBN 206863 312 30 2 1400 1300
-RCVD SCHD 312 mq 1
-t:     206863 job   312 (running) on # 1 of server mq (active) SCHEDULED
-t:     206863 job   312 on # 1 of server mq RUNNING
+RCVD SCHD 312 mq 3
+t:     206863 job   312 (running) on # 3 of server mq (active) SCHEDULED
+t:     206863 job   312 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     207033 job   309 on # 1 of server mq COMPLETED
-t:     207136 job   312 on # 1 of server mq COMPLETED
-t:     207181 job   307 on # 0 of server mq COMPLETED
-t:     207218 job   311 on # 1 of server mq COMPLETED
+t:     207033 job   309 on # 3 of server mq COMPLETED
+t:     207136 job   312 on # 3 of server mq COMPLETED
+t:     207181 job   307 on # 1 of server mq COMPLETED
+t:     207218 job   311 on # 3 of server mq COMPLETED
 SENT JOBN 208154 313 1816 5 4400 2000
 RCVD SCHD 313 mq 0
 t:     208154 job   313 (running) on # 0 of server mq (active) SCHEDULED
@@ -2302,16 +2302,16 @@ t:     217123 job   327 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 218082 328 2414 2 1300 400
-RCVD SCHD 328 mq 0
-t:     218082 job   328 (running) on # 0 of server mq (active) SCHEDULED
-t:     218082 job   328 on # 0 of server mq RUNNING
+RCVD SCHD 328 mq 1
+t:     218082 job   328 (running) on # 1 of server mq (active) SCHEDULED
+t:     218082 job   328 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     218212 job   325 on # 1 of server mq COMPLETED
 SENT JOBN 218316 329 3483 2 1700 700
-RCVD SCHD 329 mq 1
-t:     218316 job   329 (running) on # 1 of server mq (active) SCHEDULED
-t:     218316 job   329 on # 1 of server mq RUNNING
+RCVD SCHD 329 mq 0
+t:     218316 job   329 (running) on # 0 of server mq (active) SCHEDULED
+t:     218316 job   329 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     218634 job   326 on # 1 of server mq COMPLETED
@@ -2322,14 +2322,14 @@ t:     219041 job   330 (running) on # 0 of server mq (active) SCHEDULED
 t:     219041 job   330 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     219394 job   328 on # 0 of server mq COMPLETED
+t:     219394 job   328 on # 1 of server mq COMPLETED
 SENT JOBN 220075 331 3046 4 900 7800
 RCVD SCHD 331 mq 0
 t:     220075 job   331 (running) on # 0 of server mq (active) SCHEDULED
 t:     220075 job   331 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     220265 job   329 on # 1 of server mq COMPLETED
+t:     220265 job   329 on # 0 of server mq COMPLETED
 SENT JOBN 220322 332 5470 1 300 100
 RCVD SCHD 332 mq 0
 t:     220322 job   332 (running) on # 0 of server mq (active) SCHEDULED
@@ -2366,26 +2366,26 @@ RCVD REDY
 t:     223011 job   331 on # 0 of server mq COMPLETED
 t:     223428 job   332 on # 0 of server mq COMPLETED
 SENT JOBN 223538 337 1774 4 1000 3900
-RCVD SCHD 337 mq 1
-t:     223538 job   337 (running) on # 1 of server mq (active) SCHEDULED
-t:     223538 job   337 on # 1 of server mq RUNNING
+RCVD SCHD 337 mq 0
+t:     223538 job   337 (running) on # 0 of server mq (active) SCHEDULED
+t:     223538 job   337 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     223573 job   334 on # 0 of server mq COMPLETED
 SENT JOBN 224392 338 1757 1 1000 900
-RCVD SCHD 338 mq 1
-t:     224392 job   338 (running) on # 1 of server mq (active) SCHEDULED
-t:     224392 job   338 on # 1 of server mq RUNNING
+RCVD SCHD 338 mq 0
+t:     224392 job   338 (running) on # 0 of server mq (active) SCHEDULED
+t:     224392 job   338 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     224626 job   337 on # 1 of server mq COMPLETED
+t:     224626 job   337 on # 0 of server mq COMPLETED
 SENT JOBN 224727 339 4890 7 6200 5400
 RCVD SCHD 339 mq 0
 t:     224727 job   339 (running) on # 0 of server mq (active) SCHEDULED
 t:     224727 job   339 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     225408 job   338 on # 1 of server mq COMPLETED
+t:     225408 job   338 on # 0 of server mq COMPLETED
 SENT JOBN 225525 340 536 6 1500 11900
 RCVD SCHD 340 mq 1
 t:     225525 job   340 (running) on # 1 of server mq (active) SCHEDULED
@@ -2429,9 +2429,9 @@ t:     227028 job   342 on # 1 of server mq COMPLETED
 t:     227468 job   343 on # 1 of server mq COMPLETED
 t:     227542 job   340 on # 1 of server mq COMPLETED
 SENT JOBN 227608 346 3878 1 500 1700
-RCVD SCHD 346 mq 2
-t:     227608 job   346 (running) on # 2 of server mq (active) SCHEDULED
-t:     227608 job   346 on # 2 of server mq RUNNING
+RCVD SCHD 346 mq 0
+t:     227608 job   346 (running) on # 0 of server mq (active) SCHEDULED
+t:     227608 job   346 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 227671 347 305 1 300 1900
@@ -2444,211 +2444,211 @@ t:     227741 job   339 on # 0 of server mq COMPLETED
 t:     227855 job   345 on # 2 of server mq COMPLETED
 t:     228520 job   347 on # 2 of server mq COMPLETED
 SENT JOBN 228924 348 230 1 900 1500
-RCVD SCHD 348 mq 2
-t:     228924 job   348 (running) on # 2 of server mq (active) SCHEDULED
-t:     228924 job   348 on # 2 of server mq RUNNING
+RCVD SCHD 348 mq 0
+t:     228924 job   348 (running) on # 0 of server mq (active) SCHEDULED
+t:     228924 job   348 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     229135 job   348 on # 2 of server mq COMPLETED
+t:     229135 job   348 on # 0 of server mq COMPLETED
 SENT JOBN 229579 349 826 1 500 900
-RCVD SCHD 349 mq 2
-t:     229579 job   349 (running) on # 2 of server mq (active) SCHEDULED
-t:     229579 job   349 on # 2 of server mq RUNNING
+RCVD SCHD 349 mq 0
+t:     229579 job   349 (running) on # 0 of server mq (active) SCHEDULED
+t:     229579 job   349 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 230451 350 3661 6 1900 6000
-RCVD SCHD 350 mq 2
-t:     230451 job   350 (running) on # 2 of server mq (active) SCHEDULED
-t:     230451 job   350 on # 2 of server mq RUNNING
+RCVD SCHD 350 mq 0
+t:     230451 job   350 (running) on # 0 of server mq (active) SCHEDULED
+t:     230451 job   350 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     230702 job   349 on # 2 of server mq COMPLETED
-t:     231185 job   346 on # 2 of server mq COMPLETED
+t:     230702 job   349 on # 0 of server mq COMPLETED
+t:     231185 job   346 on # 0 of server mq COMPLETED
 SENT JOBN 231403 351 435 1 900 2000
-RCVD SCHD 351 mq 2
-t:     231403 job   351 (running) on # 2 of server mq (active) SCHEDULED
-t:     231403 job   351 on # 2 of server mq RUNNING
+RCVD SCHD 351 mq 0
+t:     231403 job   351 (running) on # 0 of server mq (active) SCHEDULED
+t:     231403 job   351 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 231623 352 3970 1 1000 1900
-RCVD SCHD 352 mq 2
-t:     231623 job   352 (running) on # 2 of server mq (active) SCHEDULED
-t:     231623 job   352 on # 2 of server mq RUNNING
+RCVD SCHD 352 mq 0
+t:     231623 job   352 (running) on # 0 of server mq (active) SCHEDULED
+t:     231623 job   352 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 232086 353 1387 1 200 800
-RCVD SCHD 353 mq 0
-t:     232086 job   353 (running) on # 0 of server mq (active) SCHEDULED
-t:     232086 job   353 on # 0 of server mq RUNNING
+RCVD SCHD 353 mq 1
+t:     232086 job   353 (running) on # 1 of server mq (active) SCHEDULED
+t:     232086 job   353 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 232372 354 858 4 3500 6700
-RCVD SCHD 354 mq 0
-t:     232372 job   354 (running) on # 0 of server mq (active) SCHEDULED
-t:     232372 job   354 on # 0 of server mq RUNNING
+RCVD SCHD 354 mq 1
+t:     232372 job   354 (running) on # 1 of server mq (active) SCHEDULED
+t:     232372 job   354 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     232700 job   350 on # 2 of server mq COMPLETED
-t:     232866 job   353 on # 0 of server mq COMPLETED
-t:     232951 job   351 on # 2 of server mq COMPLETED
+t:     232700 job   350 on # 0 of server mq COMPLETED
+t:     232866 job   353 on # 1 of server mq COMPLETED
+t:     232951 job   351 on # 0 of server mq COMPLETED
 SENT JOBN 233448 355 654 1 700 400
-RCVD SCHD 355 mq 2
-t:     233448 job   355 (running) on # 2 of server mq (active) SCHEDULED
-t:     233448 job   355 on # 2 of server mq RUNNING
+RCVD SCHD 355 mq 1
+t:     233448 job   355 (running) on # 1 of server mq (active) SCHEDULED
+t:     233448 job   355 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     233789 job   354 on # 0 of server mq COMPLETED
+t:     233789 job   354 on # 1 of server mq COMPLETED
 SENT JOBN 234155 356 4518 4 4300 6000
-RCVD SCHD 356 mq 2
-t:     234155 job   356 (running) on # 2 of server mq (active) SCHEDULED
-t:     234155 job   356 on # 2 of server mq RUNNING
+RCVD SCHD 356 mq 0
+t:     234155 job   356 (running) on # 0 of server mq (active) SCHEDULED
+t:     234155 job   356 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     235152 job   352 on # 2 of server mq COMPLETED
+t:     235152 job   352 on # 0 of server mq COMPLETED
 SENT JOBN 235171 357 789 1 700 700
-RCVD SCHD 357 mq 2
-t:     235171 job   357 (running) on # 2 of server mq (active) SCHEDULED
-t:     235171 job   357 on # 2 of server mq RUNNING
+RCVD SCHD 357 mq 0
+t:     235171 job   357 (running) on # 0 of server mq (active) SCHEDULED
+t:     235171 job   357 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 235303 358 4068 8 1300 13600
-RCVD SCHD 358 mq 0
-t:     235303 job   358 (running) on # 0 of server mq (active) SCHEDULED
-t:     235303 job   358 on # 0 of server mq RUNNING
+RCVD SCHD 358 mq 2
+t:     235303 job   358 (running) on # 2 of server mq (active) SCHEDULED
+t:     235303 job   358 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 235545 359 3847 8 4500 15800
-RCVD SCHD 359 mq 1
-t:     235545 job   359 (running) on # 1 of server mq (active) SCHEDULED
-t:     235545 job   359 on # 1 of server mq RUNNING
+RCVD SCHD 359 mq 3
+t:     235545 job   359 (running) on # 3 of server mq (active) SCHEDULED
+t:     235545 job   359 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     235711 job   355 on # 2 of server mq COMPLETED
-t:     235972 job   357 on # 2 of server mq COMPLETED
+t:     235711 job   355 on # 1 of server mq COMPLETED
+t:     235972 job   357 on # 0 of server mq COMPLETED
 SENT JOBN 236355 360 60 1 500 300
-RCVD SCHD 360 mq 2
-t:     236355 job   360 (running) on # 2 of server mq (active) SCHEDULED
-t:     236355 job   360 on # 2 of server mq RUNNING
+RCVD SCHD 360 mq 0
+t:     236355 job   360 (running) on # 0 of server mq (active) SCHEDULED
+t:     236355 job   360 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     236499 job   360 on # 2 of server mq COMPLETED
-t:     237101 job   356 on # 2 of server mq COMPLETED
+t:     236499 job   360 on # 0 of server mq COMPLETED
+t:     237101 job   356 on # 0 of server mq COMPLETED
 SENT JOBN 237172 361 2599 1 100 1300
-RCVD SCHD 361 mq 2
-t:     237172 job   361 (running) on # 2 of server mq (active) SCHEDULED
-t:     237172 job   361 on # 2 of server mq RUNNING
+RCVD SCHD 361 mq 0
+t:     237172 job   361 (running) on # 0 of server mq (active) SCHEDULED
+t:     237172 job   361 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     238176 job   358 on # 0 of server mq COMPLETED
+t:     238176 job   358 on # 2 of server mq COMPLETED
 SENT JOBN 238243 362 1930 1 700 600
-RCVD SCHD 362 mq 2
-t:     238243 job   362 (running) on # 2 of server mq (active) SCHEDULED
-t:     238243 job   362 on # 2 of server mq RUNNING
+RCVD SCHD 362 mq 0
+t:     238243 job   362 (running) on # 0 of server mq (active) SCHEDULED
+t:     238243 job   362 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 238391 363 149 1 800 1200
-RCVD SCHD 363 mq 2
-t:     238391 job   363 (running) on # 2 of server mq (active) SCHEDULED
-t:     238391 job   363 on # 2 of server mq RUNNING
+RCVD SCHD 363 mq 0
+t:     238391 job   363 (running) on # 0 of server mq (active) SCHEDULED
+t:     238391 job   363 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     238715 job   363 on # 2 of server mq COMPLETED
-t:     238948 job   359 on # 1 of server mq COMPLETED
+t:     238715 job   363 on # 0 of server mq COMPLETED
+t:     238948 job   359 on # 3 of server mq COMPLETED
 SENT JOBN 239441 364 5552 8 3800 12800
-RCVD SCHD 364 mq 0
-t:     239441 job   364 (running) on # 0 of server mq (active) SCHEDULED
-t:     239441 job   364 on # 0 of server mq RUNNING
+RCVD SCHD 364 mq 1
+t:     239441 job   364 (running) on # 1 of server mq (active) SCHEDULED
+t:     239441 job   364 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 239781 365 259 8 2400 6500
-RCVD SCHD 365 mq 1
-t:     239781 job   365 (running) on # 1 of server mq (active) SCHEDULED
-t:     239781 job   365 on # 1 of server mq RUNNING
+RCVD SCHD 365 mq 2
+t:     239781 job   365 (running) on # 2 of server mq (active) SCHEDULED
+t:     239781 job   365 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     239799 job   361 on # 2 of server mq COMPLETED
+t:     239799 job   361 on # 0 of server mq COMPLETED
 SENT JOBN 240119 366 119 1 600 2000
-RCVD SCHD 366 mq 2
-t:     240119 job   366 (running) on # 2 of server mq (active) SCHEDULED
-t:     240119 job   366 on # 2 of server mq RUNNING
+RCVD SCHD 366 mq 0
+t:     240119 job   366 (running) on # 0 of server mq (active) SCHEDULED
+t:     240119 job   366 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 240151 367 624 4 2000 1500
-RCVD SCHD 367 mq 2
-t:     240151 job   367 (running) on # 2 of server mq (active) SCHEDULED
-t:     240151 job   367 on # 2 of server mq RUNNING
+RCVD SCHD 367 mq 0
+t:     240151 job   367 (running) on # 0 of server mq (active) SCHEDULED
+t:     240151 job   367 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     240563 job   362 on # 2 of server mq COMPLETED
+t:     240563 job   362 on # 0 of server mq COMPLETED
 SENT JOBN 240794 368 2154 1 500 800
-RCVD SCHD 368 mq 2
-t:     240794 job   368 (running) on # 2 of server mq (active) SCHEDULED
-t:     240794 job   368 on # 2 of server mq RUNNING
+RCVD SCHD 368 mq 0
+t:     240794 job   368 (running) on # 0 of server mq (active) SCHEDULED
+t:     240794 job   368 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     240935 job   366 on # 2 of server mq COMPLETED
-t:     241744 job   365 on # 1 of server mq COMPLETED
+t:     240935 job   366 on # 0 of server mq COMPLETED
+t:     241744 job   365 on # 2 of server mq COMPLETED
 SENT JOBN 242001 369 313 4 900 3600
-RCVD SCHD 369 mq 1
-t:     242001 job   369 (running) on # 1 of server mq (active) SCHEDULED
-t:     242001 job   369 on # 1 of server mq RUNNING
+RCVD SCHD 369 mq 2
+t:     242001 job   369 (running) on # 2 of server mq (active) SCHEDULED
+t:     242001 job   369 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     242255 job   367 on # 2 of server mq COMPLETED
-t:     242265 job   368 on # 2 of server mq COMPLETED
-t:     242750 job   364 on # 0 of server mq COMPLETED
+t:     242255 job   367 on # 0 of server mq COMPLETED
+t:     242265 job   368 on # 0 of server mq COMPLETED
+t:     242750 job   364 on # 1 of server mq COMPLETED
 SENT JOBN 242922 370 1656 1 900 100
-RCVD SCHD 370 mq 1
-t:     242922 job   370 (running) on # 1 of server mq (active) SCHEDULED
-t:     242922 job   370 on # 1 of server mq RUNNING
+RCVD SCHD 370 mq 2
+t:     242922 job   370 (running) on # 2 of server mq (active) SCHEDULED
+t:     242922 job   370 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     243297 job   369 on # 1 of server mq COMPLETED
+t:     243297 job   369 on # 2 of server mq COMPLETED
 SENT JOBN 243754 371 1918 1 700 600
-RCVD SCHD 371 mq 1
-t:     243754 job   371 (running) on # 1 of server mq (active) SCHEDULED
-t:     243754 job   371 on # 1 of server mq RUNNING
+RCVD SCHD 371 mq 2
+t:     243754 job   371 (running) on # 2 of server mq (active) SCHEDULED
+t:     243754 job   371 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 243820 372 387 4 3300 5000
-RCVD SCHD 372 mq 1
-t:     243820 job   372 (running) on # 1 of server mq (active) SCHEDULED
-t:     243820 job   372 on # 1 of server mq RUNNING
+RCVD SCHD 372 mq 2
+t:     243820 job   372 (running) on # 2 of server mq (active) SCHEDULED
+t:     243820 job   372 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     244135 job   370 on # 1 of server mq COMPLETED
+t:     244135 job   370 on # 2 of server mq COMPLETED
 SENT JOBN 244604 373 1884 1 200 1100
-RCVD SCHD 373 mq 1
-t:     244604 job   373 (running) on # 1 of server mq (active) SCHEDULED
-t:     244604 job   373 on # 1 of server mq RUNNING
+RCVD SCHD 373 mq 2
+t:     244604 job   373 (running) on # 2 of server mq (active) SCHEDULED
+t:     244604 job   373 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 245589 374 320 2 1800 1900
-RCVD SCHD 374 mq 1
-t:     245589 job   374 (running) on # 1 of server mq (active) SCHEDULED
-t:     245589 job   374 on # 1 of server mq RUNNING
+RCVD SCHD 374 mq 2
+t:     245589 job   374 (running) on # 2 of server mq (active) SCHEDULED
+t:     245589 job   374 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     246011 job   374 on # 1 of server mq COMPLETED
-t:     246144 job   372 on # 1 of server mq COMPLETED
-t:     246597 job   371 on # 1 of server mq COMPLETED
+t:     246011 job   374 on # 2 of server mq COMPLETED
+t:     246144 job   372 on # 2 of server mq COMPLETED
+t:     246597 job   371 on # 2 of server mq COMPLETED
 SENT JOBN 246702 375 444 1 100 200
-RCVD SCHD 375 mq 1
-t:     246702 job   375 (running) on # 1 of server mq (active) SCHEDULED
-t:     246702 job   375 on # 1 of server mq RUNNING
+RCVD SCHD 375 mq 2
+t:     246702 job   375 (running) on # 2 of server mq (active) SCHEDULED
+t:     246702 job   375 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     247289 job   373 on # 1 of server mq COMPLETED
+t:     247289 job   373 on # 2 of server mq COMPLETED
 SENT JOBN 247382 376 6881 5 3600 1100
-RCVD SCHD 376 mq 1
-t:     247382 job   376 (running) on # 1 of server mq (active) SCHEDULED
-t:     247382 job   376 on # 1 of server mq RUNNING
+RCVD SCHD 376 mq 2
+t:     247382 job   376 (running) on # 2 of server mq (active) SCHEDULED
+t:     247382 job   376 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 248365 377 479 1 900 1900
-RCVD SCHD 377 mq 1
-t:     248365 job   377 (running) on # 1 of server mq (active) SCHEDULED
-t:     248365 job   377 on # 1 of server mq RUNNING
+RCVD SCHD 377 mq 2
+t:     248365 job   377 (running) on # 2 of server mq (active) SCHEDULED
+t:     248365 job   377 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 248579 378 956 2 2100 2000
@@ -2658,31 +2658,31 @@ t:     248579 job   378 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 248661 379 98 1 1000 300
-RCVD SCHD 379 mq 0
-t:     248661 job   379 (running) on # 0 of server mq (active) SCHEDULED
-t:     248661 job   379 on # 0 of server mq RUNNING
+RCVD SCHD 379 mq 2
+t:     248661 job   379 (running) on # 2 of server mq (active) SCHEDULED
+t:     248661 job   379 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     248799 job   377 on # 1 of server mq COMPLETED
-t:     248846 job   375 on # 1 of server mq COMPLETED
+t:     248799 job   377 on # 2 of server mq COMPLETED
+t:     248846 job   375 on # 2 of server mq COMPLETED
 t:     249166 job   378 on # 0 of server mq COMPLETED
-t:     249298 job   379 on # 0 of server mq COMPLETED
+t:     249298 job   379 on # 2 of server mq COMPLETED
 SENT JOBN 249299 380 413 1 1000 800
-RCVD SCHD 380 mq 1
-t:     249299 job   380 (running) on # 1 of server mq (active) SCHEDULED
-t:     249299 job   380 on # 1 of server mq RUNNING
+RCVD SCHD 380 mq 2
+t:     249299 job   380 (running) on # 2 of server mq (active) SCHEDULED
+t:     249299 job   380 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 249729 381 2106 1 100 500
-RCVD SCHD 381 mq 1
-t:     249729 job   381 (running) on # 1 of server mq (active) SCHEDULED
-t:     249729 job   381 on # 1 of server mq RUNNING
+RCVD SCHD 381 mq 2
+t:     249729 job   381 (running) on # 2 of server mq (active) SCHEDULED
+t:     249729 job   381 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 249746 382 3422 1 400 400
-RCVD SCHD 382 mq 1
-t:     249746 job   382 (running) on # 1 of server mq (active) SCHEDULED
-t:     249746 job   382 on # 1 of server mq RUNNING
+RCVD SCHD 382 mq 2
+t:     249746 job   382 (running) on # 2 of server mq (active) SCHEDULED
+t:     249746 job   382 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 249858 383 5086 3 300 1500
@@ -2705,9 +2705,9 @@ t:     250302 job   385 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 250480 386 3684 8 4100 12400
-RCVD SCHD 386 mq 2
-t:     250480 job   386 (running) on # 2 of server mq (active) SCHEDULED
-t:     250480 job   386 on # 2 of server mq RUNNING
+RCVD SCHD 386 mq 1
+t:     250480 job   386 (running) on # 1 of server mq (active) SCHEDULED
+t:     250480 job   386 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 250597 387 1585 1 900 300
@@ -2722,42 +2722,42 @@ t:     250798 job   388 (running) on # 0 of server mq (active) SCHEDULED
 t:     250798 job   388 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     250902 job   380 on # 1 of server mq COMPLETED
-t:     250981 job   376 on # 1 of server mq COMPLETED
+t:     250902 job   380 on # 2 of server mq COMPLETED
+t:     250981 job   376 on # 2 of server mq COMPLETED
 SENT JOBN 251223 389 352 4 2600 7300
-RCVD SCHD 389 mq 1
-t:     251223 job   389 (running) on # 1 of server mq (active) SCHEDULED
-t:     251223 job   389 on # 1 of server mq RUNNING
+RCVD SCHD 389 mq 2
+t:     251223 job   389 (running) on # 2 of server mq (active) SCHEDULED
+t:     251223 job   389 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 251638 390 775 2 1700 1800
-RCVD SCHD 390 mq 1
-t:     251638 job   390 (running) on # 1 of server mq (active) SCHEDULED
-t:     251638 job   390 on # 1 of server mq RUNNING
+RCVD SCHD 390 mq 2
+t:     251638 job   390 (running) on # 2 of server mq (active) SCHEDULED
+t:     251638 job   390 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     251680 job   381 on # 1 of server mq COMPLETED
+t:     251680 job   381 on # 2 of server mq COMPLETED
 t:     251767 job   387 on # 0 of server mq COMPLETED
 t:     252276 job   388 on # 0 of server mq COMPLETED
-t:     252364 job   389 on # 1 of server mq COMPLETED
-t:     252529 job   382 on # 1 of server mq COMPLETED
-t:     252581 job   386 on # 2 of server mq COMPLETED
+t:     252364 job   389 on # 2 of server mq COMPLETED
+t:     252529 job   382 on # 2 of server mq COMPLETED
+t:     252581 job   386 on # 1 of server mq COMPLETED
 SENT JOBN 252664 391 4009 8 1500 8500
-RCVD SCHD 391 mq 2
-t:     252664 job   391 (running) on # 2 of server mq (active) SCHEDULED
-t:     252664 job   391 on # 2 of server mq RUNNING
+RCVD SCHD 391 mq 1
+t:     252664 job   391 (running) on # 1 of server mq (active) SCHEDULED
+t:     252664 job   391 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     252857 job   383 on # 0 of server mq COMPLETED
 SENT JOBN 253210 392 637 1 800 900
-RCVD SCHD 392 mq 0
-t:     253210 job   392 (running) on # 0 of server mq (active) SCHEDULED
-t:     253210 job   392 on # 0 of server mq RUNNING
+RCVD SCHD 392 mq 2
+t:     253210 job   392 (running) on # 2 of server mq (active) SCHEDULED
+t:     253210 job   392 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     253237 job   385 on # 0 of server mq COMPLETED
-t:     253297 job   390 on # 1 of server mq COMPLETED
-t:     253647 job   392 on # 0 of server mq COMPLETED
+t:     253297 job   390 on # 2 of server mq COMPLETED
+t:     253647 job   392 on # 2 of server mq COMPLETED
 SENT JOBN 253904 393 2808 8 7100 14800
 RCVD SCHD 393 mq 0
 t:     253904 job   393 (running) on # 0 of server mq (active) SCHEDULED
@@ -2765,9 +2765,9 @@ t:     253904 job   393 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 254757 394 4001 4 3600 1500
-RCVD SCHD 394 mq 1
-t:     254757 job   394 (running) on # 1 of server mq (active) SCHEDULED
-t:     254757 job   394 on # 1 of server mq RUNNING
+RCVD SCHD 394 mq 2
+t:     254757 job   394 (running) on # 2 of server mq (active) SCHEDULED
+t:     254757 job   394 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 254803 395 995 8 4000 8000
@@ -2782,53 +2782,53 @@ t:     255732 job   396 (running) on # 4 of server mq (active) SCHEDULED
 t:     255732 job   396 on # 4 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     256084 job   391 on # 2 of server mq COMPLETED
+t:     256084 job   391 on # 1 of server mq COMPLETED
 t:     256790 job   396 on # 4 of server mq COMPLETED
 SENT JOBN 256837 397 822 8 5400 13300
-RCVD SCHD 397 mq 2
-t:     256837 job   397 (running) on # 2 of server mq (active) SCHEDULED
-t:     256837 job   397 on # 2 of server mq RUNNING
+RCVD SCHD 397 mq 1
+t:     256837 job   397 (running) on # 1 of server mq (active) SCHEDULED
+t:     256837 job   397 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     257357 job   393 on # 0 of server mq COMPLETED
 t:     257796 job   395 on # 3 of server mq COMPLETED
 SENT JOBN 258226 398 542 2 2100 3600
-RCVD SCHD 398 mq 1
-t:     258226 job   398 (running) on # 1 of server mq (active) SCHEDULED
-t:     258226 job   398 on # 1 of server mq RUNNING
+RCVD SCHD 398 mq 2
+t:     258226 job   398 (running) on # 2 of server mq (active) SCHEDULED
+t:     258226 job   398 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     258285 job   394 on # 1 of server mq COMPLETED
+t:     258285 job   394 on # 2 of server mq COMPLETED
 SENT JOBN 259288 399 4549 8 7800 4300
 RCVD SCHD 399 mq 0
 t:     259288 job   399 (running) on # 0 of server mq (active) SCHEDULED
 t:     259288 job   399 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     259658 job   397 on # 2 of server mq COMPLETED
+t:     259658 job   397 on # 1 of server mq COMPLETED
 SENT JOBN 259685 400 2280 1 200 100
-RCVD SCHD 400 mq 1
-t:     259685 job   400 (running) on # 1 of server mq (active) SCHEDULED
-t:     259685 job   400 on # 1 of server mq RUNNING
+RCVD SCHD 400 mq 2
+t:     259685 job   400 (running) on # 2 of server mq (active) SCHEDULED
+t:     259685 job   400 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 259687 401 2032 8 1100 6700
-RCVD SCHD 401 mq 2
-t:     259687 job   401 (running) on # 2 of server mq (active) SCHEDULED
-t:     259687 job   401 on # 2 of server mq RUNNING
+RCVD SCHD 401 mq 1
+t:     259687 job   401 (running) on # 1 of server mq (active) SCHEDULED
+t:     259687 job   401 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     261059 job   398 on # 1 of server mq COMPLETED
+t:     261059 job   398 on # 2 of server mq COMPLETED
 SENT JOBN 261188 402 113 1 800 200
-RCVD SCHD 402 mq 1
-t:     261188 job   402 (running) on # 1 of server mq (active) SCHEDULED
-t:     261188 job   402 on # 1 of server mq RUNNING
+RCVD SCHD 402 mq 2
+t:     261188 job   402 (running) on # 2 of server mq (active) SCHEDULED
+t:     261188 job   402 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     261508 job   400 on # 1 of server mq COMPLETED
-t:     261827 job   402 on # 1 of server mq COMPLETED
+t:     261508 job   400 on # 2 of server mq COMPLETED
+t:     261827 job   402 on # 2 of server mq COMPLETED
 t:     262027 job   399 on # 0 of server mq COMPLETED
-t:     262188 job   401 on # 2 of server mq COMPLETED
+t:     262188 job   401 on # 1 of server mq COMPLETED
 SENT JOBN 262538 403 2757 2 1700 3800
 RCVD SCHD 403 mq 0
 t:     262538 job   403 (running) on # 0 of server mq (active) SCHEDULED
@@ -3177,20 +3177,20 @@ SENT OK
 RCVD REDY
 t:     306338 job   451 on # 0 of server mq COMPLETED
 SENT JOBN 306656 453 141 1 100 1400
-RCVD SCHD 453 mq 0
-t:     306656 job   453 (running) on # 0 of server mq (active) SCHEDULED
-t:     306656 job   453 on # 0 of server mq RUNNING
+RCVD SCHD 453 mq 1
+t:     306656 job   453 (running) on # 1 of server mq (active) SCHEDULED
+t:     306656 job   453 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     306825 job   453 on # 0 of server mq COMPLETED
+t:     306825 job   453 on # 1 of server mq COMPLETED
 SENT JOBN 306846 454 837 1 500 1200
-RCVD SCHD 454 mq 0
-t:     306846 job   454 (running) on # 0 of server mq (active) SCHEDULED
-t:     306846 job   454 on # 0 of server mq RUNNING
+RCVD SCHD 454 mq 1
+t:     306846 job   454 (running) on # 1 of server mq (active) SCHEDULED
+t:     306846 job   454 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     307059 job   449 on # 0 of server mq COMPLETED
-t:     307332 job   454 on # 0 of server mq COMPLETED
+t:     307332 job   454 on # 1 of server mq COMPLETED
 t:     307484 job   450 on # 0 of server mq COMPLETED
 SENT JOBN 307500 455 2869 6 1600 8600
 RCVD SCHD 455 mq 0
@@ -3220,118 +3220,118 @@ RCVD REDY
 t:     310064 job   455 on # 0 of server mq COMPLETED
 t:     310389 job   457 on # 2 of server mq COMPLETED
 SENT JOBN 310904 459 1086 1 800 800
-RCVD SCHD 459 mq 0
-t:     310904 job   459 (running) on # 0 of server mq (active) SCHEDULED
-t:     310904 job   459 on # 0 of server mq RUNNING
+RCVD SCHD 459 mq 1
+t:     310904 job   459 (running) on # 1 of server mq (active) SCHEDULED
+t:     310904 job   459 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     310943 job   456 on # 0 of server mq COMPLETED
 SENT JOBN 311127 460 3556 1 600 2000
-RCVD SCHD 460 mq 0
-t:     311127 job   460 (running) on # 0 of server mq (active) SCHEDULED
-t:     311127 job   460 on # 0 of server mq RUNNING
+RCVD SCHD 460 mq 1
+t:     311127 job   460 (running) on # 1 of server mq (active) SCHEDULED
+t:     311127 job   460 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 311616 461 1501 8 8000 14600
-RCVD SCHD 461 mq 2
-t:     311616 job   461 (running) on # 2 of server mq (active) SCHEDULED
-t:     311616 job   461 on # 2 of server mq RUNNING
+RCVD SCHD 461 mq 0
+t:     311616 job   461 (running) on # 0 of server mq (active) SCHEDULED
+t:     311616 job   461 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     312089 job   459 on # 0 of server mq COMPLETED
+t:     312089 job   459 on # 1 of server mq COMPLETED
 t:     312533 job   458 on # 1 of server mq COMPLETED
 SENT JOBN 312770 462 6156 8 1500 7800
-RCVD SCHD 462 mq 1
-t:     312770 job   462 (running) on # 1 of server mq (active) SCHEDULED
-t:     312770 job   462 on # 1 of server mq RUNNING
+RCVD SCHD 462 mq 2
+t:     312770 job   462 (running) on # 2 of server mq (active) SCHEDULED
+t:     312770 job   462 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 313008 463 1577 3 2200 5200
-RCVD SCHD 463 mq 0
-t:     313008 job   463 (running) on # 0 of server mq (active) SCHEDULED
-t:     313008 job   463 on # 0 of server mq RUNNING
+RCVD SCHD 463 mq 1
+t:     313008 job   463 (running) on # 1 of server mq (active) SCHEDULED
+t:     313008 job   463 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 313327 464 4438 1 700 300
-RCVD SCHD 464 mq 0
-t:     313327 job   464 (running) on # 0 of server mq (active) SCHEDULED
-t:     313327 job   464 on # 0 of server mq RUNNING
+RCVD SCHD 464 mq 1
+t:     313327 job   464 (running) on # 1 of server mq (active) SCHEDULED
+t:     313327 job   464 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     313569 job   460 on # 0 of server mq COMPLETED
+t:     313569 job   460 on # 1 of server mq COMPLETED
 SENT JOBN 313631 465 1422 1 300 600
-RCVD SCHD 465 mq 0
-t:     313631 job   465 (running) on # 0 of server mq (active) SCHEDULED
-t:     313631 job   465 on # 0 of server mq RUNNING
+RCVD SCHD 465 mq 1
+t:     313631 job   465 (running) on # 1 of server mq (active) SCHEDULED
+t:     313631 job   465 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 314060 466 1987 3 2900 1000
-RCVD SCHD 466 mq 0
-t:     314060 job   466 (running) on # 0 of server mq (active) SCHEDULED
-t:     314060 job   466 on # 0 of server mq RUNNING
+RCVD SCHD 466 mq 1
+t:     314060 job   466 (running) on # 1 of server mq (active) SCHEDULED
+t:     314060 job   466 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     314561 job   465 on # 0 of server mq COMPLETED
-t:     314840 job   461 on # 2 of server mq COMPLETED
-t:     314855 job   463 on # 0 of server mq COMPLETED
+t:     314561 job   465 on # 1 of server mq COMPLETED
+t:     314840 job   461 on # 0 of server mq COMPLETED
+t:     314855 job   463 on # 1 of server mq COMPLETED
 SENT JOBN 315406 467 669 2 2100 2100
-RCVD SCHD 467 mq 0
-t:     315406 job   467 (running) on # 0 of server mq (active) SCHEDULED
-t:     315406 job   467 on # 0 of server mq RUNNING
+RCVD SCHD 467 mq 1
+t:     315406 job   467 (running) on # 1 of server mq (active) SCHEDULED
+t:     315406 job   467 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     315716 job   464 on # 0 of server mq COMPLETED
+t:     315716 job   464 on # 1 of server mq COMPLETED
 SENT JOBN 315768 468 3447 1 200 1000
-RCVD SCHD 468 mq 0
-t:     315768 job   468 (running) on # 0 of server mq (active) SCHEDULED
-t:     315768 job   468 on # 0 of server mq RUNNING
+RCVD SCHD 468 mq 1
+t:     315768 job   468 (running) on # 1 of server mq (active) SCHEDULED
+t:     315768 job   468 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     315783 job   466 on # 0 of server mq COMPLETED
-t:     316226 job   462 on # 1 of server mq COMPLETED
+t:     315783 job   466 on # 1 of server mq COMPLETED
+t:     316226 job   462 on # 2 of server mq COMPLETED
 SENT JOBN 316281 469 3393 3 500 2800
-RCVD SCHD 469 mq 0
-t:     316281 job   469 (running) on # 0 of server mq (active) SCHEDULED
-t:     316281 job   469 on # 0 of server mq RUNNING
+RCVD SCHD 469 mq 1
+t:     316281 job   469 (running) on # 1 of server mq (active) SCHEDULED
+t:     316281 job   469 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 316303 470 1016 2 1800 2700
-RCVD SCHD 470 mq 0
-t:     316303 job   470 (running) on # 0 of server mq (active) SCHEDULED
-t:     316303 job   470 on # 0 of server mq RUNNING
+RCVD SCHD 470 mq 1
+t:     316303 job   470 (running) on # 1 of server mq (active) SCHEDULED
+t:     316303 job   470 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     316464 job   467 on # 0 of server mq COMPLETED
+t:     316464 job   467 on # 1 of server mq COMPLETED
 SENT JOBN 316602 471 1173 1 1000 1300
-RCVD SCHD 471 mq 0
-t:     316602 job   471 (running) on # 0 of server mq (active) SCHEDULED
-t:     316602 job   471 on # 0 of server mq RUNNING
+RCVD SCHD 471 mq 1
+t:     316602 job   471 (running) on # 1 of server mq (active) SCHEDULED
+t:     316602 job   471 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     317113 job   470 on # 0 of server mq COMPLETED
+t:     317113 job   470 on # 1 of server mq COMPLETED
 SENT JOBN 318021 472 1848 6 5800 8400
-RCVD SCHD 472 mq 1
-t:     318021 job   472 (running) on # 1 of server mq (active) SCHEDULED
-t:     318021 job   472 on # 1 of server mq RUNNING
+RCVD SCHD 472 mq 0
+t:     318021 job   472 (running) on # 0 of server mq (active) SCHEDULED
+t:     318021 job   472 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     318306 job   469 on # 0 of server mq COMPLETED
+t:     318306 job   469 on # 1 of server mq COMPLETED
 SENT JOBN 318644 473 2407 4 1400 3800
-RCVD SCHD 473 mq 0
-t:     318644 job   473 (running) on # 0 of server mq (active) SCHEDULED
-t:     318644 job   473 on # 0 of server mq RUNNING
+RCVD SCHD 473 mq 1
+t:     318644 job   473 (running) on # 1 of server mq (active) SCHEDULED
+t:     318644 job   473 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     318739 job   468 on # 0 of server mq COMPLETED
-t:     319254 job   471 on # 0 of server mq COMPLETED
+t:     318739 job   468 on # 1 of server mq COMPLETED
+t:     319254 job   471 on # 1 of server mq COMPLETED
 SENT JOBN 320069 474 576 8 3100 11700
 RCVD SCHD 474 mq 2
 t:     320069 job   474 (running) on # 2 of server mq (active) SCHEDULED
 t:     320069 job   474 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     320179 job   472 on # 1 of server mq COMPLETED
-t:     320867 job   473 on # 0 of server mq COMPLETED
+t:     320179 job   472 on # 0 of server mq COMPLETED
+t:     320867 job   473 on # 1 of server mq COMPLETED
 SENT JOBN 321562 475 5234 3 1200 3900
 RCVD SCHD 475 mq 0
 t:     321562 job   475 (running) on # 0 of server mq (active) SCHEDULED
@@ -3443,9 +3443,9 @@ SENT OK
 RCVD REDY
 t:     333568 job   487 on # 0 of server mq COMPLETED
 SENT JOBN 334339 491 890 1 700 1700
-RCVD SCHD 491 mq 2
-t:     334339 job   491 (running) on # 2 of server mq (active) SCHEDULED
-t:     334339 job   491 on # 2 of server mq RUNNING
+RCVD SCHD 491 mq 0
+t:     334339 job   491 (running) on # 0 of server mq (active) SCHEDULED
+t:     334339 job   491 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 334646 492 1292 8 5100 7300
@@ -3457,52 +3457,52 @@ RCVD REDY
 t:     334824 job   489 on # 1 of server mq COMPLETED
 t:     335417 job   488 on # 0 of server mq COMPLETED
 SENT JOBN 335592 493 1521 3 1200 5300
-RCVD SCHD 493 mq 2
-t:     335592 job   493 (running) on # 2 of server mq (active) SCHEDULED
-t:     335592 job   493 on # 2 of server mq RUNNING
+RCVD SCHD 493 mq 0
+t:     335592 job   493 (running) on # 0 of server mq (active) SCHEDULED
+t:     335592 job   493 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     336116 job   490 on # 2 of server mq COMPLETED
 SENT JOBN 336407 494 5019 1 500 1600
-RCVD SCHD 494 mq 2
-t:     336407 job   494 (running) on # 2 of server mq (active) SCHEDULED
-t:     336407 job   494 on # 2 of server mq RUNNING
+RCVD SCHD 494 mq 0
+t:     336407 job   494 (running) on # 0 of server mq (active) SCHEDULED
+t:     336407 job   494 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 336520 495 1887 7 4200 5000
-RCVD SCHD 495 mq 0
-t:     336520 job   495 (running) on # 0 of server mq (active) SCHEDULED
-t:     336520 job   495 on # 0 of server mq RUNNING
+RCVD SCHD 495 mq 1
+t:     336520 job   495 (running) on # 1 of server mq (active) SCHEDULED
+t:     336520 job   495 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     336775 job   491 on # 2 of server mq COMPLETED
+t:     336775 job   491 on # 0 of server mq COMPLETED
 SENT JOBN 336888 496 353 1 100 800
-RCVD SCHD 496 mq 2
-t:     336888 job   496 (running) on # 2 of server mq (active) SCHEDULED
-t:     336888 job   496 on # 2 of server mq RUNNING
+RCVD SCHD 496 mq 1
+t:     336888 job   496 (running) on # 1 of server mq (active) SCHEDULED
+t:     336888 job   496 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     337044 job   493 on # 2 of server mq COMPLETED
-t:     337322 job   496 on # 2 of server mq COMPLETED
+t:     337044 job   493 on # 0 of server mq COMPLETED
+t:     337322 job   496 on # 1 of server mq COMPLETED
 t:     337382 job   492 on # 3 of server mq COMPLETED
 SENT JOBN 338162 497 910 7 4300 10500
-RCVD SCHD 497 mq 2
-t:     338162 job   497 (running) on # 2 of server mq (active) SCHEDULED
-t:     338162 job   497 on # 2 of server mq RUNNING
+RCVD SCHD 497 mq 0
+t:     338162 job   497 (running) on # 0 of server mq (active) SCHEDULED
+t:     338162 job   497 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     338374 job   495 on # 0 of server mq COMPLETED
+t:     338374 job   495 on # 1 of server mq COMPLETED
 SENT JOBN 339339 498 6140 3 2600 1500
-RCVD SCHD 498 mq 0
-t:     339339 job   498 (running) on # 0 of server mq (active) SCHEDULED
-t:     339339 job   498 on # 0 of server mq RUNNING
+RCVD SCHD 498 mq 1
+t:     339339 job   498 (running) on # 1 of server mq (active) SCHEDULED
+t:     339339 job   498 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     339401 job   494 on # 2 of server mq COMPLETED
+t:     339401 job   494 on # 0 of server mq COMPLETED
 SENT JOBN 339405 499 885 3 400 5500
-RCVD SCHD 499 mq 0
-t:     339405 job   499 (running) on # 0 of server mq (active) SCHEDULED
-t:     339405 job   499 on # 0 of server mq RUNNING
+RCVD SCHD 499 mq 1
+t:     339405 job   499 (running) on # 1 of server mq (active) SCHEDULED
+t:     339405 job   499 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 339430 500 1062 1 800 1500
@@ -3511,19 +3511,19 @@ t:     339430 job   500 (running) on # 0 of server mq (active) SCHEDULED
 t:     339430 job   500 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     339839 job   497 on # 2 of server mq COMPLETED
+t:     339839 job   497 on # 0 of server mq COMPLETED
 t:     340143 job   500 on # 0 of server mq COMPLETED
-t:     340370 job   499 on # 0 of server mq COMPLETED
+t:     340370 job   499 on # 1 of server mq COMPLETED
 SENT JOBN 340505 501 1018 3 1800 1600
-RCVD SCHD 501 mq 0
-t:     340505 job   501 (running) on # 0 of server mq (active) SCHEDULED
-t:     340505 job   501 on # 0 of server mq RUNNING
+RCVD SCHD 501 mq 1
+t:     340505 job   501 (running) on # 1 of server mq (active) SCHEDULED
+t:     340505 job   501 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 341353 502 2886 5 2600 8500
-RCVD SCHD 502 mq 1
-t:     341353 job   502 (running) on # 1 of server mq (active) SCHEDULED
-t:     341353 job   502 on # 1 of server mq RUNNING
+RCVD SCHD 502 mq 0
+t:     341353 job   502 (running) on # 0 of server mq (active) SCHEDULED
+t:     341353 job   502 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 341385 503 1452 7 3900 3300
@@ -3532,29 +3532,29 @@ t:     341385 job   503 (running) on # 2 of server mq (active) SCHEDULED
 t:     341385 job   503 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     341462 job   501 on # 0 of server mq COMPLETED
+t:     341462 job   501 on # 1 of server mq COMPLETED
 SENT JOBN 342504 504 5259 3 2700 400
 RCVD SCHD 504 mq 0
 t:     342504 job   504 (running) on # 0 of server mq (active) SCHEDULED
 t:     342504 job   504 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     342740 job   498 on # 0 of server mq COMPLETED
+t:     342740 job   498 on # 1 of server mq COMPLETED
 SENT JOBN 342867 505 2093 1 400 900
-RCVD SCHD 505 mq 0
-t:     342867 job   505 (running) on # 0 of server mq (active) SCHEDULED
-t:     342867 job   505 on # 0 of server mq RUNNING
+RCVD SCHD 505 mq 2
+t:     342867 job   505 (running) on # 2 of server mq (active) SCHEDULED
+t:     342867 job   505 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 343221 506 119 1 400 600
-RCVD SCHD 506 mq 0
-t:     343221 job   506 (running) on # 0 of server mq (active) SCHEDULED
-t:     343221 job   506 on # 0 of server mq RUNNING
+RCVD SCHD 506 mq 1
+t:     343221 job   506 (running) on # 1 of server mq (active) SCHEDULED
+t:     343221 job   506 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     343398 job   506 on # 0 of server mq COMPLETED
+t:     343398 job   506 on # 1 of server mq COMPLETED
 t:     343717 job   503 on # 2 of server mq COMPLETED
-t:     344125 job   502 on # 1 of server mq COMPLETED
+t:     344125 job   502 on # 0 of server mq COMPLETED
 SENT JOBN 345034 507 904 1 900 1400
 RCVD SCHD 507 mq 0
 t:     345034 job   507 (running) on # 0 of server mq (active) SCHEDULED
@@ -3568,7 +3568,7 @@ t:     345659 job   508 (running) on # 1 of server mq (active) SCHEDULED
 t:     345659 job   508 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     345703 job   505 on # 0 of server mq COMPLETED
+t:     345703 job   505 on # 2 of server mq COMPLETED
 SENT JOBN 346094 509 3116 2 800 2000
 RCVD SCHD 509 mq 0
 t:     346094 job   509 (running) on # 0 of server mq (active) SCHEDULED
@@ -3590,14 +3590,14 @@ SENT OK
 RCVD REDY
 t:     347993 job   509 on # 0 of server mq COMPLETED
 SENT JOBN 348500 512 261 1 800 600
-RCVD SCHD 512 mq 2
-t:     348500 job   512 (running) on # 2 of server mq (active) SCHEDULED
-t:     348500 job   512 on # 2 of server mq RUNNING
+RCVD SCHD 512 mq 0
+t:     348500 job   512 (running) on # 0 of server mq (active) SCHEDULED
+t:     348500 job   512 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     349022 job   508 on # 1 of server mq COMPLETED
 t:     349397 job   510 on # 0 of server mq COMPLETED
-t:     349548 job   512 on # 2 of server mq COMPLETED
+t:     349548 job   512 on # 0 of server mq COMPLETED
 t:     349824 job   511 on # 2 of server mq COMPLETED
 SENT JOBN 349999 513 145 3 1900 3700
 RCVD SCHD 513 mq 0
@@ -3709,9 +3709,9 @@ t:     362271 job   528 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 362336 529 1795 1 900 1400
-RCVD SCHD 529 mq 1
-t:     362336 job   529 (running) on # 1 of server mq (active) SCHEDULED
-t:     362336 job   529 on # 1 of server mq RUNNING
+RCVD SCHD 529 mq 0
+t:     362336 job   529 (running) on # 0 of server mq (active) SCHEDULED
+t:     362336 job   529 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 362502 530 2711 8 7000 3900
@@ -3724,31 +3724,31 @@ t:     362712 job   528 on # 1 of server mq COMPLETED
 t:     362750 job   526 on # 0 of server mq COMPLETED
 t:     363627 job   527 on # 0 of server mq COMPLETED
 SENT JOBN 364184 531 719 1 900 1600
-RCVD SCHD 531 mq 1
-t:     364184 job   531 (running) on # 1 of server mq (active) SCHEDULED
-t:     364184 job   531 on # 1 of server mq RUNNING
+RCVD SCHD 531 mq 0
+t:     364184 job   531 (running) on # 0 of server mq (active) SCHEDULED
+t:     364184 job   531 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     364782 job   531 on # 1 of server mq COMPLETED
+t:     364782 job   531 on # 0 of server mq COMPLETED
 SENT JOBN 365070 532 2274 1 600 1300
-RCVD SCHD 532 mq 1
-t:     365070 job   532 (running) on # 1 of server mq (active) SCHEDULED
-t:     365070 job   532 on # 1 of server mq RUNNING
+RCVD SCHD 532 mq 0
+t:     365070 job   532 (running) on # 0 of server mq (active) SCHEDULED
+t:     365070 job   532 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     365389 job   529 on # 1 of server mq COMPLETED
+t:     365389 job   529 on # 0 of server mq COMPLETED
 t:     366010 job   530 on # 2 of server mq COMPLETED
 SENT JOBN 366251 533 2529 8 7000 8700
-RCVD SCHD 533 mq 0
-t:     366251 job   533 (running) on # 0 of server mq (active) SCHEDULED
-t:     366251 job   533 on # 0 of server mq RUNNING
+RCVD SCHD 533 mq 1
+t:     366251 job   533 (running) on # 1 of server mq (active) SCHEDULED
+t:     366251 job   533 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     366363 job   532 on # 1 of server mq COMPLETED
+t:     366363 job   532 on # 0 of server mq COMPLETED
 SENT JOBN 367430 534 1997 8 8000 15000
-RCVD SCHD 534 mq 1
-t:     367430 job   534 (running) on # 1 of server mq (active) SCHEDULED
-t:     367430 job   534 on # 1 of server mq RUNNING
+RCVD SCHD 534 mq 0
+t:     367430 job   534 (running) on # 0 of server mq (active) SCHEDULED
+t:     367430 job   534 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 367476 535 1460 1 800 600
@@ -3769,32 +3769,32 @@ t:     368476 job   537 (running) on # 3 of server mq (active) SCHEDULED
 t:     368476 job   537 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     369397 job   533 on # 0 of server mq COMPLETED
+t:     369397 job   533 on # 1 of server mq COMPLETED
 t:     369478 job   536 on # 2 of server mq COMPLETED
 t:     369883 job   535 on # 2 of server mq COMPLETED
 SENT JOBN 370087 538 2217 5 500 4200
-RCVD SCHD 538 mq 0
-t:     370087 job   538 (running) on # 0 of server mq (active) SCHEDULED
-t:     370087 job   538 on # 0 of server mq RUNNING
+RCVD SCHD 538 mq 1
+t:     370087 job   538 (running) on # 1 of server mq (active) SCHEDULED
+t:     370087 job   538 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 370104 539 384 1 1000 1800
-RCVD SCHD 539 mq 0
-t:     370104 job   539 (running) on # 0 of server mq (active) SCHEDULED
-t:     370104 job   539 on # 0 of server mq RUNNING
+RCVD SCHD 539 mq 1
+t:     370104 job   539 (running) on # 1 of server mq (active) SCHEDULED
+t:     370104 job   539 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     370342 job   537 on # 3 of server mq COMPLETED
-t:     370747 job   534 on # 1 of server mq COMPLETED
-t:     370750 job   539 on # 0 of server mq COMPLETED
+t:     370747 job   534 on # 0 of server mq COMPLETED
+t:     370750 job   539 on # 1 of server mq COMPLETED
 SENT JOBN 370821 540 33 1 400 200
-RCVD SCHD 540 mq 0
-t:     370821 job   540 (running) on # 0 of server mq (active) SCHEDULED
-t:     370821 job   540 on # 0 of server mq RUNNING
+RCVD SCHD 540 mq 1
+t:     370821 job   540 (running) on # 1 of server mq (active) SCHEDULED
+t:     370821 job   540 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     370846 job   540 on # 0 of server mq COMPLETED
-t:     371344 job   538 on # 0 of server mq COMPLETED
+t:     370846 job   540 on # 1 of server mq COMPLETED
+t:     371344 job   538 on # 1 of server mq COMPLETED
 SENT JOBN 372832 541 802 8 4900 7000
 RCVD SCHD 541 mq 0
 t:     372832 job   541 (running) on # 0 of server mq (active) SCHEDULED
@@ -3892,42 +3892,42 @@ SENT OK
 RCVD REDY
 t:     387500 job   551 on # 0 of server mq COMPLETED
 SENT JOBN 387823 555 5112 1 600 200
-RCVD SCHD 555 mq 0
-t:     387823 job   555 (running) on # 0 of server mq (active) SCHEDULED
-t:     387823 job   555 on # 0 of server mq RUNNING
+RCVD SCHD 555 mq 1
+t:     387823 job   555 (running) on # 1 of server mq (active) SCHEDULED
+t:     387823 job   555 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 388023 556 6101 1 300 700
-RCVD SCHD 556 mq 0
-t:     388023 job   556 (running) on # 0 of server mq (active) SCHEDULED
-t:     388023 job   556 on # 0 of server mq RUNNING
+RCVD SCHD 556 mq 1
+t:     388023 job   556 (running) on # 1 of server mq (active) SCHEDULED
+t:     388023 job   556 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     388671 job   554 on # 1 of server mq COMPLETED
 t:     389527 job   553 on # 0 of server mq COMPLETED
 SENT JOBN 389934 557 6 1 700 1500
-RCVD SCHD 557 mq 0
-t:     389934 job   557 (running) on # 0 of server mq (active) SCHEDULED
-t:     389934 job   557 on # 0 of server mq RUNNING
+RCVD SCHD 557 mq 1
+t:     389934 job   557 (running) on # 1 of server mq (active) SCHEDULED
+t:     389934 job   557 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     390001 job   557 on # 0 of server mq COMPLETED
-t:     390383 job   555 on # 0 of server mq COMPLETED
+t:     390001 job   557 on # 1 of server mq COMPLETED
+t:     390383 job   555 on # 1 of server mq COMPLETED
 SENT JOBN 390682 558 1591 7 3700 6300
-RCVD SCHD 558 mq 0
-t:     390682 job   558 (running) on # 0 of server mq (active) SCHEDULED
-t:     390682 job   558 on # 0 of server mq RUNNING
+RCVD SCHD 558 mq 1
+t:     390682 job   558 (running) on # 1 of server mq (active) SCHEDULED
+t:     390682 job   558 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     391258 job   556 on # 0 of server mq COMPLETED
+t:     391258 job   556 on # 1 of server mq COMPLETED
 SENT JOBN 391827 559 307 1 700 400
-RCVD SCHD 559 mq 0
-t:     391827 job   559 (running) on # 0 of server mq (active) SCHEDULED
-t:     391827 job   559 on # 0 of server mq RUNNING
+RCVD SCHD 559 mq 1
+t:     391827 job   559 (running) on # 1 of server mq (active) SCHEDULED
+t:     391827 job   559 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     392192 job   558 on # 0 of server mq COMPLETED
-t:     392256 job   559 on # 0 of server mq COMPLETED
+t:     392192 job   558 on # 1 of server mq COMPLETED
+t:     392256 job   559 on # 1 of server mq COMPLETED
 SENT JOBN 393780 560 4747 1 300 400
 RCVD SCHD 560 mq 0
 t:     393780 job   560 (running) on # 0 of server mq (active) SCHEDULED
@@ -4151,12 +4151,12 @@ RCVD REDY
 t:     418126 job   586 on # 0 of server mq COMPLETED
 t:     418344 job   589 on # 0 of server mq COMPLETED
 SENT JOBN 418759 592 43 1 400 700
-RCVD SCHD 592 mq 0
-t:     418759 job   592 (running) on # 0 of server mq (active) SCHEDULED
-t:     418759 job   592 on # 0 of server mq RUNNING
+RCVD SCHD 592 mq 1
+t:     418759 job   592 (running) on # 1 of server mq (active) SCHEDULED
+t:     418759 job   592 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     418929 job   592 on # 0 of server mq COMPLETED
+t:     418929 job   592 on # 1 of server mq COMPLETED
 SENT JOBN 419319 593 1746 5 1600 9600
 RCVD SCHD 593 mq 0
 t:     419319 job   593 (running) on # 0 of server mq (active) SCHEDULED
@@ -4164,37 +4164,37 @@ t:     419319 job   593 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 419651 594 577 1 800 100
-RCVD SCHD 594 mq 1
-t:     419651 job   594 (running) on # 1 of server mq (active) SCHEDULED
-t:     419651 job   594 on # 1 of server mq RUNNING
+RCVD SCHD 594 mq 0
+t:     419651 job   594 (running) on # 0 of server mq (active) SCHEDULED
+t:     419651 job   594 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     419860 job   590 on # 0 of server mq COMPLETED
 t:     420135 job   591 on # 1 of server mq COMPLETED
 SENT JOBN 420189 595 644 1 500 100
-RCVD SCHD 595 mq 1
-t:     420189 job   595 (running) on # 1 of server mq (active) SCHEDULED
-t:     420189 job   595 on # 1 of server mq RUNNING
+RCVD SCHD 595 mq 0
+t:     420189 job   595 (running) on # 0 of server mq (active) SCHEDULED
+t:     420189 job   595 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 420585 596 4 1 400 1600
-RCVD SCHD 596 mq 1
-t:     420585 job   596 (running) on # 1 of server mq (active) SCHEDULED
-t:     420585 job   596 on # 1 of server mq RUNNING
+RCVD SCHD 596 mq 0
+t:     420585 job   596 (running) on # 0 of server mq (active) SCHEDULED
+t:     420585 job   596 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 420935 597 3629 7 1100 2500
-RCVD SCHD 597 mq 2
-t:     420935 job   597 (running) on # 2 of server mq (active) SCHEDULED
-t:     420935 job   597 on # 2 of server mq RUNNING
+RCVD SCHD 597 mq 1
+t:     420935 job   597 (running) on # 1 of server mq (active) SCHEDULED
+t:     420935 job   597 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     420999 job   594 on # 1 of server mq COMPLETED
-t:     421170 job   596 on # 1 of server mq COMPLETED
+t:     420999 job   594 on # 0 of server mq COMPLETED
+t:     421170 job   596 on # 0 of server mq COMPLETED
 SENT JOBN 421340 598 2377 4 2400 6500
-RCVD SCHD 598 mq 1
-t:     421340 job   598 (running) on # 1 of server mq (active) SCHEDULED
-t:     421340 job   598 on # 1 of server mq RUNNING
+RCVD SCHD 598 mq 2
+t:     421340 job   598 (running) on # 2 of server mq (active) SCHEDULED
+t:     421340 job   598 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 421624 599 4758 5 3700 8300
@@ -4205,125 +4205,125 @@ SENT OK
 RCVD REDY
 t:     422025 job   593 on # 0 of server mq COMPLETED
 SENT JOBN 422203 600 103 3 2100 4900
-RCVD SCHD 600 mq 1
-t:     422203 job   600 (running) on # 1 of server mq (active) SCHEDULED
-t:     422203 job   600 on # 1 of server mq RUNNING
+RCVD SCHD 600 mq 3
+t:     422203 job   600 (running) on # 3 of server mq (active) SCHEDULED
+t:     422203 job   600 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     422937 job   595 on # 1 of server mq COMPLETED
-t:     422945 job   597 on # 2 of server mq COMPLETED
+t:     422937 job   595 on # 0 of server mq COMPLETED
+t:     422945 job   597 on # 1 of server mq COMPLETED
 SENT JOBN 423020 601 1729 2 1500 2200
-RCVD SCHD 601 mq 3
-t:     423020 job   601 (running) on # 3 of server mq (active) SCHEDULED
-t:     423020 job   601 on # 3 of server mq RUNNING
+RCVD SCHD 601 mq 2
+t:     423020 job   601 (running) on # 2 of server mq (active) SCHEDULED
+t:     423020 job   601 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     423185 job   598 on # 1 of server mq COMPLETED
-t:     423567 job   600 on # 1 of server mq COMPLETED
+t:     423185 job   598 on # 2 of server mq COMPLETED
+t:     423567 job   600 on # 3 of server mq COMPLETED
 SENT JOBN 423709 602 6335 6 3700 2600
-RCVD SCHD 602 mq 0
-t:     423709 job   602 (running) on # 0 of server mq (active) SCHEDULED
-t:     423709 job   602 on # 0 of server mq RUNNING
+RCVD SCHD 602 mq 2
+t:     423709 job   602 (running) on # 2 of server mq (active) SCHEDULED
+t:     423709 job   602 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 424297 603 5596 1 800 100
-RCVD SCHD 603 mq 0
-t:     424297 job   603 (running) on # 0 of server mq (active) SCHEDULED
-t:     424297 job   603 on # 0 of server mq RUNNING
+RCVD SCHD 603 mq 3
+t:     424297 job   603 (running) on # 3 of server mq (active) SCHEDULED
+t:     424297 job   603 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     424424 job   599 on # 3 of server mq COMPLETED
-t:     424570 job   601 on # 3 of server mq COMPLETED
+t:     424570 job   601 on # 2 of server mq COMPLETED
 SENT JOBN 425245 604 487 4 3800 1900
-RCVD SCHD 604 mq 1
-t:     425245 job   604 (running) on # 1 of server mq (active) SCHEDULED
-t:     425245 job   604 on # 1 of server mq RUNNING
+RCVD SCHD 604 mq 3
+t:     425245 job   604 (running) on # 3 of server mq (active) SCHEDULED
+t:     425245 job   604 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 425997 605 742 2 1800 3400
-RCVD SCHD 605 mq 1
-t:     425997 job   605 (running) on # 1 of server mq (active) SCHEDULED
-t:     425997 job   605 on # 1 of server mq RUNNING
+RCVD SCHD 605 mq 2
+t:     425997 job   605 (running) on # 2 of server mq (active) SCHEDULED
+t:     425997 job   605 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 426210 606 1692 5 1000 6000
-RCVD SCHD 606 mq 2
-t:     426210 job   606 (running) on # 2 of server mq (active) SCHEDULED
-t:     426210 job   606 on # 2 of server mq RUNNING
+RCVD SCHD 606 mq 0
+t:     426210 job   606 (running) on # 0 of server mq (active) SCHEDULED
+t:     426210 job   606 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     426406 job   605 on # 1 of server mq COMPLETED
+t:     426406 job   605 on # 2 of server mq COMPLETED
 SENT JOBN 426407 607 160 3 2900 1400
-RCVD SCHD 607 mq 1
-t:     426407 job   607 (running) on # 1 of server mq (active) SCHEDULED
-t:     426407 job   607 on # 1 of server mq RUNNING
+RCVD SCHD 607 mq 0
+t:     426407 job   607 (running) on # 0 of server mq (active) SCHEDULED
+t:     426407 job   607 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     426539 job   604 on # 1 of server mq COMPLETED
-t:     427250 job   602 on # 0 of server mq COMPLETED
-t:     427294 job   603 on # 0 of server mq COMPLETED
-t:     427423 job   606 on # 2 of server mq COMPLETED
+t:     426539 job   604 on # 3 of server mq COMPLETED
+t:     427250 job   602 on # 2 of server mq COMPLETED
+t:     427294 job   603 on # 3 of server mq COMPLETED
+t:     427423 job   606 on # 0 of server mq COMPLETED
 SENT JOBN 427476 608 1815 1 700 300
-RCVD SCHD 608 mq 1
-t:     427476 job   608 (running) on # 1 of server mq (active) SCHEDULED
-t:     427476 job   608 on # 1 of server mq RUNNING
+RCVD SCHD 608 mq 0
+t:     427476 job   608 (running) on # 0 of server mq (active) SCHEDULED
+t:     427476 job   608 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 427646 609 862 1 900 800
-RCVD SCHD 609 mq 1
-t:     427646 job   609 (running) on # 1 of server mq (active) SCHEDULED
-t:     427646 job   609 on # 1 of server mq RUNNING
+RCVD SCHD 609 mq 0
+t:     427646 job   609 (running) on # 0 of server mq (active) SCHEDULED
+t:     427646 job   609 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 427659 610 2299 1 800 100
-RCVD SCHD 610 mq 1
-t:     427659 job   610 (running) on # 1 of server mq (active) SCHEDULED
-t:     427659 job   610 on # 1 of server mq RUNNING
+RCVD SCHD 610 mq 0
+t:     427659 job   610 (running) on # 0 of server mq (active) SCHEDULED
+t:     427659 job   610 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     427877 job   607 on # 1 of server mq COMPLETED
+t:     427877 job   607 on # 0 of server mq COMPLETED
 SENT JOBN 427887 611 805 1 1000 1000
-RCVD SCHD 611 mq 1
-t:     427887 job   611 (running) on # 1 of server mq (active) SCHEDULED
-t:     427887 job   611 on # 1 of server mq RUNNING
+RCVD SCHD 611 mq 0
+t:     427887 job   611 (running) on # 0 of server mq (active) SCHEDULED
+t:     427887 job   611 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 428354 612 3842 1 700 300
-RCVD SCHD 612 mq 1
-t:     428354 job   612 (running) on # 1 of server mq (active) SCHEDULED
-t:     428354 job   612 on # 1 of server mq RUNNING
+RCVD SCHD 612 mq 0
+t:     428354 job   612 (running) on # 0 of server mq (active) SCHEDULED
+t:     428354 job   612 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     428487 job   611 on # 1 of server mq COMPLETED
+t:     428487 job   611 on # 0 of server mq COMPLETED
 SENT JOBN 428745 613 3491 8 3900 4600
-RCVD SCHD 613 mq 0
-t:     428745 job   613 (running) on # 0 of server mq (active) SCHEDULED
-t:     428745 job   613 on # 0 of server mq RUNNING
+RCVD SCHD 613 mq 1
+t:     428745 job   613 (running) on # 1 of server mq (active) SCHEDULED
+t:     428745 job   613 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 428903 614 322 1 200 1800
-RCVD SCHD 614 mq 1
-t:     428903 job   614 (running) on # 1 of server mq (active) SCHEDULED
-t:     428903 job   614 on # 1 of server mq RUNNING
+RCVD SCHD 614 mq 0
+t:     428903 job   614 (running) on # 0 of server mq (active) SCHEDULED
+t:     428903 job   614 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 429216 615 1300 1 100 1700
-RCVD SCHD 615 mq 1
-t:     429216 job   615 (running) on # 1 of server mq (active) SCHEDULED
-t:     429216 job   615 on # 1 of server mq RUNNING
+RCVD SCHD 615 mq 0
+t:     429216 job   615 (running) on # 0 of server mq (active) SCHEDULED
+t:     429216 job   615 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     429669 job   614 on # 1 of server mq COMPLETED
-t:     429941 job   615 on # 1 of server mq COMPLETED
+t:     429669 job   614 on # 0 of server mq COMPLETED
+t:     429941 job   615 on # 0 of server mq COMPLETED
 SENT JOBN 429967 616 3263 4 1000 2900
-RCVD SCHD 616 mq 1
-t:     429967 job   616 (running) on # 1 of server mq (active) SCHEDULED
-t:     429967 job   616 on # 1 of server mq RUNNING
+RCVD SCHD 616 mq 0
+t:     429967 job   616 (running) on # 0 of server mq (active) SCHEDULED
+t:     429967 job   616 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     430153 job   608 on # 1 of server mq COMPLETED
-t:     430620 job   610 on # 1 of server mq COMPLETED
-t:     430660 job   609 on # 1 of server mq COMPLETED
+t:     430153 job   608 on # 0 of server mq COMPLETED
+t:     430620 job   610 on # 0 of server mq COMPLETED
+t:     430660 job   609 on # 0 of server mq COMPLETED
 SENT JOBN 430862 617 180 8 3700 10100
 RCVD SCHD 617 mq 2
 t:     430862 job   617 (running) on # 2 of server mq (active) SCHEDULED
@@ -4336,7 +4336,7 @@ t:     430876 job   618 (running) on # 3 of server mq (active) SCHEDULED
 t:     430876 job   618 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     431512 job   612 on # 1 of server mq COMPLETED
+t:     431512 job   612 on # 0 of server mq COMPLETED
 SENT JOBN 431583 619 3986 5 3300 2200
 RCVD SCHD 619 mq 4
 t:     431583 job   619 (running) on # 4 of server mq (active) SCHEDULED
@@ -4344,29 +4344,29 @@ t:     431583 job   619 on # 4 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     431786 job   618 on # 3 of server mq COMPLETED
-t:     431966 job   613 on # 0 of server mq COMPLETED
+t:     431966 job   613 on # 1 of server mq COMPLETED
 SENT JOBN 432206 620 489 2 700 1200
-RCVD SCHD 620 mq 1
-t:     432206 job   620 (running) on # 1 of server mq (active) SCHEDULED
-t:     432206 job   620 on # 1 of server mq RUNNING
+RCVD SCHD 620 mq 4
+t:     432206 job   620 (running) on # 4 of server mq (active) SCHEDULED
+t:     432206 job   620 on # 4 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     432661 job   616 on # 1 of server mq COMPLETED
+t:     432661 job   616 on # 0 of server mq COMPLETED
 t:     432799 job   617 on # 2 of server mq COMPLETED
 SENT JOBN 432929 621 2374 2 1100 3500
-RCVD SCHD 621 mq 1
-t:     432929 job   621 (running) on # 1 of server mq (active) SCHEDULED
-t:     432929 job   621 on # 1 of server mq RUNNING
+RCVD SCHD 621 mq 0
+t:     432929 job   621 (running) on # 0 of server mq (active) SCHEDULED
+t:     432929 job   621 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 433492 622 2438 1 100 300
-RCVD SCHD 622 mq 1
-t:     433492 job   622 (running) on # 1 of server mq (active) SCHEDULED
-t:     433492 job   622 on # 1 of server mq RUNNING
+RCVD SCHD 622 mq 4
+t:     433492 job   622 (running) on # 4 of server mq (active) SCHEDULED
+t:     433492 job   622 on # 4 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     434064 job   619 on # 4 of server mq COMPLETED
-t:     434444 job   620 on # 1 of server mq COMPLETED
+t:     434444 job   620 on # 4 of server mq COMPLETED
 SENT JOBN 434544 623 3703 6 3500 2800
 RCVD SCHD 623 mq 0
 t:     434544 job   623 (running) on # 0 of server mq (active) SCHEDULED
@@ -4374,65 +4374,65 @@ t:     434544 job   623 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 434557 624 5148 3 2600 6000
-RCVD SCHD 624 mq 1
-t:     434557 job   624 (running) on # 1 of server mq (active) SCHEDULED
-t:     434557 job   624 on # 1 of server mq RUNNING
+RCVD SCHD 624 mq 4
+t:     434557 job   624 (running) on # 4 of server mq (active) SCHEDULED
+t:     434557 job   624 on # 4 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     435570 job   621 on # 1 of server mq COMPLETED
+t:     435570 job   621 on # 0 of server mq COMPLETED
 SENT JOBN 435579 625 1448 1 300 900
-RCVD SCHD 625 mq 1
-t:     435579 job   625 (running) on # 1 of server mq (active) SCHEDULED
-t:     435579 job   625 on # 1 of server mq RUNNING
+RCVD SCHD 625 mq 0
+t:     435579 job   625 (running) on # 0 of server mq (active) SCHEDULED
+t:     435579 job   625 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     435661 job   622 on # 1 of server mq COMPLETED
+t:     435661 job   622 on # 4 of server mq COMPLETED
 SENT JOBN 436070 626 23 3 1700 3100
-RCVD SCHD 626 mq 1
-t:     436070 job   626 (running) on # 1 of server mq (active) SCHEDULED
-t:     436070 job   626 on # 1 of server mq RUNNING
+RCVD SCHD 626 mq 4
+t:     436070 job   626 (running) on # 4 of server mq (active) SCHEDULED
+t:     436070 job   626 on # 4 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     436436 job   625 on # 1 of server mq COMPLETED
+t:     436436 job   625 on # 0 of server mq COMPLETED
 SENT JOBN 436593 627 2452 4 3000 5300
-RCVD SCHD 627 mq 2
-t:     436593 job   627 (running) on # 2 of server mq (active) SCHEDULED
-t:     436593 job   627 on # 2 of server mq RUNNING
+RCVD SCHD 627 mq 1
+t:     436593 job   627 (running) on # 1 of server mq (active) SCHEDULED
+t:     436593 job   627 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     436730 job   623 on # 0 of server mq COMPLETED
-t:     437364 job   624 on # 1 of server mq COMPLETED
+t:     437364 job   624 on # 4 of server mq COMPLETED
 SENT JOBN 437554 628 2186 8 8000 14200
 RCVD SCHD 628 mq 0
 t:     437554 job   628 (running) on # 0 of server mq (active) SCHEDULED
 t:     437554 job   628 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     437648 job   626 on # 1 of server mq COMPLETED
+t:     437648 job   626 on # 4 of server mq COMPLETED
 SENT JOBN 437949 629 5541 8 3800 16200
-RCVD SCHD 629 mq 1
-t:     437949 job   629 (running) on # 1 of server mq (active) SCHEDULED
-t:     437949 job   629 on # 1 of server mq RUNNING
+RCVD SCHD 629 mq 2
+t:     437949 job   629 (running) on # 2 of server mq (active) SCHEDULED
+t:     437949 job   629 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     438777 job   627 on # 2 of server mq COMPLETED
+t:     438777 job   627 on # 1 of server mq COMPLETED
 SENT JOBN 438814 630 476 1 200 800
-RCVD SCHD 630 mq 2
-t:     438814 job   630 (running) on # 2 of server mq (active) SCHEDULED
-t:     438814 job   630 on # 2 of server mq RUNNING
+RCVD SCHD 630 mq 1
+t:     438814 job   630 (running) on # 1 of server mq (active) SCHEDULED
+t:     438814 job   630 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     439089 job   630 on # 2 of server mq COMPLETED
+t:     439089 job   630 on # 1 of server mq COMPLETED
 SENT JOBN 439495 631 329 1 400 100
-RCVD SCHD 631 mq 2
-t:     439495 job   631 (running) on # 2 of server mq (active) SCHEDULED
-t:     439495 job   631 on # 2 of server mq RUNNING
+RCVD SCHD 631 mq 1
+t:     439495 job   631 (running) on # 1 of server mq (active) SCHEDULED
+t:     439495 job   631 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 439625 632 974 7 6800 8500
-RCVD SCHD 632 mq 2
-t:     439625 job   632 (running) on # 2 of server mq (active) SCHEDULED
-t:     439625 job   632 on # 2 of server mq RUNNING
+RCVD SCHD 632 mq 1
+t:     439625 job   632 (running) on # 1 of server mq (active) SCHEDULED
+t:     439625 job   632 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 439851 633 4749 1 100 1800
@@ -4442,22 +4442,22 @@ t:     439851 job   633 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     440179 job   628 on # 0 of server mq COMPLETED
-t:     440479 job   631 on # 2 of server mq COMPLETED
+t:     440479 job   631 on # 1 of server mq COMPLETED
 SENT JOBN 440515 634 2383 3 2100 4400
 RCVD SCHD 634 mq 3
 t:     440515 job   634 (running) on # 3 of server mq (active) SCHEDULED
 t:     440515 job   634 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     441067 job   629 on # 1 of server mq COMPLETED
+t:     441067 job   629 on # 2 of server mq COMPLETED
 SENT JOBN 441143 635 1518 1 200 1400
-RCVD SCHD 635 mq 3
-t:     441143 job   635 (running) on # 3 of server mq (active) SCHEDULED
-t:     441143 job   635 on # 3 of server mq RUNNING
+RCVD SCHD 635 mq 1
+t:     441143 job   635 (running) on # 1 of server mq (active) SCHEDULED
+t:     441143 job   635 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     441433 job   632 on # 2 of server mq COMPLETED
-t:     442015 job   635 on # 3 of server mq COMPLETED
+t:     441433 job   632 on # 1 of server mq COMPLETED
+t:     442015 job   635 on # 1 of server mq COMPLETED
 t:     442559 job   634 on # 3 of server mq COMPLETED
 SENT JOBN 442773 636 12 8 5100 14300
 RCVD SCHD 636 mq 0
@@ -4507,9 +4507,9 @@ t:     448656 job   642 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 449993 643 2282 1 700 300
-RCVD SCHD 643 mq 2
-t:     449993 job   643 (running) on # 2 of server mq (active) SCHEDULED
-t:     449993 job   643 on # 2 of server mq RUNNING
+RCVD SCHD 643 mq 1
+t:     449993 job   643 (running) on # 1 of server mq (active) SCHEDULED
+t:     449993 job   643 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     450069 job   640 on # 0 of server mq COMPLETED
@@ -4522,9 +4522,9 @@ SENT OK
 RCVD REDY
 t:     451937 job   642 on # 2 of server mq COMPLETED
 SENT JOBN 451997 645 2752 7 6400 7700
-RCVD SCHD 645 mq 0
-t:     451997 job   645 (running) on # 0 of server mq (active) SCHEDULED
-t:     451997 job   645 on # 0 of server mq RUNNING
+RCVD SCHD 645 mq 1
+t:     451997 job   645 (running) on # 1 of server mq (active) SCHEDULED
+t:     451997 job   645 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 452009 646 998 1 800 1900
@@ -4533,8 +4533,8 @@ t:     452009 job   646 (running) on # 2 of server mq (active) SCHEDULED
 t:     452009 job   646 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     453259 job   643 on # 2 of server mq COMPLETED
-t:     453580 job   645 on # 0 of server mq COMPLETED
+t:     453259 job   643 on # 1 of server mq COMPLETED
+t:     453580 job   645 on # 1 of server mq COMPLETED
 SENT JOBN 453692 647 804 3 2300 5100
 RCVD SCHD 647 mq 2
 t:     453692 job   647 (running) on # 2 of server mq (active) SCHEDULED
@@ -4654,9 +4654,9 @@ t:     466574 job   663 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 466787 664 2361 1 800 1500
-RCVD SCHD 664 mq 0
-t:     466787 job   664 (running) on # 0 of server mq (active) SCHEDULED
-t:     466787 job   664 on # 0 of server mq RUNNING
+RCVD SCHD 664 mq 1
+t:     466787 job   664 (running) on # 1 of server mq (active) SCHEDULED
+t:     466787 job   664 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     467051 job   660 on # 2 of server mq COMPLETED
@@ -4667,9 +4667,9 @@ t:     467203 job   665 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 467883 666 793 3 700 4800
-RCVD SCHD 666 mq 2
-t:     467883 job   666 (running) on # 2 of server mq (active) SCHEDULED
-t:     467883 job   666 on # 2 of server mq RUNNING
+RCVD SCHD 666 mq 0
+t:     467883 job   666 (running) on # 0 of server mq (active) SCHEDULED
+t:     467883 job   666 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 468085 667 1298 2 2100 2900
@@ -4688,16 +4688,16 @@ t:     469267 job   668 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     469269 job   665 on # 0 of server mq COMPLETED
-t:     469554 job   664 on # 0 of server mq COMPLETED
+t:     469554 job   664 on # 1 of server mq COMPLETED
 t:     470414 job   668 on # 0 of server mq COMPLETED
 SENT JOBN 470999 669 2153 5 4900 7100
-RCVD SCHD 669 mq 2
-t:     470999 job   669 (running) on # 2 of server mq (active) SCHEDULED
-t:     470999 job   669 on # 2 of server mq RUNNING
+RCVD SCHD 669 mq 0
+t:     470999 job   669 (running) on # 0 of server mq (active) SCHEDULED
+t:     470999 job   669 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     471210 job   666 on # 2 of server mq COMPLETED
-t:     472085 job   669 on # 2 of server mq COMPLETED
+t:     471210 job   666 on # 0 of server mq COMPLETED
+t:     472085 job   669 on # 0 of server mq COMPLETED
 SENT JOBN 472691 670 2549 3 1300 5600
 RCVD SCHD 670 mq 0
 t:     472691 job   670 (running) on # 0 of server mq (active) SCHEDULED
@@ -4718,9 +4718,9 @@ SENT OK
 RCVD REDY
 t:     475224 job   670 on # 0 of server mq COMPLETED
 SENT JOBN 475229 673 1761 1 900 1800
-RCVD SCHD 673 mq 0
-t:     475229 job   673 (running) on # 0 of server mq (active) SCHEDULED
-t:     475229 job   673 on # 0 of server mq RUNNING
+RCVD SCHD 673 mq 1
+t:     475229 job   673 (running) on # 1 of server mq (active) SCHEDULED
+t:     475229 job   673 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 475275 674 2318 8 3500 6600
@@ -4730,16 +4730,16 @@ t:     475275 job   674 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 475283 675 1125 3 1500 3500
-RCVD SCHD 675 mq 3
-t:     475283 job   675 (running) on # 3 of server mq (active) SCHEDULED
-t:     475283 job   675 on # 3 of server mq RUNNING
+RCVD SCHD 675 mq 0
+t:     475283 job   675 (running) on # 0 of server mq (active) SCHEDULED
+t:     475283 job   675 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     475393 job   671 on # 0 of server mq COMPLETED
 SENT JOBN 475682 676 528 1 800 1800
-RCVD SCHD 676 mq 0
-t:     475682 job   676 (running) on # 0 of server mq (active) SCHEDULED
-t:     475682 job   676 on # 0 of server mq RUNNING
+RCVD SCHD 676 mq 1
+t:     475682 job   676 (running) on # 1 of server mq (active) SCHEDULED
+t:     475682 job   676 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 476507 677 1553 1 100 1600
@@ -4748,17 +4748,17 @@ t:     476507 job   677 (running) on # 0 of server mq (active) SCHEDULED
 t:     476507 job   677 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     476582 job   675 on # 3 of server mq COMPLETED
-t:     476789 job   673 on # 0 of server mq COMPLETED
+t:     476582 job   675 on # 0 of server mq COMPLETED
+t:     476789 job   673 on # 1 of server mq COMPLETED
 t:     477022 job   672 on # 1 of server mq COMPLETED
 SENT JOBN 477148 678 2799 8 1800 4300
-RCVD SCHD 678 mq 1
-t:     477148 job   678 (running) on # 1 of server mq (active) SCHEDULED
-t:     477148 job   678 on # 1 of server mq RUNNING
+RCVD SCHD 678 mq 3
+t:     477148 job   678 (running) on # 3 of server mq (active) SCHEDULED
+t:     477148 job   678 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     478320 job   674 on # 2 of server mq COMPLETED
-t:     478347 job   676 on # 0 of server mq COMPLETED
+t:     478347 job   676 on # 1 of server mq COMPLETED
 SENT JOBN 478732 679 31 2 1300 3400
 RCVD SCHD 679 mq 0
 t:     478732 job   679 (running) on # 0 of server mq (active) SCHEDULED
@@ -4779,7 +4779,7 @@ t:     480377 job   681 (running) on # 0 of server mq (active) SCHEDULED
 t:     480377 job   681 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     480379 job   678 on # 1 of server mq COMPLETED
+t:     480379 job   678 on # 3 of server mq COMPLETED
 SENT JOBN 482043 682 469 1 900 1400
 RCVD SCHD 682 mq 0
 t:     482043 job   682 (running) on # 0 of server mq (active) SCHEDULED
@@ -4837,12 +4837,12 @@ t:     488526 job   689 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 489577 690 285 1 400 300
-RCVD SCHD 690 mq 1
-t:     489577 job   690 (running) on # 1 of server mq (active) SCHEDULED
-t:     489577 job   690 on # 1 of server mq RUNNING
+RCVD SCHD 690 mq 0
+t:     489577 job   690 (running) on # 0 of server mq (active) SCHEDULED
+t:     489577 job   690 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     489722 job   690 on # 1 of server mq COMPLETED
+t:     489722 job   690 on # 0 of server mq COMPLETED
 t:     489806 job   689 on # 1 of server mq COMPLETED
 t:     490230 job   688 on # 0 of server mq COMPLETED
 SENT JOBN 491245 691 1549 1 400 1100
@@ -4892,43 +4892,43 @@ SENT OK
 RCVD REDY
 t:     497570 job   694 on # 0 of server mq COMPLETED
 SENT JOBN 497703 698 3257 1 1000 800
-RCVD SCHD 698 mq 1
-t:     497703 job   698 (running) on # 1 of server mq (active) SCHEDULED
-t:     497703 job   698 on # 1 of server mq RUNNING
+RCVD SCHD 698 mq 0
+t:     497703 job   698 (running) on # 0 of server mq (active) SCHEDULED
+t:     497703 job   698 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     498746 job   696 on # 0 of server mq COMPLETED
 t:     498837 job   695 on # 0 of server mq COMPLETED
 SENT JOBN 499150 699 1427 4 1200 7400
-RCVD SCHD 699 mq 1
-t:     499150 job   699 (running) on # 1 of server mq (active) SCHEDULED
-t:     499150 job   699 on # 1 of server mq RUNNING
+RCVD SCHD 699 mq 0
+t:     499150 job   699 (running) on # 0 of server mq (active) SCHEDULED
+t:     499150 job   699 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     499569 job   698 on # 1 of server mq COMPLETED
+t:     499569 job   698 on # 0 of server mq COMPLETED
 t:     500218 job   697 on # 1 of server mq COMPLETED
 SENT JOBN 500374 700 774 1 1000 500
-RCVD SCHD 700 mq 1
-t:     500374 job   700 (running) on # 1 of server mq (active) SCHEDULED
-t:     500374 job   700 on # 1 of server mq RUNNING
+RCVD SCHD 700 mq 0
+t:     500374 job   700 (running) on # 0 of server mq (active) SCHEDULED
+t:     500374 job   700 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     501024 job   700 on # 1 of server mq COMPLETED
+t:     501024 job   700 on # 0 of server mq COMPLETED
 SENT JOBN 501500 701 2567 1 1000 100
-RCVD SCHD 701 mq 1
-t:     501500 job   701 (running) on # 1 of server mq (active) SCHEDULED
-t:     501500 job   701 on # 1 of server mq RUNNING
+RCVD SCHD 701 mq 0
+t:     501500 job   701 (running) on # 0 of server mq (active) SCHEDULED
+t:     501500 job   701 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     502258 job   699 on # 1 of server mq COMPLETED
+t:     502258 job   699 on # 0 of server mq COMPLETED
 SENT JOBN 502354 702 236 1 500 700
-RCVD SCHD 702 mq 1
-t:     502354 job   702 (running) on # 1 of server mq (active) SCHEDULED
-t:     502354 job   702 on # 1 of server mq RUNNING
+RCVD SCHD 702 mq 0
+t:     502354 job   702 (running) on # 0 of server mq (active) SCHEDULED
+t:     502354 job   702 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     502744 job   702 on # 1 of server mq COMPLETED
-t:     503022 job   701 on # 1 of server mq COMPLETED
+t:     502744 job   702 on # 0 of server mq COMPLETED
+t:     503022 job   701 on # 0 of server mq COMPLETED
 SENT JOBN 503251 703 2114 4 1700 4300
 RCVD SCHD 703 mq 0
 t:     503251 job   703 (running) on # 0 of server mq (active) SCHEDULED
@@ -4998,13 +4998,13 @@ RCVD REDY
 t:     506891 job   706 on # 0 of server mq COMPLETED
 t:     507309 job   711 on # 0 of server mq COMPLETED
 SENT JOBN 507675 713 96 1 500 800
-RCVD SCHD 713 mq 1
-t:     507675 job   713 (running) on # 1 of server mq (active) SCHEDULED
-t:     507675 job   713 on # 1 of server mq RUNNING
+RCVD SCHD 713 mq 0
+t:     507675 job   713 (running) on # 0 of server mq (active) SCHEDULED
+t:     507675 job   713 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     507807 job   709 on # 0 of server mq COMPLETED
-t:     507877 job   713 on # 1 of server mq COMPLETED
+t:     507877 job   713 on # 0 of server mq COMPLETED
 t:     508025 job   712 on # 1 of server mq COMPLETED
 SENT JOBN 508145 714 1066 1 700 1600
 RCVD SCHD 714 mq 0
@@ -5053,25 +5053,25 @@ SENT OK
 RCVD REDY
 t:     510549 job   715 on # 0 of server mq COMPLETED
 SENT JOBN 510836 721 2994 1 1000 100
-RCVD SCHD 721 mq 0
-t:     510836 job   721 (running) on # 0 of server mq (active) SCHEDULED
-t:     510836 job   721 on # 0 of server mq RUNNING
+RCVD SCHD 721 mq 1
+t:     510836 job   721 (running) on # 1 of server mq (active) SCHEDULED
+t:     510836 job   721 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 510919 722 1167 4 1500 6200
-RCVD SCHD 722 mq 2
-t:     510919 job   722 (running) on # 2 of server mq (active) SCHEDULED
-t:     510919 job   722 on # 2 of server mq RUNNING
+RCVD SCHD 722 mq 0
+t:     510919 job   722 (running) on # 0 of server mq (active) SCHEDULED
+t:     510919 job   722 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 511086 723 887 1 200 1300
-RCVD SCHD 723 mq 2
-t:     511086 job   723 (running) on # 2 of server mq (active) SCHEDULED
-t:     511086 job   723 on # 2 of server mq RUNNING
+RCVD SCHD 723 mq 1
+t:     511086 job   723 (running) on # 1 of server mq (active) SCHEDULED
+t:     511086 job   723 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     511240 job   719 on # 0 of server mq COMPLETED
-t:     511609 job   723 on # 2 of server mq COMPLETED
+t:     511609 job   723 on # 1 of server mq COMPLETED
 SENT JOBN 511720 724 2023 1 200 400
 RCVD SCHD 724 mq 0
 t:     511720 job   724 (running) on # 0 of server mq (active) SCHEDULED
@@ -5079,72 +5079,72 @@ t:     511720 job   724 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 512015 725 3160 5 4900 900
-RCVD SCHD 725 mq 3
-t:     512015 job   725 (running) on # 3 of server mq (active) SCHEDULED
-t:     512015 job   725 on # 3 of server mq RUNNING
+RCVD SCHD 725 mq 2
+t:     512015 job   725 (running) on # 2 of server mq (active) SCHEDULED
+t:     512015 job   725 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     512154 job   718 on # 0 of server mq COMPLETED
 SENT JOBN 512782 726 4250 5 1500 6000
-RCVD SCHD 726 mq 0
-t:     512782 job   726 (running) on # 0 of server mq (active) SCHEDULED
-t:     512782 job   726 on # 0 of server mq RUNNING
+RCVD SCHD 726 mq 3
+t:     512782 job   726 (running) on # 3 of server mq (active) SCHEDULED
+t:     512782 job   726 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 512905 727 2260 1 300 1800
-RCVD SCHD 727 mq 2
-t:     512905 job   727 (running) on # 2 of server mq (active) SCHEDULED
-t:     512905 job   727 on # 2 of server mq RUNNING
+RCVD SCHD 727 mq 1
+t:     512905 job   727 (running) on # 1 of server mq (active) SCHEDULED
+t:     512905 job   727 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     513085 job   722 on # 2 of server mq COMPLETED
+t:     513085 job   722 on # 0 of server mq COMPLETED
 t:     513172 job   720 on # 1 of server mq COMPLETED
 SENT JOBN 513341 728 2053 8 1000 12000
-RCVD SCHD 728 mq 1
-t:     513341 job   728 (running) on # 1 of server mq (active) SCHEDULED
-t:     513341 job   728 on # 1 of server mq RUNNING
+RCVD SCHD 728 mq 4
+t:     513341 job   728 (running) on # 4 of server mq (active) SCHEDULED
+t:     513341 job   728 on # 4 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     513457 job   724 on # 0 of server mq COMPLETED
-t:     513604 job   721 on # 0 of server mq COMPLETED
-t:     513894 job   725 on # 3 of server mq COMPLETED
+t:     513604 job   721 on # 1 of server mq COMPLETED
+t:     513894 job   725 on # 2 of server mq COMPLETED
 SENT JOBN 513988 729 705 1 900 900
-RCVD SCHD 729 mq 2
-t:     513988 job   729 (running) on # 2 of server mq (active) SCHEDULED
-t:     513988 job   729 on # 2 of server mq RUNNING
+RCVD SCHD 729 mq 3
+t:     513988 job   729 (running) on # 3 of server mq (active) SCHEDULED
+t:     513988 job   729 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     514077 job   727 on # 2 of server mq COMPLETED
+t:     514077 job   727 on # 1 of server mq COMPLETED
 SENT JOBN 514729 730 1611 3 2800 900
-RCVD SCHD 730 mq 2
-t:     514729 job   730 (running) on # 2 of server mq (active) SCHEDULED
-t:     514729 job   730 on # 2 of server mq RUNNING
+RCVD SCHD 730 mq 0
+t:     514729 job   730 (running) on # 0 of server mq (active) SCHEDULED
+t:     514729 job   730 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 514732 731 1950 1 100 1700
-RCVD SCHD 731 mq 2
-t:     514732 job   731 (running) on # 2 of server mq (active) SCHEDULED
-t:     514732 job   731 on # 2 of server mq RUNNING
+RCVD SCHD 731 mq 3
+t:     514732 job   731 (running) on # 3 of server mq (active) SCHEDULED
+t:     514732 job   731 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     514757 job   729 on # 2 of server mq COMPLETED
-t:     515049 job   726 on # 0 of server mq COMPLETED
+t:     514757 job   729 on # 3 of server mq COMPLETED
+t:     515049 job   726 on # 3 of server mq COMPLETED
 SENT JOBN 515666 732 187 1 800 800
-RCVD SCHD 732 mq 2
-t:     515666 job   732 (running) on # 2 of server mq (active) SCHEDULED
-t:     515666 job   732 on # 2 of server mq RUNNING
+RCVD SCHD 732 mq 0
+t:     515666 job   732 (running) on # 0 of server mq (active) SCHEDULED
+t:     515666 job   732 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     515896 job   731 on # 2 of server mq COMPLETED
-t:     515942 job   732 on # 2 of server mq COMPLETED
-t:     516468 job   730 on # 2 of server mq COMPLETED
+t:     515896 job   731 on # 3 of server mq COMPLETED
+t:     515942 job   732 on # 0 of server mq COMPLETED
+t:     516468 job   730 on # 0 of server mq COMPLETED
 SENT JOBN 516541 733 1246 3 2700 4900
 RCVD SCHD 733 mq 0
 t:     516541 job   733 (running) on # 0 of server mq (active) SCHEDULED
 t:     516541 job   733 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     516821 job   728 on # 1 of server mq COMPLETED
+t:     516821 job   728 on # 4 of server mq COMPLETED
 SENT JOBN 517670 734 4605 8 3100 5200
 RCVD SCHD 734 mq 1
 t:     517670 job   734 (running) on # 1 of server mq (active) SCHEDULED
@@ -5333,43 +5333,43 @@ t:     533508 job   760 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 534461 761 3824 1 100 800
-RCVD SCHD 761 mq 1
-t:     534461 job   761 (running) on # 1 of server mq (active) SCHEDULED
-t:     534461 job   761 on # 1 of server mq RUNNING
+RCVD SCHD 761 mq 0
+t:     534461 job   761 (running) on # 0 of server mq (active) SCHEDULED
+t:     534461 job   761 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     535869 job   758 on # 0 of server mq COMPLETED
 t:     535928 job   760 on # 1 of server mq COMPLETED
 SENT JOBN 536047 762 134 1 500 1600
-RCVD SCHD 762 mq 1
-t:     536047 job   762 (running) on # 1 of server mq (active) SCHEDULED
-t:     536047 job   762 on # 1 of server mq RUNNING
+RCVD SCHD 762 mq 0
+t:     536047 job   762 (running) on # 0 of server mq (active) SCHEDULED
+t:     536047 job   762 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     536073 job   759 on # 0 of server mq COMPLETED
-t:     536619 job   761 on # 1 of server mq COMPLETED
+t:     536619 job   761 on # 0 of server mq COMPLETED
 SENT JOBN 537854 763 3395 8 4500 8500
-RCVD SCHD 763 mq 0
-t:     537854 job   763 (running) on # 0 of server mq (active) SCHEDULED
-t:     537854 job   763 on # 0 of server mq RUNNING
+RCVD SCHD 763 mq 1
+t:     537854 job   763 (running) on # 1 of server mq (active) SCHEDULED
+t:     537854 job   763 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     538666 job   762 on # 1 of server mq COMPLETED
+t:     538666 job   762 on # 0 of server mq COMPLETED
 SENT JOBN 539131 764 1526 1 1000 1100
-RCVD SCHD 764 mq 1
-t:     539131 job   764 (running) on # 1 of server mq (active) SCHEDULED
-t:     539131 job   764 on # 1 of server mq RUNNING
+RCVD SCHD 764 mq 0
+t:     539131 job   764 (running) on # 0 of server mq (active) SCHEDULED
+t:     539131 job   764 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 539863 765 942 1 500 300
-RCVD SCHD 765 mq 1
-t:     539863 job   765 (running) on # 1 of server mq (active) SCHEDULED
-t:     539863 job   765 on # 1 of server mq RUNNING
+RCVD SCHD 765 mq 0
+t:     539863 job   765 (running) on # 0 of server mq (active) SCHEDULED
+t:     539863 job   765 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     540354 job   765 on # 1 of server mq COMPLETED
-t:     540985 job   764 on # 1 of server mq COMPLETED
-t:     541271 job   763 on # 0 of server mq COMPLETED
+t:     540354 job   765 on # 0 of server mq COMPLETED
+t:     540985 job   764 on # 0 of server mq COMPLETED
+t:     541271 job   763 on # 1 of server mq COMPLETED
 SENT JOBN 541456 766 410 5 3800 6800
 RCVD SCHD 766 mq 0
 t:     541456 job   766 (running) on # 0 of server mq (active) SCHEDULED
@@ -5390,9 +5390,9 @@ t:     543754 job   768 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 545487 769 784 1 500 100
-RCVD SCHD 769 mq 0
-t:     545487 job   769 (running) on # 0 of server mq (active) SCHEDULED
-t:     545487 job   769 on # 0 of server mq RUNNING
+RCVD SCHD 769 mq 1
+t:     545487 job   769 (running) on # 1 of server mq (active) SCHEDULED
+t:     545487 job   769 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 545652 770 502 5 3500 7700
@@ -5403,7 +5403,7 @@ SENT OK
 RCVD REDY
 t:     545821 job   767 on # 1 of server mq COMPLETED
 t:     546109 job   768 on # 0 of server mq COMPLETED
-t:     546395 job   769 on # 0 of server mq COMPLETED
+t:     546395 job   769 on # 1 of server mq COMPLETED
 SENT JOBN 546494 771 270 1 800 500
 RCVD SCHD 771 mq 2
 t:     546494 job   771 (running) on # 2 of server mq (active) SCHEDULED
@@ -5495,119 +5495,119 @@ SENT OK
 RCVD REDY
 t:     559564 job   781 on # 0 of server mq COMPLETED
 SENT JOBN 560205 784 2747 1 100 100
-RCVD SCHD 784 mq 0
-t:     560205 job   784 (running) on # 0 of server mq (active) SCHEDULED
-t:     560205 job   784 on # 0 of server mq RUNNING
+RCVD SCHD 784 mq 1
+t:     560205 job   784 (running) on # 1 of server mq (active) SCHEDULED
+t:     560205 job   784 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     560855 job   782 on # 0 of server mq COMPLETED
 SENT JOBN 561326 785 1894 8 1800 2400
-RCVD SCHD 785 mq 2
-t:     561326 job   785 (running) on # 2 of server mq (active) SCHEDULED
-t:     561326 job   785 on # 2 of server mq RUNNING
+RCVD SCHD 785 mq 0
+t:     561326 job   785 (running) on # 0 of server mq (active) SCHEDULED
+t:     561326 job   785 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     562143 job   783 on # 1 of server mq COMPLETED
 SENT JOBN 562322 786 43 2 300 2700
-RCVD SCHD 786 mq 0
-t:     562322 job   786 (running) on # 0 of server mq (active) SCHEDULED
-t:     562322 job   786 on # 0 of server mq RUNNING
+RCVD SCHD 786 mq 1
+t:     562322 job   786 (running) on # 1 of server mq (active) SCHEDULED
+t:     562322 job   786 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     562385 job   784 on # 0 of server mq COMPLETED
+t:     562385 job   784 on # 1 of server mq COMPLETED
 SENT JOBN 562385 787 1562 2 1800 1000
-RCVD SCHD 787 mq 0
-t:     562385 job   787 (running) on # 0 of server mq (active) SCHEDULED
-t:     562385 job   787 on # 0 of server mq RUNNING
+RCVD SCHD 787 mq 1
+t:     562385 job   787 (running) on # 1 of server mq (active) SCHEDULED
+t:     562385 job   787 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     562397 job   786 on # 0 of server mq COMPLETED
+t:     562397 job   786 on # 1 of server mq COMPLETED
 SENT JOBN 562669 788 831 1 900 1900
-RCVD SCHD 788 mq 0
-t:     562669 job   788 (running) on # 0 of server mq (active) SCHEDULED
-t:     562669 job   788 on # 0 of server mq RUNNING
+RCVD SCHD 788 mq 1
+t:     562669 job   788 (running) on # 1 of server mq (active) SCHEDULED
+t:     562669 job   788 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     563095 job   788 on # 0 of server mq COMPLETED
+t:     563095 job   788 on # 1 of server mq COMPLETED
 SENT JOBN 563393 789 2416 1 300 100
-RCVD SCHD 789 mq 0
-t:     563393 job   789 (running) on # 0 of server mq (active) SCHEDULED
-t:     563393 job   789 on # 0 of server mq RUNNING
+RCVD SCHD 789 mq 1
+t:     563393 job   789 (running) on # 1 of server mq (active) SCHEDULED
+t:     563393 job   789 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     563470 job   785 on # 2 of server mq COMPLETED
-t:     563539 job   787 on # 0 of server mq COMPLETED
+t:     563470 job   785 on # 0 of server mq COMPLETED
+t:     563539 job   787 on # 1 of server mq COMPLETED
 SENT JOBN 564028 790 1646 4 900 3100
-RCVD SCHD 790 mq 0
-t:     564028 job   790 (running) on # 0 of server mq (active) SCHEDULED
-t:     564028 job   790 on # 0 of server mq RUNNING
+RCVD SCHD 790 mq 1
+t:     564028 job   790 (running) on # 1 of server mq (active) SCHEDULED
+t:     564028 job   790 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 564221 791 94 1 700 500
-RCVD SCHD 791 mq 0
-t:     564221 job   791 (running) on # 0 of server mq (active) SCHEDULED
-t:     564221 job   791 on # 0 of server mq RUNNING
+RCVD SCHD 791 mq 1
+t:     564221 job   791 (running) on # 1 of server mq (active) SCHEDULED
+t:     564221 job   791 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 565125 792 1523 2 600 3800
-RCVD SCHD 792 mq 0
-t:     565125 job   792 (running) on # 0 of server mq (active) SCHEDULED
-t:     565125 job   792 on # 0 of server mq RUNNING
+RCVD SCHD 792 mq 1
+t:     565125 job   792 (running) on # 1 of server mq (active) SCHEDULED
+t:     565125 job   792 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     565169 job   790 on # 0 of server mq COMPLETED
-t:     565288 job   789 on # 0 of server mq COMPLETED
+t:     565169 job   790 on # 1 of server mq COMPLETED
+t:     565288 job   789 on # 1 of server mq COMPLETED
 SENT JOBN 566260 793 685 1 500 200
-RCVD SCHD 793 mq 0
-t:     566260 job   793 (running) on # 0 of server mq (active) SCHEDULED
-t:     566260 job   793 on # 0 of server mq RUNNING
+RCVD SCHD 793 mq 1
+t:     566260 job   793 (running) on # 1 of server mq (active) SCHEDULED
+t:     566260 job   793 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     566319 job   791 on # 0 of server mq COMPLETED
+t:     566319 job   791 on # 1 of server mq COMPLETED
 SENT JOBN 566808 794 2750 1 600 600
-RCVD SCHD 794 mq 0
-t:     566808 job   794 (running) on # 0 of server mq (active) SCHEDULED
-t:     566808 job   794 on # 0 of server mq RUNNING
+RCVD SCHD 794 mq 1
+t:     566808 job   794 (running) on # 1 of server mq (active) SCHEDULED
+t:     566808 job   794 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     567083 job   792 on # 0 of server mq COMPLETED
+t:     567083 job   792 on # 1 of server mq COMPLETED
 SENT JOBN 567526 795 4509 1 500 1900
-RCVD SCHD 795 mq 0
-t:     567526 job   795 (running) on # 0 of server mq (active) SCHEDULED
-t:     567526 job   795 on # 0 of server mq RUNNING
+RCVD SCHD 795 mq 1
+t:     567526 job   795 (running) on # 1 of server mq (active) SCHEDULED
+t:     567526 job   795 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     568066 job   793 on # 0 of server mq COMPLETED
+t:     568066 job   793 on # 1 of server mq COMPLETED
 SENT JOBN 568647 796 329 2 200 1200
-RCVD SCHD 796 mq 0
-t:     568647 job   796 (running) on # 0 of server mq (active) SCHEDULED
-t:     568647 job   796 on # 0 of server mq RUNNING
+RCVD SCHD 796 mq 1
+t:     568647 job   796 (running) on # 1 of server mq (active) SCHEDULED
+t:     568647 job   796 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     569585 job   794 on # 0 of server mq COMPLETED
+t:     569585 job   794 on # 1 of server mq COMPLETED
 SENT JOBN 569671 797 1522 1 500 600
-RCVD SCHD 797 mq 0
-t:     569671 job   797 (running) on # 0 of server mq (active) SCHEDULED
-t:     569671 job   797 on # 0 of server mq RUNNING
+RCVD SCHD 797 mq 1
+t:     569671 job   797 (running) on # 1 of server mq (active) SCHEDULED
+t:     569671 job   797 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     569953 job   796 on # 0 of server mq COMPLETED
-t:     570019 job   795 on # 0 of server mq COMPLETED
+t:     569953 job   796 on # 1 of server mq COMPLETED
+t:     570019 job   795 on # 1 of server mq COMPLETED
 SENT JOBN 570248 798 1497 1 400 1500
-RCVD SCHD 798 mq 0
-t:     570248 job   798 (running) on # 0 of server mq (active) SCHEDULED
-t:     570248 job   798 on # 0 of server mq RUNNING
+RCVD SCHD 798 mq 1
+t:     570248 job   798 (running) on # 1 of server mq (active) SCHEDULED
+t:     570248 job   798 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     571206 job   797 on # 0 of server mq COMPLETED
+t:     571206 job   797 on # 1 of server mq COMPLETED
 SENT JOBN 571320 799 437 1 900 1100
-RCVD SCHD 799 mq 0
-t:     571320 job   799 (running) on # 0 of server mq (active) SCHEDULED
-t:     571320 job   799 on # 0 of server mq RUNNING
+RCVD SCHD 799 mq 1
+t:     571320 job   799 (running) on # 1 of server mq (active) SCHEDULED
+t:     571320 job   799 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     571386 job   798 on # 0 of server mq COMPLETED
-t:     571839 job   799 on # 0 of server mq COMPLETED
+t:     571386 job   798 on # 1 of server mq COMPLETED
+t:     571839 job   799 on # 1 of server mq COMPLETED
 SENT JOBN 572272 800 1270 1 500 600
 RCVD SCHD 800 mq 0
 t:     572272 job   800 (running) on # 0 of server mq (active) SCHEDULED
@@ -5653,27 +5653,27 @@ RCVD REDY
 t:     574526 job   801 on # 0 of server mq COMPLETED
 t:     574889 job   800 on # 0 of server mq COMPLETED
 SENT JOBN 574985 807 3780 1 500 900
-RCVD SCHD 807 mq 0
-t:     574985 job   807 (running) on # 0 of server mq (active) SCHEDULED
-t:     574985 job   807 on # 0 of server mq RUNNING
+RCVD SCHD 807 mq 1
+t:     574985 job   807 (running) on # 1 of server mq (active) SCHEDULED
+t:     574985 job   807 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     575278 job   803 on # 1 of server mq COMPLETED
 t:     575402 job   802 on # 0 of server mq COMPLETED
 SENT JOBN 575453 808 1943 1 800 1900
-RCVD SCHD 808 mq 0
-t:     575453 job   808 (running) on # 0 of server mq (active) SCHEDULED
-t:     575453 job   808 on # 0 of server mq RUNNING
+RCVD SCHD 808 mq 1
+t:     575453 job   808 (running) on # 1 of server mq (active) SCHEDULED
+t:     575453 job   808 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 575533 809 1 1 600 800
-RCVD SCHD 809 mq 0
-t:     575533 job   809 (running) on # 0 of server mq (active) SCHEDULED
-t:     575533 job   809 on # 0 of server mq RUNNING
+RCVD SCHD 809 mq 1
+t:     575533 job   809 (running) on # 1 of server mq (active) SCHEDULED
+t:     575533 job   809 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     575644 job   805 on # 1 of server mq COMPLETED
-t:     575761 job   809 on # 0 of server mq COMPLETED
+t:     575761 job   809 on # 1 of server mq COMPLETED
 SENT JOBN 576146 810 388 2 1400 1000
 RCVD SCHD 810 mq 1
 t:     576146 job   810 (running) on # 1 of server mq (active) SCHEDULED
@@ -5681,16 +5681,16 @@ t:     576146 job   810 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 576364 811 960 1 300 1000
-RCVD SCHD 811 mq 0
-t:     576364 job   811 (running) on # 0 of server mq (active) SCHEDULED
-t:     576364 job   811 on # 0 of server mq RUNNING
+RCVD SCHD 811 mq 1
+t:     576364 job   811 (running) on # 1 of server mq (active) SCHEDULED
+t:     576364 job   811 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     576524 job   808 on # 0 of server mq COMPLETED
+t:     576524 job   808 on # 1 of server mq COMPLETED
 t:     576547 job   810 on # 1 of server mq COMPLETED
 t:     576662 job   804 on # 2 of server mq COMPLETED
-t:     577102 job   807 on # 0 of server mq COMPLETED
-t:     577407 job   811 on # 0 of server mq COMPLETED
+t:     577102 job   807 on # 1 of server mq COMPLETED
+t:     577407 job   811 on # 1 of server mq COMPLETED
 t:     577578 job   806 on # 1 of server mq COMPLETED
 SENT JOBN 577653 812 270 3 900 2500
 RCVD SCHD 812 mq 0
@@ -5822,40 +5822,40 @@ t:     591419 job   830 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 591466 831 81 2 2100 1900
-RCVD SCHD 831 mq 3
-t:     591466 job   831 (running) on # 3 of server mq (active) SCHEDULED
-t:     591466 job   831 on # 3 of server mq RUNNING
+RCVD SCHD 831 mq 0
+t:     591466 job   831 (running) on # 0 of server mq (active) SCHEDULED
+t:     591466 job   831 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     591580 job   827 on # 3 of server mq COMPLETED
 SENT JOBN 591948 832 2384 3 2100 500
-RCVD SCHD 832 mq 0
-t:     591948 job   832 (running) on # 0 of server mq (active) SCHEDULED
-t:     591948 job   832 on # 0 of server mq RUNNING
+RCVD SCHD 832 mq 3
+t:     591948 job   832 (running) on # 3 of server mq (active) SCHEDULED
+t:     591948 job   832 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     592239 job   828 on # 3 of server mq COMPLETED
-t:     593157 job   831 on # 3 of server mq COMPLETED
+t:     593157 job   831 on # 0 of server mq COMPLETED
 t:     593217 job   829 on # 3 of server mq COMPLETED
 SENT JOBN 593424 833 194 5 4100 8700
-RCVD SCHD 833 mq 1
-t:     593424 job   833 (running) on # 1 of server mq (active) SCHEDULED
-t:     593424 job   833 on # 1 of server mq RUNNING
+RCVD SCHD 833 mq 3
+t:     593424 job   833 (running) on # 3 of server mq (active) SCHEDULED
+t:     593424 job   833 on # 3 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     593757 job   832 on # 0 of server mq COMPLETED
+t:     593757 job   832 on # 3 of server mq COMPLETED
 SENT JOBN 594467 834 2348 5 2000 5700
-RCVD SCHD 834 mq 2
-t:     594467 job   834 (running) on # 2 of server mq (active) SCHEDULED
-t:     594467 job   834 on # 2 of server mq RUNNING
+RCVD SCHD 834 mq 1
+t:     594467 job   834 (running) on # 1 of server mq (active) SCHEDULED
+t:     594467 job   834 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     594657 job   830 on # 0 of server mq COMPLETED
-t:     594793 job   833 on # 1 of server mq COMPLETED
+t:     594793 job   833 on # 3 of server mq COMPLETED
 SENT JOBN 594854 835 1147 1 900 600
-RCVD SCHD 835 mq 2
-t:     594854 job   835 (running) on # 2 of server mq (active) SCHEDULED
-t:     594854 job   835 on # 2 of server mq RUNNING
+RCVD SCHD 835 mq 1
+t:     594854 job   835 (running) on # 1 of server mq (active) SCHEDULED
+t:     594854 job   835 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 595016 836 1288 8 6300 5700
@@ -5864,18 +5864,18 @@ t:     595016 job   836 (running) on # 0 of server mq (active) SCHEDULED
 t:     595016 job   836 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     595808 job   835 on # 2 of server mq COMPLETED
+t:     595808 job   835 on # 1 of server mq COMPLETED
 SENT JOBN 595831 837 292 1 200 800
-RCVD SCHD 837 mq 2
-t:     595831 job   837 (running) on # 2 of server mq (active) SCHEDULED
-t:     595831 job   837 on # 2 of server mq RUNNING
+RCVD SCHD 837 mq 1
+t:     595831 job   837 (running) on # 1 of server mq (active) SCHEDULED
+t:     595831 job   837 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     596212 job   837 on # 2 of server mq COMPLETED
+t:     596212 job   837 on # 1 of server mq COMPLETED
 SENT JOBN 596905 838 842 1 300 1100
-RCVD SCHD 838 mq 2
-t:     596905 job   838 (running) on # 2 of server mq (active) SCHEDULED
-t:     596905 job   838 on # 2 of server mq RUNNING
+RCVD SCHD 838 mq 1
+t:     596905 job   838 (running) on # 1 of server mq (active) SCHEDULED
+t:     596905 job   838 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     597289 job   836 on # 0 of server mq COMPLETED
@@ -5886,50 +5886,50 @@ t:     597785 job   839 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 597816 840 3132 1 900 1700
-RCVD SCHD 840 mq 0
-t:     597816 job   840 (running) on # 0 of server mq (active) SCHEDULED
-t:     597816 job   840 on # 0 of server mq RUNNING
+RCVD SCHD 840 mq 1
+t:     597816 job   840 (running) on # 1 of server mq (active) SCHEDULED
+t:     597816 job   840 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     597900 job   834 on # 2 of server mq COMPLETED
+t:     597900 job   834 on # 1 of server mq COMPLETED
 SENT JOBN 598123 841 1776 1 800 1400
-RCVD SCHD 841 mq 2
-t:     598123 job   841 (running) on # 2 of server mq (active) SCHEDULED
-t:     598123 job   841 on # 2 of server mq RUNNING
+RCVD SCHD 841 mq 0
+t:     598123 job   841 (running) on # 0 of server mq (active) SCHEDULED
+t:     598123 job   841 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 598520 842 665 3 1500 6100
-RCVD SCHD 842 mq 2
-t:     598520 job   842 (running) on # 2 of server mq (active) SCHEDULED
-t:     598520 job   842 on # 2 of server mq RUNNING
+RCVD SCHD 842 mq 0
+t:     598520 job   842 (running) on # 0 of server mq (active) SCHEDULED
+t:     598520 job   842 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 598907 843 3262 8 5600 15400
-RCVD SCHD 843 mq 1
-t:     598907 job   843 (running) on # 1 of server mq (active) SCHEDULED
-t:     598907 job   843 on # 1 of server mq RUNNING
+RCVD SCHD 843 mq 2
+t:     598907 job   843 (running) on # 2 of server mq (active) SCHEDULED
+t:     598907 job   843 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     599393 job   841 on # 2 of server mq COMPLETED
+t:     599393 job   841 on # 0 of server mq COMPLETED
 SENT JOBN 599434 844 12 2 1300 3700
-RCVD SCHD 844 mq 2
-t:     599434 job   844 (running) on # 2 of server mq (active) SCHEDULED
-t:     599434 job   844 on # 2 of server mq RUNNING
+RCVD SCHD 844 mq 1
+t:     599434 job   844 (running) on # 1 of server mq (active) SCHEDULED
+t:     599434 job   844 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     599491 job   838 on # 2 of server mq COMPLETED
+t:     599491 job   838 on # 1 of server mq COMPLETED
 t:     599545 job   839 on # 0 of server mq COMPLETED
-t:     599915 job   844 on # 2 of server mq COMPLETED
-t:     600453 job   840 on # 0 of server mq COMPLETED
+t:     599915 job   844 on # 1 of server mq COMPLETED
+t:     600453 job   840 on # 1 of server mq COMPLETED
 SENT JOBN 600682 845 590 1 1000 1100
-RCVD SCHD 845 mq 2
-t:     600682 job   845 (running) on # 2 of server mq (active) SCHEDULED
-t:     600682 job   845 on # 2 of server mq RUNNING
+RCVD SCHD 845 mq 0
+t:     600682 job   845 (running) on # 0 of server mq (active) SCHEDULED
+t:     600682 job   845 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     601117 job   845 on # 2 of server mq COMPLETED
-t:     601122 job   842 on # 2 of server mq COMPLETED
-t:     601280 job   843 on # 1 of server mq COMPLETED
+t:     601117 job   845 on # 0 of server mq COMPLETED
+t:     601122 job   842 on # 0 of server mq COMPLETED
+t:     601280 job   843 on # 2 of server mq COMPLETED
 SENT JOBN 601770 846 972 1 400 1800
 RCVD SCHD 846 mq 0
 t:     601770 job   846 (running) on # 0 of server mq (active) SCHEDULED
@@ -5991,22 +5991,22 @@ SENT OK
 RCVD REDY
 t:     607513 job   851 on # 0 of server mq COMPLETED
 SENT JOBN 608245 855 733 1 400 1200
-RCVD SCHD 855 mq 1
-t:     608245 job   855 (running) on # 1 of server mq (active) SCHEDULED
-t:     608245 job   855 on # 1 of server mq RUNNING
+RCVD SCHD 855 mq 0
+t:     608245 job   855 (running) on # 0 of server mq (active) SCHEDULED
+t:     608245 job   855 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     608931 job   853 on # 0 of server mq COMPLETED
 SENT JOBN 609164 856 1450 1 100 1500
-RCVD SCHD 856 mq 1
-t:     609164 job   856 (running) on # 1 of server mq (active) SCHEDULED
-t:     609164 job   856 on # 1 of server mq RUNNING
+RCVD SCHD 856 mq 0
+t:     609164 job   856 (running) on # 0 of server mq (active) SCHEDULED
+t:     609164 job   856 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     609169 job   855 on # 1 of server mq COMPLETED
+t:     609169 job   855 on # 0 of server mq COMPLETED
 t:     609367 job   852 on # 0 of server mq COMPLETED
 t:     609889 job   854 on # 1 of server mq COMPLETED
-t:     610140 job   856 on # 1 of server mq COMPLETED
+t:     610140 job   856 on # 0 of server mq COMPLETED
 SENT JOBN 610511 857 5070 5 500 4600
 RCVD SCHD 857 mq 0
 t:     610511 job   857 (running) on # 0 of server mq (active) SCHEDULED
@@ -6039,9 +6039,9 @@ SENT OK
 RCVD REDY
 t:     612772 job   859 on # 0 of server mq COMPLETED
 SENT JOBN 613069 862 822 1 1000 1300
-RCVD SCHD 862 mq 1
-t:     613069 job   862 (running) on # 1 of server mq (active) SCHEDULED
-t:     613069 job   862 on # 1 of server mq RUNNING
+RCVD SCHD 862 mq 0
+t:     613069 job   862 (running) on # 0 of server mq (active) SCHEDULED
+t:     613069 job   862 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     613403 job   858 on # 0 of server mq COMPLETED
@@ -6059,7 +6059,7 @@ t:     613788 job   864 (running) on # 0 of server mq (active) SCHEDULED
 t:     613788 job   864 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     614376 job   862 on # 1 of server mq COMPLETED
+t:     614376 job   862 on # 0 of server mq COMPLETED
 SENT JOBN 614513 865 4188 8 2500 14000
 RCVD SCHD 865 mq 3
 t:     614513 job   865 (running) on # 3 of server mq (active) SCHEDULED
@@ -6074,9 +6074,9 @@ SENT OK
 RCVD REDY
 t:     615487 job   861 on # 1 of server mq COMPLETED
 SENT JOBN 615712 867 533 1 400 1600
-RCVD SCHD 867 mq 1
-t:     615712 job   867 (running) on # 1 of server mq (active) SCHEDULED
-t:     615712 job   867 on # 1 of server mq RUNNING
+RCVD SCHD 867 mq 0
+t:     615712 job   867 (running) on # 0 of server mq (active) SCHEDULED
+t:     615712 job   867 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     616104 job   864 on # 0 of server mq COMPLETED
@@ -6097,7 +6097,7 @@ SENT OK
 RCVD REDY
 t:     617195 job   869 on # 1 of server mq COMPLETED
 t:     617542 job   866 on # 1 of server mq COMPLETED
-t:     617789 job   867 on # 1 of server mq COMPLETED
+t:     617789 job   867 on # 0 of server mq COMPLETED
 SENT JOBN 618786 870 1718 8 1300 11600
 RCVD SCHD 870 mq 0
 t:     618786 job   870 (running) on # 0 of server mq (active) SCHEDULED
@@ -6130,20 +6130,20 @@ t:     620891 job   874 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 621183 875 528 1 1000 1800
-RCVD SCHD 875 mq 1
-t:     621183 job   875 (running) on # 1 of server mq (active) SCHEDULED
-t:     621183 job   875 on # 1 of server mq RUNNING
+RCVD SCHD 875 mq 2
+t:     621183 job   875 (running) on # 2 of server mq (active) SCHEDULED
+t:     621183 job   875 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     621734 job   870 on # 0 of server mq COMPLETED
 t:     621788 job   871 on # 1 of server mq COMPLETED
 SENT JOBN 621966 876 2563 1 600 1100
-RCVD SCHD 876 mq 1
-t:     621966 job   876 (running) on # 1 of server mq (active) SCHEDULED
-t:     621966 job   876 on # 1 of server mq RUNNING
+RCVD SCHD 876 mq 2
+t:     621966 job   876 (running) on # 2 of server mq (active) SCHEDULED
+t:     621966 job   876 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     622137 job   875 on # 1 of server mq COMPLETED
+t:     622137 job   875 on # 2 of server mq COMPLETED
 SENT JOBN 622298 877 4684 8 900 9200
 RCVD SCHD 877 mq 0
 t:     622298 job   877 (running) on # 0 of server mq (active) SCHEDULED
@@ -6151,48 +6151,48 @@ t:     622298 job   877 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 622447 878 583 1 100 700
-RCVD SCHD 878 mq 1
-t:     622447 job   878 (running) on # 1 of server mq (active) SCHEDULED
-t:     622447 job   878 on # 1 of server mq RUNNING
+RCVD SCHD 878 mq 2
+t:     622447 job   878 (running) on # 2 of server mq (active) SCHEDULED
+t:     622447 job   878 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     623329 job   878 on # 1 of server mq COMPLETED
+t:     623329 job   878 on # 2 of server mq COMPLETED
 SENT JOBN 623422 879 1105 1 500 300
-RCVD SCHD 879 mq 1
-t:     623422 job   879 (running) on # 1 of server mq (active) SCHEDULED
-t:     623422 job   879 on # 1 of server mq RUNNING
+RCVD SCHD 879 mq 2
+t:     623422 job   879 (running) on # 2 of server mq (active) SCHEDULED
+t:     623422 job   879 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     623586 job   873 on # 1 of server mq COMPLETED
-t:     623607 job   876 on # 1 of server mq COMPLETED
+t:     623607 job   876 on # 2 of server mq COMPLETED
 t:     623811 job   874 on # 2 of server mq COMPLETED
 SENT JOBN 624184 880 2314 3 1200 3100
-RCVD SCHD 880 mq 1
-t:     624184 job   880 (running) on # 1 of server mq (active) SCHEDULED
-t:     624184 job   880 on # 1 of server mq RUNNING
+RCVD SCHD 880 mq 2
+t:     624184 job   880 (running) on # 2 of server mq (active) SCHEDULED
+t:     624184 job   880 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 624865 881 2642 1 100 600
-RCVD SCHD 881 mq 1
-t:     624865 job   881 (running) on # 1 of server mq (active) SCHEDULED
-t:     624865 job   881 on # 1 of server mq RUNNING
+RCVD SCHD 881 mq 2
+t:     624865 job   881 (running) on # 2 of server mq (active) SCHEDULED
+t:     624865 job   881 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 624964 882 1137 4 2700 7700
-RCVD SCHD 882 mq 2
-t:     624964 job   882 (running) on # 2 of server mq (active) SCHEDULED
-t:     624964 job   882 on # 2 of server mq RUNNING
+RCVD SCHD 882 mq 1
+t:     624964 job   882 (running) on # 1 of server mq (active) SCHEDULED
+t:     624964 job   882 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     625206 job   877 on # 0 of server mq COMPLETED
-t:     625715 job   880 on # 1 of server mq COMPLETED
+t:     625715 job   880 on # 2 of server mq COMPLETED
 SENT JOBN 626303 883 2304 4 600 3000
 RCVD SCHD 883 mq 1
 t:     626303 job   883 (running) on # 1 of server mq (active) SCHEDULED
 t:     626303 job   883 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     626833 job   879 on # 1 of server mq COMPLETED
+t:     626833 job   879 on # 2 of server mq COMPLETED
 SENT JOBN 627187 884 69 1 800 1400
 RCVD SCHD 884 mq 2
 t:     627187 job   884 (running) on # 2 of server mq (active) SCHEDULED
@@ -6200,8 +6200,8 @@ t:     627187 job   884 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     627384 job   884 on # 2 of server mq COMPLETED
-t:     627447 job   882 on # 2 of server mq COMPLETED
-t:     627625 job   881 on # 1 of server mq COMPLETED
+t:     627447 job   882 on # 1 of server mq COMPLETED
+t:     627625 job   881 on # 2 of server mq COMPLETED
 SENT JOBN 627815 885 779 2 1900 3600
 RCVD SCHD 885 mq 1
 t:     627815 job   885 (running) on # 1 of server mq (active) SCHEDULED
@@ -6391,28 +6391,28 @@ RCVD REDY
 t:     657631 job   908 on # 0 of server mq COMPLETED
 t:     658258 job   909 on # 1 of server mq COMPLETED
 SENT JOBN 658948 912 3085 1 1000 700
-RCVD SCHD 912 mq 0
-t:     658948 job   912 (running) on # 0 of server mq (active) SCHEDULED
-t:     658948 job   912 on # 0 of server mq RUNNING
+RCVD SCHD 912 mq 2
+t:     658948 job   912 (running) on # 2 of server mq (active) SCHEDULED
+t:     658948 job   912 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     659594 job   911 on # 2 of server mq COMPLETED
 t:     660155 job   910 on # 0 of server mq COMPLETED
 SENT JOBN 660595 913 21 1 900 700
-RCVD SCHD 913 mq 0
-t:     660595 job   913 (running) on # 0 of server mq (active) SCHEDULED
-t:     660595 job   913 on # 0 of server mq RUNNING
+RCVD SCHD 913 mq 2
+t:     660595 job   913 (running) on # 2 of server mq (active) SCHEDULED
+t:     660595 job   913 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     660651 job   913 on # 0 of server mq COMPLETED
+t:     660651 job   913 on # 2 of server mq COMPLETED
 SENT JOBN 661310 914 229 1 600 1300
-RCVD SCHD 914 mq 0
-t:     661310 job   914 (running) on # 0 of server mq (active) SCHEDULED
-t:     661310 job   914 on # 0 of server mq RUNNING
+RCVD SCHD 914 mq 2
+t:     661310 job   914 (running) on # 2 of server mq (active) SCHEDULED
+t:     661310 job   914 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     661463 job   914 on # 0 of server mq COMPLETED
-t:     661698 job   912 on # 0 of server mq COMPLETED
+t:     661463 job   914 on # 2 of server mq COMPLETED
+t:     661698 job   912 on # 2 of server mq COMPLETED
 SENT JOBN 662487 915 1056 2 300 3300
 RCVD SCHD 915 mq 0
 t:     662487 job   915 (running) on # 0 of server mq (active) SCHEDULED
@@ -6440,70 +6440,70 @@ t:     668622 job   918 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 669468 919 371 1 1000 700
-RCVD SCHD 919 mq 0
-t:     669468 job   919 (running) on # 0 of server mq (active) SCHEDULED
-t:     669468 job   919 on # 0 of server mq RUNNING
+RCVD SCHD 919 mq 1
+t:     669468 job   919 (running) on # 1 of server mq (active) SCHEDULED
+t:     669468 job   919 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     669616 job   917 on # 0 of server mq COMPLETED
 t:     670815 job   918 on # 1 of server mq COMPLETED
 SENT JOBN 670844 920 3438 1 500 400
-RCVD SCHD 920 mq 0
-t:     670844 job   920 (running) on # 0 of server mq (active) SCHEDULED
-t:     670844 job   920 on # 0 of server mq RUNNING
+RCVD SCHD 920 mq 1
+t:     670844 job   920 (running) on # 1 of server mq (active) SCHEDULED
+t:     670844 job   920 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 671269 921 523 1 300 800
-RCVD SCHD 921 mq 0
-t:     671269 job   921 (running) on # 0 of server mq (active) SCHEDULED
-t:     671269 job   921 on # 0 of server mq RUNNING
+RCVD SCHD 921 mq 1
+t:     671269 job   921 (running) on # 1 of server mq (active) SCHEDULED
+t:     671269 job   921 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 671323 922 824 2 1400 3200
-RCVD SCHD 922 mq 0
-t:     671323 job   922 (running) on # 0 of server mq (active) SCHEDULED
-t:     671323 job   922 on # 0 of server mq RUNNING
+RCVD SCHD 922 mq 1
+t:     671323 job   922 (running) on # 1 of server mq (active) SCHEDULED
+t:     671323 job   922 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 671394 923 3667 8 2900 8700
-RCVD SCHD 923 mq 1
-t:     671394 job   923 (running) on # 1 of server mq (active) SCHEDULED
-t:     671394 job   923 on # 1 of server mq RUNNING
+RCVD SCHD 923 mq 0
+t:     671394 job   923 (running) on # 0 of server mq (active) SCHEDULED
+t:     671394 job   923 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     671599 job   921 on # 0 of server mq COMPLETED
-t:     672150 job   922 on # 0 of server mq COMPLETED
-t:     672420 job   919 on # 0 of server mq COMPLETED
+t:     671599 job   921 on # 1 of server mq COMPLETED
+t:     672150 job   922 on # 1 of server mq COMPLETED
+t:     672420 job   919 on # 1 of server mq COMPLETED
 SENT JOBN 672878 924 1792 4 2500 4700
-RCVD SCHD 924 mq 0
-t:     672878 job   924 (running) on # 0 of server mq (active) SCHEDULED
-t:     672878 job   924 on # 0 of server mq RUNNING
+RCVD SCHD 924 mq 1
+t:     672878 job   924 (running) on # 1 of server mq (active) SCHEDULED
+t:     672878 job   924 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     673004 job   920 on # 0 of server mq COMPLETED
-t:     673235 job   923 on # 1 of server mq COMPLETED
+t:     673004 job   920 on # 1 of server mq COMPLETED
+t:     673235 job   923 on # 0 of server mq COMPLETED
 SENT JOBN 674200 925 538 1 800 200
-RCVD SCHD 925 mq 0
-t:     674200 job   925 (running) on # 0 of server mq (active) SCHEDULED
-t:     674200 job   925 on # 0 of server mq RUNNING
+RCVD SCHD 925 mq 1
+t:     674200 job   925 (running) on # 1 of server mq (active) SCHEDULED
+t:     674200 job   925 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     674311 job   924 on # 0 of server mq COMPLETED
+t:     674311 job   924 on # 1 of server mq COMPLETED
 SENT JOBN 674355 926 1093 1 1000 1900
-RCVD SCHD 926 mq 0
-t:     674355 job   926 (running) on # 0 of server mq (active) SCHEDULED
-t:     674355 job   926 on # 0 of server mq RUNNING
+RCVD SCHD 926 mq 1
+t:     674355 job   926 (running) on # 1 of server mq (active) SCHEDULED
+t:     674355 job   926 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 674369 927 1553 1 400 1800
-RCVD SCHD 927 mq 0
-t:     674369 job   927 (running) on # 0 of server mq (active) SCHEDULED
-t:     674369 job   927 on # 0 of server mq RUNNING
+RCVD SCHD 927 mq 1
+t:     674369 job   927 (running) on # 1 of server mq (active) SCHEDULED
+t:     674369 job   927 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
-t:     674879 job   925 on # 0 of server mq COMPLETED
-t:     675425 job   926 on # 0 of server mq COMPLETED
-t:     675624 job   927 on # 0 of server mq COMPLETED
+t:     674879 job   925 on # 1 of server mq COMPLETED
+t:     675425 job   926 on # 1 of server mq COMPLETED
+t:     675624 job   927 on # 1 of server mq COMPLETED
 SENT JOBN 675738 928 3141 1 700 1100
 RCVD SCHD 928 mq 0
 t:     675738 job   928 (running) on # 0 of server mq (active) SCHEDULED
@@ -6607,13 +6607,13 @@ t:     688757 job   942 on # 1 of server mq RUNNING
 SENT OK
 RCVD REDY
 SENT JOBN 689640 943 118 1 800 400
-RCVD SCHD 943 mq 1
-t:     689640 job   943 (running) on # 1 of server mq (active) SCHEDULED
-t:     689640 job   943 on # 1 of server mq RUNNING
+RCVD SCHD 943 mq 0
+t:     689640 job   943 (running) on # 0 of server mq (active) SCHEDULED
+t:     689640 job   943 on # 0 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     689863 job   942 on # 1 of server mq COMPLETED
-t:     689866 job   943 on # 1 of server mq COMPLETED
+t:     689866 job   943 on # 0 of server mq COMPLETED
 t:     689869 job   940 on # 0 of server mq COMPLETED
 t:     691099 job   941 on # 0 of server mq COMPLETED
 SENT JOBN 691186 944 39 1 900 200
@@ -6755,13 +6755,13 @@ SENT OK
 RCVD REDY
 t:     707278 job   961 on # 0 of server mq COMPLETED
 SENT JOBN 707963 964 1739 2 800 3500
-RCVD SCHD 964 mq 1
-t:     707963 job   964 (running) on # 1 of server mq (active) SCHEDULED
-t:     707963 job   964 on # 1 of server mq RUNNING
+RCVD SCHD 964 mq 2
+t:     707963 job   964 (running) on # 2 of server mq (active) SCHEDULED
+t:     707963 job   964 on # 2 of server mq RUNNING
 SENT OK
 RCVD REDY
 t:     709167 job   963 on # 1 of server mq COMPLETED
-t:     709168 job   964 on # 1 of server mq COMPLETED
+t:     709168 job   964 on # 2 of server mq COMPLETED
 SENT JOBN 709250 965 282 1 1000 1800
 RCVD SCHD 965 mq 2
 t:     709250 job   965 (running) on # 2 of server mq (active) SCHEDULED
@@ -7011,6 +7011,6 @@ RCVD QUIT
 t:     734964 job   998 on # 0 of server mq COMPLETED
 t:     735062 job   999 on # 0 of server mq COMPLETED
 # ---------------------------------------------------------------------------
-# 6 mq servers used with a utilisation of 29.82 at the cost of $3.37
+# 6 mq servers used with a utilisation of 29.94 at the cost of $3.37
 # ================================ [ Total ] ================================
-# Total #servers used: 6, avg utilisation: 29.82 and total cost: $3.37
+# Total #servers used: 6, avg utilisation: 29.94 and total cost: $3.37

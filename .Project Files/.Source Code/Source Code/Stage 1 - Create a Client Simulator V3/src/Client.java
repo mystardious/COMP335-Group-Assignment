@@ -135,20 +135,6 @@ public class Client {
      *
      *      server_type (char *) server_ID (int) server_state (int) available_time (int) #CPU_cores (int) memory (int) disk_space (int)
      *      0                    1               2                  3                    4                5            6
-     *
-     *      In order for a server to have sufficient resources to run a job, the job's required number of cores must be less
-     *      than or equal to the servers number of cores. If a job is scheduled to a server with less than the number of
-     *      required cores the server replys "ERR: Server incapable of running such a job".
-     *
-     *      First-Fit Algorithm
-     *
-     *          1. The Server list must be sorted from smallest to largest (from smallest to largest coreCount)
-     *                  findAllServerInfoSortOrder() - Finds the order to sort the servers. (Run once at the beginning of ClientScheduler)
-     *                  sortAllServerInfo() - Sorts the allServerInfo list based on the ArrayList<ArrayList<String>> sortOrder;
-     *          2. The first available server that has 'sufficient resources' is scheduled a job.
-     *                  findFirstFit(String[] currentJob) - the first active server with sufficient initial resource capacity to run the job
-     *
-     *
      */
     public void ClientScheduler() {
 
@@ -235,166 +221,67 @@ public class Client {
 
     /**
      * First-Fit Algorithm
-     * @return the first active server with sufficient initial resource capacity to run the job
-     *
-     * String[] currentJob =
-     *
-     *     JOBN submit_time (int) job_ID (int) estimated_runtime (int) #CPU_cores (int) memory (int) disk(int)
-     *     0    1                 2            3                       4                5            6
-     *
+     * @return the first server with sufficient resources to run the job, if none are found, check based on initial
+     * resource capacity.
      */
     public ArrayList<String> findFirstFit(String[] currentJob) {
 
-        /**
-         *  Compare job's required number of cores against server's number of cores
-         */
-
+        // Traverse through all servers
         for(ArrayList<String> server: allServerInfo) {
 
+            // Return the first server with sufficient resources
             if(hasSufficientResources(server, currentJob)) {
                 return server;
             }
 
         }
 
-        /**
-         * If there is no server with sufficient resource capacity, compare using initial resource capacity
-         */
-
+        // Traverse through all servers based on initial check of resources
         for(int i = 0; i < initialAllServerInfo.size(); i++) {
 
+            // Return the first server with sufficient resources and is active --> serverState = 3 (Active / Busy)
             if(hasSufficientResources(initialAllServerInfo.get(i), currentJob)) {
-                if(isServerAvailable(allServerInfo.get(i))) {
+                if(isServerActive(allServerInfo.get(i))) {
                     return allServerInfo.get(i);
                 }
             }
 
         }
 
+        // If null is returned, no server exists that has sufficient resources to start the job
         return null;
 
     }
 
     /**
      * Best-Fit Algorithm
-     * @return the best-fit server or if none have sufficient resources, return the best-fit active server based on initial resources
+     * @return the best-fit server that has sufficient resources to run the job, if none are found, return the best-fit
+     * active server based on initial resource capacity
      *
-     * A server is the best fit when the difference between the server's number of cores and the jobs required cores is
-     * the smallest.
-     *
-     *  e.g.    Anything not important has been replaced with the letter x
-     *
-     *  Some Servers
-     *          server_type server_ID server_state available_time #CPU_cores memory disk_space
-     *          xlarge,     x,        x,           x,             16,        x,     x
-     *          large,      x,        x,           x,             8,         x,     x
-     *
-     *  The current job
-     *                submit_time job_ID estimated_runtime #CPU_cores memory disk_space
-     *          JOBN, x,          x,     x,                7,         x,     x
-     *
-     *  The fitness value of the two severs xlarge and large are:
-     *          xlarge: 9
-     *          large:  1
-     *
-     *  The server with the best fit is the one with the lowest fitness value which is the large server. So the job should
-     *  be scheduled to large. However if there are no servers that have sufficient resources to run the job then it is
-     *  assigned to the server with the best fit based on the first RESCAll() call. Which will use the first active server
-     *  with sufficient resources.
+     * The best-fit is calculated using a fitness value, this fitness value is the difference between the server's
+     * number of cores and the job's required number of cores. A server is considered the best-fit when this difference
+     * is closer to 0 (Can only be positive).
      *
      */
     public ArrayList<String> findBestFit(String[] currentJob) {
 
-        ArrayList<String> bestFitServer = findBestFitServer(allServerInfo, currentJob);
-
-        if(bestFitServer != null)
-            return bestFitServer;
-        else
-            return findBestFitActiveServer(currentJob);
-
-    }
-
-    /**
-     * Worst-Fit Algorithm
-     * @return the worst-fit active server or if there is none, return the server with the second worst-fit
-     *
-     * A server is consider to be the worst-fit if the fitness value is the biggest possible, this means the bigger the
-     * core count the better the server is for being the worse-fit. So the largest servers will be used instead of a
-     * smaller server which would cost less.
-     *
-     * For each active / idle server, it's fitness value is calculated and the server with the biggest value is scheduled
-     * the job.
-     *
-     * If the server is inactive, the altFit is calculated which is basically inactive servers with large coreCounts,
-     * if there is a server that has a slower boot time it is preferred over the one with a longer boot time.
-     *
-     */
-    public ArrayList<String> findWorstFit(String[] currentJob) {
-
-        int worstFit = Integer.MIN_VALUE;
-        ArrayList<String> worstFitServer = null;
-
-        int altFit = Integer.MIN_VALUE;
-        ArrayList<String> altFitServer = null;
-
-        for(ArrayList<String> server: allServerInfo) {
-
-            if(hasSufficientResources(server, currentJob)) {
-
-                int fitnessValue = calculateFitnessValue(server, currentJob);
-                int serverAvailTime = Integer.parseInt(server.get(3));
-
-                if( (fitnessValue > worstFit) && isServerAvailable(server) ) {
-
-                    worstFit = fitnessValue;
-                    worstFitServer = server;
-
-                } else if (fitnessValue > altFit && !isServerAvailable(server)) {
-
-                    altFit = fitnessValue;
-                    altFitServer = server;
-
-                }
-
-            }
-
-        }
-
-        if(worstFitServer != null)
-            return worstFitServer;
-        else if(altFitServer != null)
-            return altFitServer;
-        else {
-            return findWorstFitActiveServer(currentJob);
-        }
-
-    }
-
-    // Algorithm Helper Methods
-
-    /**
-     * Find the server with the closest number of cores to the job with sufficient resources (must have more cores than job)
-     * @return Best Fit Server based on list of server data
-     */
-    public ArrayList<String> findBestFitServer(ArrayList<ArrayList<String>> serverList, String[] currentJob) {
-
         int bestFit = Integer.MAX_VALUE, minAvail = Integer.MAX_VALUE;
         ArrayList<String> bestFitServer = null;
 
-        for(ArrayList<String> server: serverList) {
+        // Traverse through all servers
+        for(ArrayList<String> server: allServerInfo) {
 
+            // Server must have sufficient resources to run the job
             if(hasSufficientResources(server, currentJob)) {
 
                 int fitnessValue = calculateFitnessValue(server, currentJob);
                 int serverAvail = Integer.parseInt(server.get(3));
 
                 /**
-                 * If a server has a better fitness value (smaller is better) or
-                 * If a server with the same fitness value but is available in a smaller amount of time then
-                 *
-                 * Set that server as the best-fit server                 *
+                 * If there is a server with a lower fitness value set that server as the server with the best-fit,
+                 * otherwise if there is a server with the same fitness value but is available in a shorter amount of
+                 * time set that server as the server with best-fit.
                  */
-
                 if( (fitnessValue < bestFit) || (fitnessValue == bestFit && serverAvail < minAvail) ) {
 
                     bestFit = fitnessValue;
@@ -407,30 +294,87 @@ public class Client {
 
         }
 
-        return bestFitServer;
+        if(bestFitServer != null) {
+            return bestFitServer;
+        } else {
+
+            bestFit = Integer.MAX_VALUE;
+            bestFitServer = null;
+
+            // Traverse through all servers based on initial check of resources
+            for(int i = 0; i < initialAllServerInfo.size(); i++) {
+
+                ArrayList<String> initialServer = initialAllServerInfo.get(i);
+                ArrayList<String> currentServer = allServerInfo.get(i);
+
+                // Server must have sufficient resources to run the job
+                if(hasSufficientResources(initialServer, currentJob)) {
+
+                    int fitnessValue = calculateFitnessValue(initialServer, currentJob);
+
+                    // The server's available time is not checked since all active servers are busy
+                    if( (fitnessValue < bestFit) && isServerActive(currentServer)) {
+
+                        bestFit = fitnessValue;
+                        bestFitServer = initialServer;
+
+                    }
+
+                }
+
+            }
+
+            return bestFitServer;
+
+        }
+
 
     }
 
-    public ArrayList<String> findWorstFitActiveServer(String[] currentJob) {
+    /**
+     * Worst-Fit Algorithm
+     * @return the worst-fit server that has sufficient resources to run the job, if none are found, return the second
+     * worst-fit (altFit), if none are found, return the worst-fit active server based on initial resource capacity.
+     *
+     * The worst-fit is calculated similarly to best-fit in that a fitness value is calculated, however the worst-fit
+     * server is found when a server has the biggest fitness value (Larger the better).
+     *
+     */
+    public ArrayList<String> findWorstFit(String[] currentJob) {
 
         int worstFit = Integer.MIN_VALUE;
-        ArrayList<String> worstFitActiveServer = null;
+        ArrayList<String> worstFitServer = null;
 
-        int minAvail = Integer.MAX_VALUE;
+        int altFit = Integer.MIN_VALUE;
+        ArrayList<String> altFitServer = null;
 
-        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+        // Traverse through all servers
+        for(ArrayList<String> server: allServerInfo) {
 
-            ArrayList<String> initialServer = initialAllServerInfo.get(i);
-            ArrayList<String> currentServer = allServerInfo.get(i);
+            // Server must have sufficient resources to run the job
+            if(hasSufficientResources(server, currentJob)) {
 
-            if(hasSufficientResources(initialServer, currentJob)) {
+                int fitnessValue = calculateFitnessValue(server, currentJob);
 
-                int fitnessValue = calculateFitnessValue(initialServer, currentJob);
-
-                if( (fitnessValue > worstFit) && isServerAvailable(currentServer) ) {
+                /**
+                 * If there is a server with a higher fitness value and it is immediately available set that server as
+                 * the server with the worst-fit
+                 */
+                if( (fitnessValue > worstFit) && isServerImmediatelyAvailable(server) ) {
 
                     worstFit = fitnessValue;
-                    worstFitActiveServer = initialServer;
+                    worstFitServer = server;
+
+                }
+
+                /**
+                 * If there is a server with a higher fitness value that is not immediately available (Inactive State)
+                 * set that server as the server with the second worst-fit
+                  */
+                else if (fitnessValue > altFit && !isServerImmediatelyAvailable(server)) {
+
+                    altFit = fitnessValue;
+                    altFitServer = server;
 
                 }
 
@@ -438,57 +382,53 @@ public class Client {
 
         }
 
-        return worstFitActiveServer;
+        if(worstFitServer != null) {
+            return worstFitServer;
+        } else if(altFitServer != null) {
+            return altFitServer;
+        } else {
 
-    }
+            /**
+             * If no worst-fit server has been found (No server with sufficient resources has been found), find the
+             * server with the worst-fit based on initial resource capacity.
+              */
 
-    /**
-     * Find the server with the closest number of cores to the job based on initial resource capacity (must be active)
-     * @return Best Fit Server based on list of inital server data
-     */
-    public ArrayList<String> findBestFitActiveServer(String[] currentJob) {
+            worstFit = Integer.MIN_VALUE;
+            worstFitServer = null;
 
-        int bestFit = Integer.MAX_VALUE;
-        ArrayList<String> bestFitServer = null;
+            // Traverse through all servers based on initial check of resources
+            for(int i = 0; i < initialAllServerInfo.size(); i++) {
 
-        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+                ArrayList<String> initialServer = initialAllServerInfo.get(i);
+                ArrayList<String> currentServer = allServerInfo.get(i);
 
-            ArrayList<String> initialServer = initialAllServerInfo.get(i);
-            ArrayList<String> currentServer = allServerInfo.get(i);
+                // Server must have sufficient resources to run the job
+                if(hasSufficientResources(initialServer, currentJob)) {
 
-            if(hasSufficientResources(initialServer, currentJob)) {
+                    int fitnessValue = calculateFitnessValue(initialServer, currentJob);
 
-                int fitnessValue = calculateFitnessValue(initialServer, currentJob);
-                int serverAvailTime = Integer.parseInt(currentServer.get(3));
+                    if( fitnessValue > worstFit && isServerActive(currentServer) ) {
 
-                if( (fitnessValue < bestFit) && isServerAvailable(currentServer)) {
+                        worstFit = fitnessValue;
+                        worstFitServer = initialServer;
 
-                    bestFit = fitnessValue;
-                    bestFitServer = initialServer;
+                    }
 
                 }
 
             }
 
+            return worstFitServer;
         }
-
-        return bestFitServer;
 
     }
 
+    // Algorithm Helper Methods
+
     /**
-     * Is the selected server available?
-     * @return true if the server status is 3 (Active)
-     *
-     * Server data structure
-     *
-     *      server_type server_ID server_state available_time #CPU_cores memory disk_space
-     *      0           1         2            3              4          5      6
-     *
-     * The server's current state is obtained in the third field.
-     *
+     * Return true if the selected server is active
      */
-    public boolean isServerAvailable(ArrayList<String> server) {
+    public boolean isServerActive(ArrayList<String> server) {
 
         int serverState = Integer.parseInt(server.get(2));
 
@@ -500,8 +440,24 @@ public class Client {
     }
 
     /**
-     * Does this server have sufficient resources?
-     * @return true if the server has equal or more cores than the job requires
+     * A server is considered to be immediately available if it is able to schedule a job immediately, which can be in
+     * two different states Idle == 2 and Active == 3. This function must be used with hasSufficientResources() since
+     * an active server can have insufficient resources and still be immediately be available.
+     */
+    public boolean isServerImmediatelyAvailable(ArrayList<String> server) {
+
+        int serverState = Integer.parseInt(server.get(2));
+
+        if(serverState == 2 || serverState == 3)
+            return true;
+
+        return false;
+
+    }
+
+    /**
+     * A server has sufficient resources to run a job if the number of cores, memory and disk space are equal or greater
+     * than the job's required resources.
      */
     public boolean hasSufficientResources(ArrayList<String> server, String[] currentJob) {
 
@@ -520,8 +476,8 @@ public class Client {
     }
 
     /**
-     * Calculate fitness value of a job to a server
-     * @return the difference between the number of cores the job requires and that in the server
+     * @return (Always Positive) the difference between the number of cores a server has and the number of cores the
+     * job requires.
      */
     public int calculateFitnessValue(ArrayList<String> server, String[] currentJob) {
 
@@ -542,36 +498,6 @@ public class Client {
 
         allServerInfo = new ArrayList<>(); // Delete old information for new data
         sendCommandNoLog("RESC All"); // Expected Response is "DATA"
-
-        String temp = sendCommandNoLog("OK");
-        while(!temp.equals(".")) {
-
-            // Store data for each server into array
-            ArrayList<String> server = new ArrayList<>();
-            String[] tempServer = temp.split(" ");
-            for(String serverDetail: tempServer) {
-                server.add(serverDetail);
-            }
-
-            // Add server to list
-            allServerInfo.add(server);
-
-            // Get next server
-            temp = sendCommandNoLog("OK");
-
-        }
-
-    }
-
-    /**
-     * Resource Information Request
-     *      *  RESC Avail - The information of servers that are available (i.e. inactive, booting and idle) for the job
-     *          with sufficient resources.
-     */
-    public void RESCAvail(String coreCount, String memory, String diskSpace) {
-
-        allServerInfo = new ArrayList<>(); // Delete old information for new data
-        sendCommandNoLog("RESC Avail " + coreCount+ " " + memory + " " + diskSpace); // Expected Response is "DATA"
 
         String temp = sendCommandNoLog("OK");
         while(!temp.equals(".")) {
@@ -696,7 +622,7 @@ public class Client {
     }
 
     /**
-     * Sometimes we want to send a commmand and not display it in the terminal because it is not important to the user.
+     * Sometimes we want to send a command and not display it in the terminal because it is not important to the user.
      * This function works exactly the same as the above but without any logging.
      * @param argument - the command to be send.
      * @return String - the reply from the server.
@@ -716,8 +642,6 @@ public class Client {
         return "ERR: No Response from Server.";
 
     }
-
-    // Client Usage
 
     public static void clientUsage() {
 
