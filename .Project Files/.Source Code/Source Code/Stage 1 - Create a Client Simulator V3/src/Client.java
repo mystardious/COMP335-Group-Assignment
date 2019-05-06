@@ -227,10 +227,18 @@ public class Client {
             // Goto next job
             currentJob = sendCommand("REDY");
 
-//            for(ArrayList<String> server: allServerInfo) {
-//                System.out.println(server);
-//            }
+        }
 
+        System.out.println("Initial Server Information");
+        System.out.println();
+        for(ArrayList<String> server: initialAllServerInfo) {
+            System.out.println(server);
+        }
+
+        System.out.println("Current Server Information");
+        System.out.println();
+        for(ArrayList<String> server: allServerInfo) {
+            System.out.println(server);
         }
 
     }
@@ -390,12 +398,19 @@ public class Client {
             if(hasSufficientResources(server, currentJob)) {
 
                 int fitnessValue = calculateFitnessValue(server, currentJob);
-                int serverAvailTime = Integer.parseInt(server.get(3));
+                int serverAvail = Integer.parseInt(server.get(3));
 
-                if( (fitnessValue < bestFit) || (fitnessValue == bestFit && serverAvailTime < minAvail) ) {
+                /**
+                 * If a server has a better fitness value (smaller is better) or
+                 * If a server with the same fitness value but is available in a smaller amount of time then
+                 *
+                 * Set that server as the best-fit server                 *
+                 */
+
+                if( (fitnessValue < bestFit) || (fitnessValue == bestFit && serverAvail < minAvail) ) {
 
                     bestFit = fitnessValue;
-                    minAvail = serverAvailTime;
+                    minAvail = serverAvail;
                     bestFitServer = server;
 
                 }
@@ -445,7 +460,7 @@ public class Client {
      */
     public ArrayList<String> findBestFitActiveServer(String[] currentJob) {
 
-        int bestFit = Integer.MAX_VALUE, minAvail = Integer.MAX_VALUE;
+        int bestFit = Integer.MAX_VALUE;
         ArrayList<String> bestFitServer = null;
 
         for(int i = 0; i < initialAllServerInfo.size(); i++) {
@@ -456,12 +471,11 @@ public class Client {
             if(hasSufficientResources(initialServer, currentJob)) {
 
                 int fitnessValue = calculateFitnessValue(initialServer, currentJob);
-                int serverAvailTime = Integer.parseInt(initialServer.get(3));
+                int serverAvailTime = Integer.parseInt(currentServer.get(3));
 
-                if( ((fitnessValue < bestFit) || (fitnessValue == bestFit && serverAvailTime < minAvail)) && isServerAvailable(currentServer)) {
+                if( (fitnessValue < bestFit) && isServerAvailable(currentServer)) {
 
                     bestFit = fitnessValue;
-                    minAvail = serverAvailTime;
                     bestFitServer = initialServer;
 
                 }
@@ -476,7 +490,7 @@ public class Client {
 
     /**
      * Is the selected server available?
-     * @return true if the server status is either 2 or 3 (Idle or Active)
+     * @return true if the server status is 3 (Active)
      *
      * Server data structure
      *
@@ -490,7 +504,7 @@ public class Client {
 
         int serverState = Integer.parseInt(server.get(2));
 
-        if(serverState == 2 || serverState == 3)
+        if(serverState == 3)
             return true;
 
         return false;
