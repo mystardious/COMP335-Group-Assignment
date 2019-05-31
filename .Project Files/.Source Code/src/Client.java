@@ -629,7 +629,7 @@ public class Client {
                 }
 
                 // Return minAvailableServer if it has a available time between 0 - 3 (INSTANT - MEDIUM).
-                if (minAvail < 4)
+                if (minAvail < 3)
                     return minAvailableActiveServer;
                 else
                     return firstFitServer;
@@ -811,6 +811,42 @@ public class Client {
             return 4;
 
         return -1;
+
+    }
+
+    public boolean isServerWaitTimePermanent(ArrayList<String> server) {
+
+        int retval = 0;
+        int limit = 30000;
+
+        // Return 0 if server has no jobs
+        if(isServerIdle(server))
+            return false;
+
+        // Request list of jobs from server
+        sendCommandNoLog("LSTJ "+server.get(0)+" "+server.get(1));
+
+        // Current job details
+        String serverResponse = sendCommandNoLog("OK");
+
+        while(!serverResponse.equals(".")) {
+
+            // Split server response into list of words
+            String[] tempJob = serverResponse.split(" ");
+
+            // Add job time to count
+            if(retval < limit)
+            retval += Integer.parseInt(tempJob[3]);
+
+            // Goto the next job.
+            serverResponse = sendCommandNoLog("OK");
+
+        }
+
+        if(retval > limit)
+            return true;
+
+        return false;
 
     }
 
