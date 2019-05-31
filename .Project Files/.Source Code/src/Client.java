@@ -446,6 +446,125 @@ public class Client {
 
     // Algorithm Helper Methods
 
+    public int findServerIndex(String serverType, String serverID) {
+
+        for(int i = 0; i < allServerInfo.size(); i++) {
+
+            String selectedServerType = allServerInfo.get(i).get(0);
+            String selectedServerID = allServerInfo.get(i).get(1);
+
+            if(selectedServerType.equals(serverType) && selectedServerID.equals(serverID)) {
+                return i;
+            }
+
+        }
+
+        return -1;
+
+    }
+
+    public ArrayList<String> hfindBestWaitTime(String[] currentJob) {
+
+        ArrayList<String> firstFitServer = hfindFirstFit(currentJob);
+
+        // Check if at least one server is available / active
+        if(isAnyServerImmediatelyAvailable()) {
+
+            // Check if the first-fit server is available / active.
+            if (isServerImmediatelyAvailable(firstFitServer))
+                return firstFitServer;
+
+                // Otherwise assign job to currently available / active servers based on wait time.
+                // If this part is reached we can assume all available / active servers are full.
+            else {
+
+                // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
+                int minAvail = Integer.MAX_VALUE;
+                ArrayList<String> minAvailableActiveServer = null;
+
+                for (int i = 0; i < allServerInfo.size(); i++) {
+
+                    ArrayList<String> server = allServerInfo.get(i); // Keep track of server
+                    ArrayList<String> initialServer = initialAllServerInfo.get(i);
+
+                    // To assign a job the server must have enough initial cores to run the job and it must be active.
+                    if (isServerImmediatelyAvailable(server) && hasSufficientResources(initialServer, currentJob) && !isReserved(server)) {
+
+                        // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
+                        // IDLE servers are set as INSTANT
+                        int serverWaitTime = calculateServerWaitTime(server);
+
+                        if (serverWaitTime < minAvail) {
+                            minAvail = serverWaitTime;
+                            minAvailableActiveServer = server;
+                        }
+
+                    }
+
+                }
+
+                // Return minAvailableServer if it has a available time between 0 - 3 (INSTANT - MEDIUM).
+                if (minAvail < 4)
+                    return minAvailableActiveServer;
+                else
+                    return firstFitServer;
+
+            }
+
+        }
+
+        return null;
+
+    }
+
+    public ArrayList<String> hfindFirstFit(String[] currentJob) {
+
+        // Traverse through all servers
+        for(ArrayList<String> server: allServerInfo) {
+
+            // Return the first server with sufficient resources
+            if(hasSufficientResources(server, currentJob) && !isReserved(server)) {
+                return server;
+            }
+
+        }
+
+        // Traverse through all servers based on initial check of resources
+        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+
+            // Return the first server with sufficient resources and is active --> serverState = 3 (Active / Busy)
+            if(hasSufficientResources(initialAllServerInfo.get(i), currentJob)) {
+                if(isServerActive(allServerInfo.get(i)) && !isReserved(initialAllServerInfo.get(i))) {
+                    return allServerInfo.get(i);
+                }
+            }
+
+        }
+
+        // If null is returned, no server exists that has sufficient resources to start the job
+        return null;
+
+    }
+
+    public boolean isReserved(ArrayList<String> server) {
+
+        String selectedServerType = server.get(0);
+        String selectedServerID = server.get(1);
+
+        for(ArrayList<String> reservedServer: reservedServers) {
+
+            String reservedServerType = reservedServer.get(0);
+            String reservedServerID = reservedServer.get(1);
+
+            if(selectedServerType.equals(reservedServerType) && selectedServerID.equals(reservedServerID))
+                return true;
+
+        }
+
+        return false;
+
+    }
+
     /**
      * Return true if there are servers active
      */
@@ -682,19 +801,41 @@ public class Client {
         for(int i = 0; i < allServerInfo.size(); i++) {
 
             if(!isServerTypeInList(allServerInfo.get(i).get(0))) {
-                addServerType(allServerInfo.get(i).get(0), allServerInfo.get(i).get(4));
+
+                String serverType = allServerInfo.get(i).get(0);
+                String coreCount = allServerInfo.get(i).get(4);
+
+                addServerType(serverType, coreCount, findNoServerWithType(serverType));
             }
 
         }
 
     }
 
+    // Find number of servers with a specific type
+    public String findNoServerWithType(String serverType) {
+
+        int noServer = 0;
+
+        for(ArrayList<String> server: allServerInfo){
+
+            if(server.get(0).equals(serverType)) {
+                noServer++;
+            }
+
+        }
+
+        return Integer.toString(noServer);
+
+    }
+
     // Helper method for findAllServerInfoSortOrder()
-    public int addServerType(String serverType, String coreCount) {
+    public int addServerType(String serverType, String coreCount, String noServers) {
 
         ArrayList<String> temp = new ArrayList<>();
         temp.add(serverType);
         temp.add(coreCount);
+        temp.add(noServers);
 
         for(int i = 0; i < sortOrder.size(); i++) {
             if(Integer.parseInt(coreCount) < Integer.parseInt(sortOrder.get(i).get(1))) {
