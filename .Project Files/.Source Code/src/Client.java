@@ -469,7 +469,6 @@ public class Client {
 
     boolean isSetup = false;
     boolean isReservedSmall = false;
-    boolean isReservedMedium = false;
     ArrayList<ArrayList<String>> reservedServers = new ArrayList<>();
 
     /**
@@ -496,27 +495,7 @@ public class Client {
 
             int noLargestServers = Integer.parseInt(sortOrder.get(sortOrder.size()-1).get(2));
 
-            if(noLargestServers >= 3) {
-
-                /**
-                 * Reserve two servers: one for INSTANT -> MEDIUM TASKS, another for LONG TASKS
-                 */
-
-                isReservedSmall = true;
-                isReservedMedium = true;
-
-                String largestServerType = sortOrder.get(sortOrder.size()-1).get(0);
-
-                reservedServers.add(
-                        initialAllServerInfo.get(
-                                findServerIndex(largestServerType, Integer.toString(0))));
-
-                reservedServers.add(
-                        initialAllServerInfo.get(
-                                findServerIndex(largestServerType, Integer.toString(1))));
-
-
-            } else if (noLargestServers == 2) {
+            if (noLargestServers >= 2) {
 
                 /**
                  * Reserve one server: one for INSTANT -> MEDIUM Tasks
@@ -556,10 +535,6 @@ public class Client {
         if(currentJobWaitTime < 3 && isReservedSmall && hasSufficientResources(reservedServers.get(0), currentJob)) {
 
             return reservedServers.get(0);
-
-        } else if(currentJobWaitTime == 3 && isReservedMedium) {
-
-            return reservedServers.get(1);
 
         } else {
 
@@ -704,20 +679,6 @@ public class Client {
 
     }
 
-    public boolean isAllServersActive() {
-
-        for(ArrayList<String> server: allServerInfo) {
-
-            if(!isServerActive(server)) {
-                return false;
-            }
-
-        }
-
-        return false;
-
-    }
-
     /**
      * Return true if the selected server is active
      */
@@ -811,42 +772,6 @@ public class Client {
             return 4;
 
         return -1;
-
-    }
-
-    public boolean isServerWaitTimePermanent(ArrayList<String> server) {
-
-        int retval = 0;
-        int limit = 30000;
-
-        // Return 0 if server has no jobs
-        if(isServerIdle(server))
-            return false;
-
-        // Request list of jobs from server
-        sendCommandNoLog("LSTJ "+server.get(0)+" "+server.get(1));
-
-        // Current job details
-        String serverResponse = sendCommandNoLog("OK");
-
-        while(!serverResponse.equals(".")) {
-
-            // Split server response into list of words
-            String[] tempJob = serverResponse.split(" ");
-
-            // Add job time to count
-            if(retval < limit)
-            retval += Integer.parseInt(tempJob[3]);
-
-            // Goto the next job.
-            serverResponse = sendCommandNoLog("OK");
-
-        }
-
-        if(retval > limit)
-            return true;
-
-        return false;
 
     }
 
