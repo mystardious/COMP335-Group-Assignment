@@ -449,7 +449,7 @@ public class Client {
     /**
      * Return true if there are servers active
      */
-    public boolean isAnyServerImmediatelyAvailable() {
+    public boolean AnyReadyServer() {
 
         for(ArrayList<String> server: allServerInfo) {
             if(isServerImmediatelyAvailable(server))
@@ -505,7 +505,7 @@ public class Client {
     /**
      * Job with the largest wait time is set as the servers wait time
      */
-    public int calculateServerWaitTime(ArrayList<String> server) {
+    public int waitCalculator(ArrayList<String> server) {
 
         // Server is instantly available when idle
         if(isServerIdle(server))
