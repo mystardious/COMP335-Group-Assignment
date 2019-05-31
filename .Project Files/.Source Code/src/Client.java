@@ -447,6 +447,34 @@ public class Client {
     // Algorithm Helper Methods
 
     /**
+     * Return true if there are servers active
+     */
+    public boolean isAnyServerImmediatelyAvailable() {
+
+        for(ArrayList<String> server: allServerInfo) {
+            if(isServerImmediatelyAvailable(server))
+                return true;
+        }
+
+        return false;
+
+    }
+
+    public boolean isAllServersActive() {
+
+        for(ArrayList<String> server: allServerInfo) {
+
+            if(!isServerActive(server)) {
+                return false;
+            }
+
+        }
+
+        return false;
+
+    }
+
+    /**
      * Return true if the selected server is active
      */
     public boolean isServerActive(ArrayList<String> server) {
@@ -457,6 +485,88 @@ public class Client {
             return true;
 
         return false;
+
+    }
+
+    /**
+     * Return true if the selected server is idle
+     */
+    public boolean isServerIdle(ArrayList<String> server) {
+
+        int serverState = Integer.parseInt(server.get(2));
+
+        if(serverState == 2)
+            return true;
+
+        return false;
+
+    }
+
+    /**
+     * Job with the largest wait time is set as the servers wait time
+     */
+    public int calculateServerWaitTime(ArrayList<String> server) {
+
+        // Server is instantly available when idle
+        if(isServerIdle(server))
+            return 0;
+
+        // Request list of jobs from server
+        sendCommandNoLog("LSTJ "+server.get(0)+" "+server.get(1));
+        int largestJobWaitTime = 0;
+
+        String serverResponse = sendCommandNoLog("OK");
+        while(!serverResponse.equals(".")) {
+
+            // Split server response into list of words
+            String[] tempJob = serverResponse.split(" ");
+
+            int currentJobWaitTime = findJobWaitTime(tempJob);
+
+            if(currentJobWaitTime > largestJobWaitTime)
+                largestJobWaitTime = currentJobWaitTime;
+
+            // Goto the next job.
+            serverResponse = sendCommandNoLog("OK");
+
+        }
+
+        // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
+        return largestJobWaitTime;
+
+    }
+
+    /**
+     * Jobs are classified as one of the following:
+     *
+     *      - 0     INSTANT       1SEC        till        10SECS
+     *      - 1     SHORT         11SECS      till        5MINS
+     *      - 2     MEDIUM        5MINS       till        1HR
+     *      - 3     LONG          1HR         till        12HRS
+     *      - 4     PERMANENT     12HRS       till        24855 Days
+     *
+     * If -1 is returned the job has a runtime of nothing, it doesn't exist.
+     */
+    public int findJobWaitTime(String[] currentJob) {
+
+        int currentJobWaitTime = Integer.parseInt(currentJob[3]);
+
+        if(currentJobWaitTime >= 0 && currentJobWaitTime <= 10)
+            return 0;
+
+        if(currentJobWaitTime >= 11 && currentJobWaitTime <= 300)
+            return 1;
+
+        if(currentJobWaitTime >= 301 && currentJobWaitTime <= 1800)
+            return 2;
+
+        if(currentJobWaitTime >= 1801 && currentJobWaitTime <= 43200)
+            return 3;
+
+        if(currentJobWaitTime >= 43201 && currentJobWaitTime <= Integer.MAX_VALUE)
+            return 4;
+
+        return -1;
 
     }
 
