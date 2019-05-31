@@ -11,7 +11,7 @@ public class Client {
     static boolean verbose     = false;
 
     // Automation variables
-    static int algorithm = 0; // 0 = AllToLargest, 1 = First-Fit, 2 = Best-Fit, 3 = Worst-Fit
+    static int algorithm = 0; // 0 = AllToLargest, 1 = First-Fit, 2 = Best-Fit, 3 = Worst-Fit, 4 = Best-Cost
 
     // Server data
     ArrayList<ArrayList<String>> allServerInfo = new ArrayList<>();
@@ -35,6 +35,8 @@ public class Client {
                     algorithm = 2;
                 else if(args[i+1].equals("wf"))
                     algorithm = 3;
+                else if(args[i+1].equals("ffplus"))
+                    algorithm = 4;
                 else {
                     System.out.println("Please enter a valid algorithm.");
                     help = true;
@@ -217,11 +219,22 @@ public class Client {
             // Worst-Fit
             else if (algorithm == 3) {
 
-
-
                 ArrayList<String> worstFitServer = findWorstFit(currentJobDetails);
                 serverType = worstFitServer.get(0);
                 serverID = worstFitServer.get(1);
+
+            }
+
+            // Best-Cost
+            else if (algorithm == 4) {
+
+                // Sort All Servers from smallest to largest
+                allServerInfo = sortAllServerInfo(allServerInfo);
+                initialAllServerInfo = sortAllServerInfo(initialAllServerInfo);
+
+                ArrayList<String> firstFitPlus = ffplus(currentJobDetails);
+                serverType = firstFitPlus.get(0);
+                serverID = firstFitPlus.get(1);
 
             }
 
@@ -441,6 +454,53 @@ public class Client {
 
             return worstFitServer;
         }
+
+    }
+
+    public ArrayList<String> ffplus(String[] currentJob) {
+
+        ArrayList<String> firstFitServer = findFirstFit(currentJob);
+
+        if(AnyReadyServer()) {
+
+            if(isServerImmediatelyAvailable(firstFitServer))
+                return firstFitServer;
+
+            else {
+
+                int readyMin = Integer.MAX_VALUE;
+                ArrayList<String> activeReadyServer = null;
+
+                for(int i = 0; i < allServerInfo.size(); i++) {
+
+                    ArrayList<String> currentServer = allServerInfo.get(i);
+                    ArrayList<String> firstServer = initialAllServerInfo.get(i);
+
+                    if(isServerImmediatelyAvailable(currentServer) && hasSufficientResources(firstServer, currentJob)) {
+
+                        int serverDelay = waitCalculator(currentServer);
+
+                        if(serverDelay < readyMin) {
+                            readyMin = serverDelay;
+                            activeReadyServer = currentServer;
+                        }
+
+                    }
+
+                }
+
+                if(readyMin < 3)
+                    return activeReadyServer;
+
+                else
+                    return firstFitServer;
+
+            }
+
+        }
+
+        else
+            return firstFitServer;
 
     }
 
