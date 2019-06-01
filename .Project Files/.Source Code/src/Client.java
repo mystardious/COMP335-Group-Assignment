@@ -467,6 +467,7 @@ public class Client {
 
     }
 
+    // Hawk Algorithm Variables
     boolean isSetup = false;
     boolean isReservedSmall = false;
     ArrayList<ArrayList<String>> reservedServers = new ArrayList<>();
@@ -538,7 +539,7 @@ public class Client {
 
         } else {
 
-            return hfindBestWaitTime(currentJob);
+            return findServerWithShortestWaitTime(currentJob);
 
         }
 
@@ -563,86 +564,174 @@ public class Client {
 
     }
 
-    public ArrayList<String> hfindBestWaitTime(String[] currentJob) {
+    /**
+     * Find a server to run a long job on.
+     */
+    public ArrayList<String> findServerWithShortestWaitTime(String[] currentJob) {
 
-        ArrayList<String> firstFitServer = hfindFirstFit(currentJob);
+        ArrayList<String> bestFitServer = findModifiedBestFit(currentJob);
 
-        // Check if at least one server is available / active
-        if(isAnyServerImmediatelyAvailable()) {
+        // Either there are no active or available server, or all currently active servers are full
+        if(bestFitServer == null) {
 
-            // Check if the first-fit server is available / active.
-            if (isServerImmediatelyAvailable(firstFitServer))
-                return firstFitServer;
+            ArrayList<String> worstFitServer = findModifiedWorstFit(currentJob);
 
-                // Otherwise assign job to currently available / active servers based on wait time.
-                // If this part is reached we can assume all available / active servers are full.
-            else {
+            // If there is at least one server running.
+            if(worstFitServer == null) {
 
-                // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
-                int minAvail = Integer.MAX_VALUE;
-                ArrayList<String> minAvailableActiveServer = null;
+                return findServerWithSmallestQueue(currentJob);
 
-                for (int i = 0; i < allServerInfo.size(); i++) {
+            } else {
 
-                    ArrayList<String> server = allServerInfo.get(i); // Keep track of server
-                    ArrayList<String> initialServer = initialAllServerInfo.get(i);
-
-                    // To assign a job the server must have enough initial cores to run the job and it must be active.
-                    if (isServerImmediatelyAvailable(server) && hasSufficientResources(initialServer, currentJob) && !isReserved(server)) {
-
-                        // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
-                        // IDLE servers are set as INSTANT
-                        int serverWaitTime = calculateServerWaitTime(server);
-
-                        if (serverWaitTime < minAvail) {
-                            minAvail = serverWaitTime;
-                            minAvailableActiveServer = server;
-                        }
-
-                    }
-
-                }
-
-                // Return minAvailableServer if it has a available time between 0 - 3 (INSTANT - MEDIUM).
-                if (minAvail < 3)
-                    return minAvailableActiveServer;
-                else
-                    return firstFitServer;
+                return worstFitServer;
 
             }
 
         }
 
-        return null;
+        // Immediately schedule job to run instantly.
+        return bestFitServer;
 
     }
 
-    public ArrayList<String> hfindFirstFit(String[] currentJob) {
+    /**
+     * Find the best-fit server ignoring reserved servers.
+     */
+    public ArrayList<String> findModifiedBestFit(String[] currentJob) {
+
+        int bestFit = Integer.MAX_VALUE;
+        ArrayList<String> bestFitServer = null;
 
         // Traverse through all servers
         for(ArrayList<String> server: allServerInfo) {
 
-            // Return the first server with sufficient resources
-            if(hasSufficientResources(server, currentJob) && !isReserved(server)) {
-                return server;
-            }
+            // Server must have sufficient resources to run the job
+            if(hasSufficientResources(server, currentJob)) {
 
-        }
+                int fitnessValue = calculateFitnessValue(server, currentJob);
+                int serverAvail = Integer.parseInt(server.get(3));
 
-        // Traverse through all servers based on initial check of resources
-        for(int i = 0; i < initialAllServerInfo.size(); i++) {
+                /**
+                 * Find best-fit based on currently available / active servers ignoring reserved servers.
+                 */
+                if( (fitnessValue < bestFit) && isServerActive(server) && !isReserved(server)) {
 
-            // Return the first server with sufficient resources and is active --> serverState = 3 (Active / Busy)
-            if(hasSufficientResources(initialAllServerInfo.get(i), currentJob)) {
-                if(isServerActive(allServerInfo.get(i)) && !isReserved(initialAllServerInfo.get(i))) {
-                    return allServerInfo.get(i);
+                    bestFit = fitnessValue;
+                    bestFitServer = server;
+
                 }
+
             }
 
         }
 
-        // If null is returned, no server exists that has sufficient resources to start the job
-        return null;
+        // If return is null, no active server with available resources was found.
+        return bestFitServer;
+
+    }
+
+    public ArrayList<String> findModifiedWorstFit(String[] currentJob) {
+
+        int worstFit = Integer.MIN_VALUE;
+        ArrayList<String> worstFitServer = null;
+
+        // Traverse through all servers
+        for(ArrayList<String> server: allServerInfo) {
+
+            // Server must have sufficient resources to run the job
+            if(hasSufficientResources(server, currentJob)) {
+
+                int fitnessValue = calculateFitnessValue(server, currentJob);
+
+                /**
+                 * If there is a server with a higher fitness value and it is immediately available set that server as
+                 * the server with the worst-fit
+                 */
+                if( (fitnessValue > worstFit) && !isReserved(server) ) {
+
+                    worstFit = fitnessValue;
+                    worstFitServer = server;
+
+                }
+
+            }
+
+        }
+
+        return worstFitServer;
+
+    }
+
+    public ArrayList<String> findServerWithSmallestQueue(String[] currentJob) {
+
+        int serverWithLowestJobCount = Integer.MAX_VALUE;
+        ArrayList<String> chosenServer = null;
+
+        for(int i = 0; i < allServerInfo.size(); i++) {
+
+            ArrayList<String> server = allServerInfo.get(i);
+            ArrayList<String> initialServer = initialAllServerInfo.get(i);
+            int serverJobCount = findNumberOfJobsOnServer(server);
+
+            if( (serverJobCount < serverWithLowestJobCount) && !isReserved(server) && hasSufficientResources(initialServer, currentJob)) {
+
+                serverWithLowestJobCount = serverJobCount;
+                chosenServer = server;
+
+            }
+
+        }
+
+        return chosenServer;
+
+    }
+
+    public int findNumberOfJobsOnServer(ArrayList<String> server) {
+
+        if(isServerIdle(server) || !isServerImmediatelyAvailable(server)) {
+            return 0;
+        }
+
+        int retVal = 0;
+
+        // Request list of jobs from server
+        sendCommandNoLog("LSTJ "+server.get(0)+" "+server.get(1));
+        String serverResponse = sendCommandNoLog("OK");
+
+        while(!serverResponse.equals(".")) {
+
+            retVal++;
+
+            serverResponse = sendCommandNoLog("OK");
+
+        }
+
+        return retVal;
+
+    }
+    public int findWaitTimeOnServer(ArrayList<String> server) {
+
+        if(isServerIdle(server) || !isServerImmediatelyAvailable(server)) {
+            return 0;
+        }
+
+        int retVal = 0;
+
+        // Request list of jobs from server
+        sendCommandNoLog("LSTJ "+server.get(0)+" "+server.get(1));
+        String serverResponse = sendCommandNoLog("OK");
+
+        while(!serverResponse.equals(".")) {
+
+            String[] job = serverResponse.split(" ");
+
+            retVal += Integer.parseInt(job[2]);
+
+            serverResponse = sendCommandNoLog("OK");
+
+        }
+
+        return retVal;
 
     }
 
@@ -665,9 +754,6 @@ public class Client {
 
     }
 
-    /**
-     * Return true if there are servers active
-     */
     public boolean isAnyServerImmediatelyAvailable() {
 
         for(ArrayList<String> server: allServerInfo) {
@@ -679,9 +765,6 @@ public class Client {
 
     }
 
-    /**
-     * Return true if the selected server is active
-     */
     public boolean isServerActive(ArrayList<String> server) {
 
         int serverState = Integer.parseInt(server.get(2));
@@ -693,9 +776,6 @@ public class Client {
 
     }
 
-    /**
-     * Return true if the selected server is idle
-     */
     public boolean isServerIdle(ArrayList<String> server) {
 
         int serverState = Integer.parseInt(server.get(2));
@@ -707,9 +787,6 @@ public class Client {
 
     }
 
-    /**
-     * Job with the largest wait time is set as the servers wait time
-     */
     public int calculateServerWaitTime(ArrayList<String> server) {
 
         // Server is instantly available when idle
@@ -738,6 +815,34 @@ public class Client {
 
         // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
         return largestJobWaitTime;
+
+    }
+
+    public int calculateServerJobs(ArrayList<String> server) {
+
+        int retVal = 0;
+
+        // Server is instantly available when idle
+        if(isServerIdle(server))
+            return retVal;
+
+        // Request list of jobs from server
+        sendCommandNoLog("LSTJ "+server.get(0)+" "+server.get(1));
+        String serverResponse = sendCommandNoLog("OK");
+
+        while(!serverResponse.equals(".")) {
+
+            // Split server response into list of words
+            String[] tempJob = serverResponse.split(" ");
+
+            retVal++;
+
+            // Goto the next job.
+            serverResponse = sendCommandNoLog("OK");
+
+        }
+
+        return retVal;
 
     }
 
@@ -949,17 +1054,6 @@ public class Client {
 
     }
 
-    /**
-     * Send a command to the server and display the result in the terminal.
-     *  e.g. sendCommand("HELO");
-     *
-     *  Client Terminal
-     *      SENT: HELO
-     *      RCVD: OK
-     *
-     * @param argument - the command to be send.
-     * @return String - the reply from the server.
-     */
     public String sendCommand(String argument){
 
         try {
@@ -980,13 +1074,6 @@ public class Client {
         return "ERR: No Response from Server.";
 
     }
-
-    /**
-     * Sometimes we want to send a command and not display it in the terminal because it is not important to the user.
-     * This function works exactly the same as the above but without any logging.
-     * @param argument - the command to be send.
-     * @return String - the reply from the server.
-     */
     public String sendCommandNoLog(String argument) {
 
         try {
