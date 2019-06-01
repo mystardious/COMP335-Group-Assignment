@@ -569,10 +569,10 @@ public class Client {
      */
     public ArrayList<String> findServerWithShortestWaitTime(String[] currentJob) {
 
-        ArrayList<String> bestFitServer = findModifiedBestFit(currentJob);
+        ArrayList<String> firstFitServer = findModifiedFirstFit(currentJob);
 
         // Either there are no active or available server, or all currently active servers are full
-        if(bestFitServer == null) {
+        if(firstFitServer == null) {
 
             ArrayList<String> worstFitServer = findModifiedWorstFit(currentJob);
 
@@ -590,7 +590,26 @@ public class Client {
         }
 
         // Immediately schedule job to run instantly.
-        return bestFitServer;
+        return firstFitServer;
+
+    }
+
+    /**
+     * Find the worst-fit server ignoring reserved servers.
+     */
+    public ArrayList<String> findModifiedFirstFit(String[] currentJob) {
+
+        // Traverse through all servers
+        for(ArrayList<String> server: allServerInfo) {
+
+            // Return the first server with sufficient resources
+            if(hasSufficientResources(server, currentJob) && isServerImmediatelyAvailable(server) && !isReserved(server)) {
+                return server;
+            }
+
+        }
+
+        return null;
 
     }
 
@@ -630,6 +649,9 @@ public class Client {
 
     }
 
+    /**
+     * Find the worst-fit server ignoring reserved servers.
+     */
     public ArrayList<String> findModifiedWorstFit(String[] currentJob) {
 
         int worstFit = Integer.MIN_VALUE;
