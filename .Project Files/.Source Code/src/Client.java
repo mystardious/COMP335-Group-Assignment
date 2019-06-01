@@ -11,7 +11,7 @@ public class Client {
     static boolean verbose     = false;
 
     // Automation variables
-    static int algorithm = 0; // 0 = AllToLargest, 1 = First-Fit, 2 = Best-Fit, 3 = Worst-Fit
+    static int algorithm = 0; // 0 = AllToLargest, 1 = First-Fit, 2 = Best-Fit, 3 = Worst-Fit, 4 = Best-Cost
 
     // Server data
     ArrayList<ArrayList<String>> allServerInfo = new ArrayList<>();
@@ -35,6 +35,8 @@ public class Client {
                     algorithm = 2;
                 else if(args[i+1].equals("wf"))
                     algorithm = 3;
+                else if(args[i+1].equals("bfp"))
+                    algorithm = 4;
                 else {
                     System.out.println("Please enter a valid algorithm.");
                     help = true;
@@ -217,11 +219,18 @@ public class Client {
             // Worst-Fit
             else if (algorithm == 3) {
 
-
-
                 ArrayList<String> worstFitServer = findWorstFit(currentJobDetails);
                 serverType = worstFitServer.get(0);
                 serverID = worstFitServer.get(1);
+
+            }
+
+            // Best-Cost
+            else if (algorithm == 4) {
+
+                ArrayList<String> bestCostServer = findBestCost(currentJobDetails);
+                serverType = bestCostServer.get(0);
+                serverID = bestCostServer.get(1);
 
             }
 
@@ -441,6 +450,89 @@ public class Client {
 
             return worstFitServer;
         }
+
+    }
+
+    /**
+     * Best-Cost Algorithm - Extends Best Fit Algorithm.
+     *
+     * The Algorithm is exactly like best fit except when a situation arises when all active servers are full, the
+     * lgorithm then calculates a wait time for each server:
+     *
+     *      - -1     FREE          0SEC
+     *      -  0     INSTANT       1SEC        till        10SECS
+     *      -  1     SHORT         11SECS      till        5MINS
+     *      -  2     MEDIUM        5MINS       till        1HR
+     *      -  3     LONG          1HR         till        12HRS
+     *      -  4     PERMANENT     12HRS       till        24855 Days
+     *
+     */
+    public ArrayList<String> findBestCost(String[] currentJob) {
+
+        ArrayList<String> bestFitServer = findBestFit(currentJob);
+
+        // Check if at least one server is available / active
+        if(isAnyServerImmediatelyAvailable()) {
+
+            // Check if the Best-fit server is available / active.
+            if(isServerImmediatelyAvailable(bestFitServer))
+                return bestFitServer;
+
+            // Otherwise assign job to currently available / active servers based on wait time.
+            // If this part is reached we can assume all available / active servers are full.
+            else {
+				
+				/**
+				 *	For each server, a wait time is calculated based on the estimated run time of the jobs
+				 *	that are currently scheduled to run on any give server. We want to schedule the next job
+				 *  to the server with the lowest wait time to lower the overall turnaround time of all jobs
+				 *  when servers are busy.
+				 */
+
+                // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
+                int minAvail = Integer.MAX_VALUE;
+                ArrayList<String> minAvailableActiveServer = null;
+
+                for(int i = 0; i < allServerInfo.size(); i++) {
+
+                    ArrayList<String> server = allServerInfo.get(i); // Keep track of server
+                    ArrayList<String> initialServer = initialAllServerInfo.get(i);
+
+                    // To assign a job the server must have enough initial cores to run the job and it must be active.
+                    if(isServerImmediatelyAvailable(server) && hasSufficientResources(initialServer, currentJob)) {
+
+                        // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
+                        // IDLE servers are set as INSTANT
+                        int serverWaitTime = calculateServerWaitTime(server);
+
+                        if(serverWaitTime < minAvail) {
+                            minAvail = serverWaitTime;
+                            minAvailableActiveServer = server;
+                        }
+
+                    }
+
+                }
+
+                // Return minAvailableServer if it has a available time between 0 - 3 (INSTANT - MEDIUM).
+                if(minAvail < 3)
+                    return minAvailableActiveServer;
+
+//                // Only when all servers are full and all wait times are are LONG or greater.
+//                else if(isAllServersActive())
+//                    return minAvailableActiveServer;
+
+                // Otherwise start an inactive server if all active servers have a wait time of LONG or greater.
+                else
+                    return bestFitServer;
+
+            }
+
+        }
+
+        // Assign first server using Best-fit
+        else
+            return bestFitServer;
 
     }
 
