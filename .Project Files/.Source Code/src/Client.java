@@ -11,7 +11,7 @@ public class Client {
     static boolean verbose     = false;
 
     // Automation variables
-    static int algorithm = 0; // 0 = AllToLargest, 1 = First-Fit, 2 = Best-Fit, 3 = Worst-Fit, 4 = Best-Cost
+    static int algorithm = 0; // 0 = AllToLargest, 1 = First-Fit, 2 = Best-Fit, 3 = Worst-Fit, 4 = Hawk
 
     /**
      * Data regarding regarding structure of servers, information about status, and number of servers per type.
@@ -43,7 +43,7 @@ public class Client {
                     algorithm = 2;
                 else if(args[i+1].equals("wf"))
                     algorithm = 3;
-                else if(args[i+1].equals("bc"))
+                else if(args[i+1].equals("hawk"))
                     algorithm = 4;
                 else {
                     System.out.println("Please enter a valid algorithm.");
@@ -154,19 +154,6 @@ public class Client {
         sendCommand("AUTH "+System.getProperty("user.name"));
 
     }
-
-    /**
-     * Client Scheduler
-     * If no algorithm was specified using "-a" then the default is used (allToLargest).
-     *
-     * Some details regarding the format for jobs and servers
-     *
-     *      JOBN submit_time (int) job_ID (int) estimated_runtime (int) #CPU_cores (int) memory (int) disk(int)
-     *      0    1                 2            3                       4                5            6
-     *
-     *      server_type (char *) server_ID (int) server_state (int) available_time (int) #CPU_cores (int) memory (int) disk_space (int)
-     *      0                    1               2                  3                    4                5            6
-     */
     public void ClientScheduler() {
 
         String currentJob = sendCommand("REDY");
@@ -186,8 +173,6 @@ public class Client {
         }
 
         findAllServerInfoSortOrder();
-        for(ArrayList<String> list: sortOrder)
-            System.out.println(list);
 
         while(!currentJob.equals("NONE") && !status[0].equals("ERR:")) {
 
@@ -235,16 +220,16 @@ public class Client {
 
             }
 
-            // Best-Cost
+            // Hawk
             else if (algorithm == 4) {
 
                 // Sort All Servers from smallest to largest
                 allServerInfo = sortAllServerInfo(allServerInfo);
                 initialAllServerInfo = sortAllServerInfo(initialAllServerInfo);
 
-                ArrayList<String> bestCostServer = findBestCost(currentJobDetails);
-                serverType = bestCostServer.get(0);
-                serverID = bestCostServer.get(1);
+                ArrayList<String> hawkServer = findHawk(currentJobDetails);
+                serverType = hawkServer.get(0);
+                serverID = hawkServer.get(1);
 
             }
 
@@ -472,21 +457,7 @@ public class Client {
     boolean isReservedSmall = false;
     ArrayList<ArrayList<String>> reservedServers = new ArrayList<>();
 
-    /**
-     * Best-Cost Algorithm - Extends First Fit Algorithm.
-     *
-     * The Algorithm is exactly like first fit except when a situation arises when all active servers are full, the
-     * lgorithm then calculates a wait time for each server:
-     *
-     *      - -1     FREE          0SEC
-     *      -  0     INSTANT       1SEC        till        10SECS
-     *      -  1     SHORT         11SECS      till        5MINS
-     *      -  2     MEDIUM        5MINS       till        1HR
-     *      -  3     LONG          1HR         till        12HRS
-     *      -  4     PERMANENT     12HRS       till        24855 Days
-     *
-     */
-    public ArrayList<String> findBestCost(String[] currentJob) {
+    public ArrayList<String> findHawk(String[] currentJob) {
 
         /**
          * We want to know the number of largest servers so we can determine how many servers to reserve for both:
@@ -610,42 +581,6 @@ public class Client {
         }
 
         return null;
-
-    }
-
-    /**
-     * Find the best-fit server ignoring reserved servers.
-     */
-    public ArrayList<String> findModifiedBestFit(String[] currentJob) {
-
-        int bestFit = Integer.MAX_VALUE;
-        ArrayList<String> bestFitServer = null;
-
-        // Traverse through all servers
-        for(ArrayList<String> server: allServerInfo) {
-
-            // Server must have sufficient resources to run the job
-            if(hasSufficientResources(server, currentJob)) {
-
-                int fitnessValue = calculateFitnessValue(server, currentJob);
-                int serverAvail = Integer.parseInt(server.get(3));
-
-                /**
-                 * Find best-fit based on currently available / active servers ignoring reserved servers.
-                 */
-                if( (fitnessValue < bestFit) && isServerActive(server) && !isReserved(server)) {
-
-                    bestFit = fitnessValue;
-                    bestFitServer = server;
-
-                }
-
-            }
-
-        }
-
-        // If return is null, no active server with available resources was found.
-        return bestFitServer;
 
     }
 
@@ -776,17 +711,6 @@ public class Client {
 
     }
 
-    public boolean isAnyServerImmediatelyAvailable() {
-
-        for(ArrayList<String> server: allServerInfo) {
-            if(isServerImmediatelyAvailable(server))
-                return true;
-        }
-
-        return false;
-
-    }
-
     public boolean isServerActive(ArrayList<String> server) {
 
         int serverState = Integer.parseInt(server.get(2));
@@ -806,65 +730,6 @@ public class Client {
             return true;
 
         return false;
-
-    }
-
-    public int calculateServerWaitTime(ArrayList<String> server) {
-
-        // Server is instantly available when idle
-        if(isServerIdle(server))
-            return 0;
-
-        // Request list of jobs from server
-        sendCommandNoLog("LSTJ "+server.get(0)+" "+server.get(1));
-        int largestJobWaitTime = 0;
-
-        String serverResponse = sendCommandNoLog("OK");
-        while(!serverResponse.equals(".")) {
-
-            // Split server response into list of words
-            String[] tempJob = serverResponse.split(" ");
-
-            int currentJobWaitTime = findJobWaitTime(tempJob);
-
-            if(currentJobWaitTime > largestJobWaitTime)
-                largestJobWaitTime = currentJobWaitTime;
-
-            // Goto the next job.
-            serverResponse = sendCommandNoLog("OK");
-
-        }
-
-        // 0 = INSTANT (BEST), 1 = SHORT, 2 = MEDIUM, 3 = LONG, 4 = PERMANENT (WORST)
-        return largestJobWaitTime;
-
-    }
-
-    public int calculateServerJobs(ArrayList<String> server) {
-
-        int retVal = 0;
-
-        // Server is instantly available when idle
-        if(isServerIdle(server))
-            return retVal;
-
-        // Request list of jobs from server
-        sendCommandNoLog("LSTJ "+server.get(0)+" "+server.get(1));
-        String serverResponse = sendCommandNoLog("OK");
-
-        while(!serverResponse.equals(".")) {
-
-            // Split server response into list of words
-            String[] tempJob = serverResponse.split(" ");
-
-            retVal++;
-
-            // Goto the next job.
-            serverResponse = sendCommandNoLog("OK");
-
-        }
-
-        return retVal;
 
     }
 
