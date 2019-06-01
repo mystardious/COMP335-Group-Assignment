@@ -456,18 +456,23 @@ public class Client {
         }
 
     }
-
+    /**
+     * First-Fit-Plus Algorithm, Builds upon and improves first fit to account for wait time and improve resource utilisation
+     * When servers are full wait times are accounted for in order to return a valid server , wait time is calculated with refernce to wait time categories represented by integers, 
+     * These being: 0-(Immediate 1-10 seconds), 1-(Short 11-300 seconds), 2-(Medium 5-60 minutes), 3-(Long 1-12 hours), 4-(Permanent 12hours or more), 
+     * -1 would represent wait times less than 1 second
+     */
     public ArrayList<String> ffplus(String[] currentJob) {
 
         ArrayList<String> firstFitServer = findFirstFit(currentJob);
-
+        //validates that an active server exists 
         if(AnyReadyServer()) {
-
+            //validates whether the server from first fit is available
             if(isServerImmediatelyAvailable(firstFitServer))
                 return firstFitServer;
-
+            //schedule jobs to active and available servers decided upon wait time, this path executes when all active and available servers are utilised already
             else {
-
+                //readyMin represents wait time categories 0-4 (view header comment), the lower the value the lower the wait time
                 int readyMin = Integer.MAX_VALUE;
                 ArrayList<String> activeReadyServer = null;
 
@@ -475,9 +480,9 @@ public class Client {
 
                     ArrayList<String> currentServer = allServerInfo.get(i);
                     ArrayList<String> firstServer = initialAllServerInfo.get(i);
-
+                    //jobs are only scheduled to servers which are active and has enough resources to run the job
                     if(isServerImmediatelyAvailable(currentServer) && hasSufficientResources(firstServer, currentJob)) {
-
+                        //calcualtion based upon 0-4 again with idle servers essentially being immediate
                         int serverDelay = waitCalculator(currentServer);
 
                         if(serverDelay < readyMin) {
@@ -488,17 +493,17 @@ public class Client {
                     }
 
                 }
-
+                //return the ready server if the wait time is less than category 3
                 if(readyMin < 3)
                     return activeReadyServer;
-
+                //in the case wait time is greater than category 3 (medium) for all active servers, run an inactive server
                 else
                     return firstFitServer;
 
             }
 
         }
-
+        //asign first server
         else
             return firstFitServer;
 
@@ -519,7 +524,9 @@ public class Client {
         return false;
 
     }
-
+    /**
+     * Return false if all servers are not active
+     */
     public boolean isAllServersActive() {
 
         for(ArrayList<String> server: allServerInfo) {
